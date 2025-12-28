@@ -1,1 +1,27 @@
 body { font-family: Arial, sans-serif; }
+/* 四個選單那一排 */
+.menu {
+  margin-top: 20px;
+}
+
+/* 每個選單文字 */
+.menu .tab {
+  margin: 0 15px;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent; /* 平常沒有底線 */
+}
+
+/* 滑過去有底線（可留可不留） */
+.menu .tab:hover {
+  border-bottom: 2px solid black;
+}
+
+/* 點到的那個：底線固定住 */
+.menu .tab.active {
+  border-bottom: 2px solid black;
+}
+
