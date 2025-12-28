@@ -4,7 +4,7 @@ body {
 
 /* LOGO 區 */
 .logo {
-  height: 32px;
+  height: 12px;
 }
 
 /* 四個選單那一排 */
@@ -34,6 +34,7 @@ body {
 .menu .tab.active {
   border-bottom: 2px solid black;
 }
+
 
 
 
