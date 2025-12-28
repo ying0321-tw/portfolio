@@ -10,66 +10,62 @@
 <body>
 
 <header class="header">
-  <img src="images/logo.png" class="logo" alt="Ying Portfolio">
+  <div class="header-inner">
+    <img src="images/logo.png" class="logo" alt="Ying portfolio">
 
-  <div class="intro">
-    <h1 class="name">鄒佳穎｜作品集</h1>
-    <p class="tagline">好奇心強的牡羊座，一起把生活靈感玩出新花樣吧！</p>
-    <div class="meta">
-      <span class="meta-item">Marketing / Visual / Video / UIUX</span>
-      <a class="mail" href="mailto:yin9423@gmail.com">yin9423@gmail.com</a>
+    <div class="intro">
+      <h1 class="name">鄒佳穎｜作品集</h1>
+      <p class="tagline">好奇心強的牡羊座，一起把生活靈感玩出新花樣吧！</p>
+
+      <!-- ✅ Email 純文字，不連結 -->
+      <div class="email-text">yin9423@gmail.com</div>
     </div>
   </div>
 
-  <nav class="menu" aria-label="分類選單">
-    <span class="pill" aria-hidden="true"></span>
-    <span class="tab active" data-target="#marketing">行銷專案</span>
-    <span class="tab" data-target="#design">平面設計</span>
-    <span class="tab" data-target="#video">短影音</span>
-    <span class="tab" data-target="#uiux">UI / UX</span>
-  </nav>
+  <!-- ✅ 滿版灰底 + 內部置中 -->
+  <div class="menu-wrap">
+    <nav class="menu" aria-label="分類選單">
+      <span class="pill" aria-hidden="true"></span>
+
+      <button class="tab active" type="button" data-target="#marketing">行銷專案</button>
+      <button class="tab" type="button" data-target="#design">平面設計</button>
+      <button class="tab" type="button" data-target="#video">短影音</button>
+      <button class="tab" type="button" data-target="#uiux">UI / UX</button>
+    </nav>
+  </div>
 </header>
 
 <main class="container">
 
   <!-- 行銷 -->
   <section class="section" id="marketing">
-    <div class="section-head">
-      <h2 class="section-title">行銷專案</h2>
-      <p class="section-desc">活動企劃、內容策略、整合行銷與成效整理（可點擊查看 PDF）。</p>
-    </div>
+    <h2 class="section-title">行銷專案</h2>
 
     <div class="grid">
       <button class="card" data-pdf="pdf/marketing/marketing-01.pdf" type="button">
-        <img class="card-img" src="images/marketing/marketing-01.jpg" alt="行銷專案 01">
+        <img class="card-img" src="images/marketing/marketing-01.jpg" alt="行銷專案 01"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-marketing">行銷</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 A</div>
-            <div class="card-sub">活動企劃｜素材整合｜投放摘要</div>
-          </div>
+          <div class="card-title">專案標題 A</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/marketing/marketing-02.pdf" type="button">
-        <img class="card-img" src="images/marketing/marketing-02.jpg" alt="行銷專案 02">
+        <img class="card-img" src="images/marketing/marketing-02.jpg" alt="行銷專案 02"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-marketing">行銷</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 B</div>
-            <div class="card-sub">社群內容｜數據回顧｜優化方向</div>
-          </div>
+          <div class="card-title">專案標題 B</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/marketing/marketing-03.pdf" type="button">
-        <img class="card-img" src="images/marketing/marketing-03.jpg" alt="行銷專案 03">
+        <img class="card-img" src="images/marketing/marketing-03.jpg" alt="行銷專案 03"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-marketing">行銷</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 C</div>
-            <div class="card-sub">檔期企劃｜視覺統一｜落地執行</div>
-          </div>
+          <div class="card-title">專案標題 C</div>
         </div>
       </button>
     </div>
@@ -77,42 +73,33 @@
 
   <!-- 平面 -->
   <section class="section" id="design">
-    <div class="section-head">
-      <h2 class="section-title">平面設計</h2>
-      <p class="section-desc">KV、Banner、印刷物與社群圖文（可點擊查看 PDF）。</p>
-    </div>
+    <h2 class="section-title">平面設計</h2>
 
     <div class="grid">
       <button class="card" data-pdf="pdf/design/design-01.pdf" type="button">
-        <img class="card-img" src="images/design/design-01.jpg" alt="平面設計 01">
+        <img class="card-img" src="images/design/design-01.jpg" alt="平面設計 01"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-design">設計</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 A</div>
-            <div class="card-sub">KV 設計｜延伸版型｜印刷規格</div>
-          </div>
+          <div class="card-title">專案標題 A</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/design/design-02.pdf" type="button">
-        <img class="card-img" src="images/design/design-02.jpg" alt="平面設計 02">
+        <img class="card-img" src="images/design/design-02.jpg" alt="平面設計 02"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-design">設計</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 B</div>
-            <div class="card-sub">社群圖文｜系列化｜排版一致性</div>
-          </div>
+          <div class="card-title">專案標題 B</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/design/design-03.pdf" type="button">
-        <img class="card-img" src="images/design/design-03.jpg" alt="平面設計 03">
+        <img class="card-img" src="images/design/design-03.jpg" alt="平面設計 03"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-design">設計</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 C</div>
-            <div class="card-sub">Banner｜主視覺｜多尺寸套版</div>
-          </div>
+          <div class="card-title">專案標題 C</div>
         </div>
       </button>
     </div>
@@ -120,42 +107,33 @@
 
   <!-- 短影音 -->
   <section class="section" id="video">
-    <div class="section-head">
-      <h2 class="section-title">短影音</h2>
-      <p class="section-desc">腳本、拍攝剪輯、封面與成效回顧（可點擊查看 PDF）。</p>
-    </div>
+    <h2 class="section-title">短影音</h2>
 
     <div class="grid">
       <button class="card" data-pdf="pdf/video/video-01.pdf" type="button">
-        <img class="card-img" src="images/video/video-01.jpg" alt="短影音 01">
+        <img class="card-img" src="images/video/video-01.jpg" alt="短影音 01"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-video">短影片</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 A</div>
-            <div class="card-sub">腳本｜節奏｜封面｜完播分析</div>
-          </div>
+          <div class="card-title">專案標題 A</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/video/video-02.pdf" type="button">
-        <img class="card-img" src="images/video/video-02.jpg" alt="短影音 02">
+        <img class="card-img" src="images/video/video-02.jpg" alt="短影音 02"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-video">短影片</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 B</div>
-            <div class="card-sub">新品｜開箱｜Hook｜留言互動</div>
-          </div>
+          <div class="card-title">專案標題 B</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/video/video-03.pdf" type="button">
-        <img class="card-img" src="images/video/video-03.jpg" alt="短影音 03">
+        <img class="card-img" src="images/video/video-03.jpg" alt="短影音 03"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-video">短影片</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 C</div>
-            <div class="card-sub">活動｜花絮｜情緒設計｜收斂剪輯</div>
-          </div>
+          <div class="card-title">專案標題 C</div>
         </div>
       </button>
     </div>
@@ -163,42 +141,33 @@
 
   <!-- UIUX -->
   <section class="section" id="uiux">
-    <div class="section-head">
-      <h2 class="section-title">UI / UX</h2>
-      <p class="section-desc">流程、Wireframe、UI 規範與協作紀錄（可點擊查看 PDF）。</p>
-    </div>
+    <h2 class="section-title">UI / UX</h2>
 
     <div class="grid">
       <button class="card" data-pdf="pdf/uiux/uiux-01.pdf" type="button">
-        <img class="card-img" src="images/uiux/uiux-01.jpg" alt="UIUX 01">
+        <img class="card-img" src="images/uiux/uiux-01.jpg" alt="UIUX 01"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-uiux">UIUX</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 A</div>
-            <div class="card-sub">流程｜UI｜元件｜規格整理</div>
-          </div>
+          <div class="card-title">專案標題 A</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/uiux/uiux-02.pdf" type="button">
-        <img class="card-img" src="images/uiux/uiux-02.jpg" alt="UIUX 02">
+        <img class="card-img" src="images/uiux/uiux-02.jpg" alt="UIUX 02"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-uiux">UIUX</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 B</div>
-            <div class="card-sub">需求拆解｜版型｜狀態｜交付</div>
-          </div>
+          <div class="card-title">專案標題 B</div>
         </div>
       </button>
 
       <button class="card" data-pdf="pdf/uiux/uiux-03.pdf" type="button">
-        <img class="card-img" src="images/uiux/uiux-03.jpg" alt="UIUX 03">
+        <img class="card-img" src="images/uiux/uiux-03.jpg" alt="UIUX 03"
+             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
         <div class="card-body">
           <span class="badge badge-uiux">UIUX</span>
-          <div class="card-text">
-            <div class="card-title">案例標題 C</div>
-            <div class="card-sub">RWD｜資訊架構｜互動規範</div>
-          </div>
+          <div class="card-title">專案標題 C</div>
         </div>
       </button>
     </div>
@@ -216,14 +185,14 @@
 </div>
 
 <script>
-  // Tabs + pill
+  // Tabs + pill + smooth scroll
   const tabs = document.querySelectorAll('.tab');
   const pill = document.querySelector('.pill');
 
   function movePill(el){
     if (!pill) return;
-    const pillStyle = window.getComputedStyle(pill);
-    if (pillStyle.display === 'none') return;
+    const style = window.getComputedStyle(pill);
+    if (style.display === 'none') return;
 
     const menu = el.parentElement.getBoundingClientRect();
     const r = el.getBoundingClientRect();
