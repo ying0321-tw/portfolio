@@ -2,39 +2,37 @@ body {
   font-family: Arial, sans-serif; 
 }
 
-/* LOGO 區 */
 .logo {
-  height: 12px;
+  height: 36px;
 }
 
-/* 四個選單那一排 */
 .menu {
-  display: flex;              /* 排成一排 */
-  justify-content: center;    /* 置中 */
-  gap: 40px;                  /* 等距 ← 重點 */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
 }
 
-/* 每個選單文字 */
 .menu .tab {
-  margin: 0 15px;
   font-size: 16px;
   color: black;
   cursor: pointer;
-
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
 }
 
-/* 滑過去有底線 */
-.menu .tab:hover {
-  border-bottom: 2px solid black;
-}
-
-/* 點到的那個：底線固定住 */
+.menu .tab:hover,
 .menu .tab.active {
   border-bottom: 2px solid black;
 }
 
+@media (min-width: 1024px) {
+  .menu {
+    gap: 40px;
+    margin-top: 24px;
+  }
 
-
-
+  .menu .tab {
+    font-size: 18px;
+  }
+}
