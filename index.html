@@ -16,13 +16,13 @@
   <!-- 空一行 -->
   <div class="space"></div>
 
-  <!-- 四個文字按鍵 -->
-  <div class="menu">
-    <span onclick="showContent('marketing')">行銷專案</span>
-    <span onclick="showContent('graphic')">平面設計</span>
-    <span onclick="showContent('video')">短影音</span>
-    <span onclick="showContent('uiux')">UI / UX</span>
-  </div>
+<!-- 四個文字按鍵 -->
+<div class="menu">
+  <span class="tab" onclick="setActive(this)">行銷專案</span>
+  <span class="tab" onclick="setActive(this)">平面設計</span>
+  <span class="tab" onclick="setActive(this)">短影音</span>
+  <span class="tab" onclick="setActive(this)">UI / UX</span>
+</div>
 
   <!-- 內容顯示區 -->
   <div id="content">
@@ -30,24 +30,15 @@
   </div>
 
   <!-- 動態腦袋 -->
-  <script>
-    function showContent(type) {
-      const content = document.getElementById("content");
-
-      if (type === "marketing") {
-        content.innerText = "這裡是行銷專案內容";
-      } 
-      else if (type === "graphic") {
-        content.innerText = "這裡是平面設計內容";
-      } 
-      else if (type === "video") {
-        content.innerText = "這裡是短影音內容";
-      } 
-      else if (type === "uiux") {
-        content.innerText = "這裡是 UI / UX 內容";
-      }
-    }
-  </script>
+<script>
+  function setActive(el) {
+    // 先把全部 tab 的 active 移除
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    // 再把你點到的那個加 active
+    el.classList.add("active");
+  }
+</script>
 
 </body>
 </html>
+
