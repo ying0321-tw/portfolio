@@ -1,4 +1,3 @@
-/* 基本設定 */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,58 +11,247 @@ body {
   padding: 18px 20px;
 }
 
-/* Header 分隔線（對齊草稿） */
+/* Header 分隔線 */
 .header {
   border-bottom: 1px solid #000;
 }
 
 /* LOGO */
 .logo {
-  height: 36px;              /* 顯示高度 */
+  height: 36px;
   display: block;
 }
 
-/* 選單 */
+/* ===== 上方選單：淺灰底 + 滑動 active ===== */
 .menu {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   gap: 16px;
   margin-top: 12px;
+
+  background: #ededed;
+  padding: 10px 14px;
+  border-radius: 9999px;
 }
 
-/* 單一選單項 */
+/* 滑動底 */
+.menu .pill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  height: calc(100% - 8px);
+  width: 0px;
+
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 9999px;
+
+  transition: left 260ms ease, width 260ms ease;
+  z-index: 0;
+}
+
+/* tab */
 .menu .tab {
+  position: relative;
+  z-index: 1;
+
   font-size: 16px;
   line-height: 1.4;
   color: #000;
   cursor: pointer;
-  padding-bottom: 6px;
-  border-bottom: 2px solid transparent;
+
+  padding: 8px 16px;
+  border-radius: 9999px;
+
+  background: transparent;
+  border: 1px solid transparent;
+
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
-/* hover / active */
-.menu .tab:hover,
+.menu .tab:hover {
+  background: rgba(255,255,255,0.7);
+  border-color: #ccc;
+}
+
 .menu .tab.active {
-  border-bottom: 2px solid #000;
+  background: transparent;
+  border-color: transparent;
 }
 
 /* 桌機放大 */
 @media (min-width: 1024px) {
   .menu {
-    gap: 40px;               /* 桌機等距 */
-    margin-top: 24px;
+    gap: 32px;
+    margin-top: 20px;
+    padding: 12px 18px;
   }
 
   .menu .tab {
-    font-size: 18px;         /* 桌機字級 */
+    font-size: 18px;
+    padding: 10px 20px;
   }
 }
 
-/* 手機可換行（保險） */
+/* 手機可換行 */
 @media (max-width: 768px) {
   .menu {
     flex-wrap: wrap;
+    gap: 12px;
   }
 }
 
+/* ===== 下方內容區 ===== */
+.section {
+  padding-top: 26px;
+  margin-top: 18px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin: 0 0 14px 0;
+}
+
+/* Grid：桌機 3 欄 / 手機 1 欄 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 卡片：改用 button 外觀歸零 */
+.card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 圖片 */
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+
+  transition: filter 180ms ease;
+}
+
+/* hover 圖片反灰（灰階） */
+.card:hover .card-img {
+  filter: grayscale(100%);
+}
+
+.card-body {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title {
+  font-size: 14px;
+}
+
+/* 圓弧 ICON（badge） */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 26px;
+  padding: 0 12px;
+
+  border-radius: 9999px;
+  font-size: 12px;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+/* ===== Modal（PDF 彈出視窗） ===== */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* 整個 modal 容器 */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.modal.open {
+  display: block;
+}
+
+/* 黑色遮罩 */
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* 視窗本體 */
+.modal-panel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: min(980px, calc(100vw - 28px));
+  height: min(86vh, 900px);
+
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 叉叉 */
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: rgba(255,255,255,0.9);
+  border-radius: 9999px;
+  cursor: pointer;
+
+  font-size: 28px;
+  line-height: 40px;
+}
+
+/* PDF 區 */
+.modal-body {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px; /* 留給叉叉 */
+  box-sizing: border-box;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: calc(100% - 52px);
+  border: 0;
+}
