@@ -14,26 +14,229 @@
       <img src="images/logo.png" class="logo" alt="Ying Portfolio">
     </div>
 
-    <nav class="menu">
-      <span class="tab active">行銷專案</span>
-      <span class="tab">平面設計</span>
-      <span class="tab">短影音</span>
-      <span class="tab">UI / UX</span>
+    <!-- 上方 4 個按鈕（點了跳到下面對應區塊） -->
+    <nav class="menu" id="topMenu">
+      <span class="pill" aria-hidden="true"></span>
+
+      <span class="tab active" data-target="#marketing">行銷專案</span>
+      <span class="tab" data-target="#design">平面設計</span>
+      <span class="tab" data-target="#video">短影音</span>
+      <span class="tab" data-target="#uiux">UI / UX</span>
     </nav>
   </header>
 
   <main class="container">
-    <!-- 之後放大圖輪播或內容 -->
+
+    <!-- 行銷專案 -->
+    <section class="section" id="marketing">
+      <h2 class="section-title">行銷專案</h2>
+      <div class="grid">
+        <button class="card" type="button" data-pdf="pdf/marketing-1.pdf" aria-label="打開 行銷案例A PDF">
+          <img class="card-img" src="images/marketing-1.jpg" alt="行銷專案 1">
+          <div class="card-body">
+            <span class="badge badge-marketing">行銷</span>
+            <div class="card-title">案例標題 A</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/marketing-2.pdf" aria-label="打開 行銷案例B PDF">
+          <img class="card-img" src="images/marketing-2.jpg" alt="行銷專案 2">
+          <div class="card-body">
+            <span class="badge badge-marketing">行銷</span>
+            <div class="card-title">案例標題 B</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/marketing-3.pdf" aria-label="打開 行銷案例C PDF">
+          <img class="card-img" src="images/marketing-3.jpg" alt="行銷專案 3">
+          <div class="card-body">
+            <span class="badge badge-marketing">行銷</span>
+            <div class="card-title">案例標題 C</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- 平面設計 -->
+    <section class="section" id="design">
+      <h2 class="section-title">平面設計</h2>
+      <div class="grid">
+        <button class="card" type="button" data-pdf="pdf/design-1.pdf">
+          <img class="card-img" src="images/design-1.jpg" alt="平面設計 1">
+          <div class="card-body">
+            <span class="badge badge-design">設計</span>
+            <div class="card-title">案例標題 A</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/design-2.pdf">
+          <img class="card-img" src="images/design-2.jpg" alt="平面設計 2">
+          <div class="card-body">
+            <span class="badge badge-design">設計</span>
+            <div class="card-title">案例標題 B</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/design-3.pdf">
+          <img class="card-img" src="images/design-3.jpg" alt="平面設計 3">
+          <div class="card-body">
+            <span class="badge badge-design">設計</span>
+            <div class="card-title">案例標題 C</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- 短影音 -->
+    <section class="section" id="video">
+      <h2 class="section-title">短影音</h2>
+      <div class="grid">
+        <button class="card" type="button" data-pdf="pdf/video-1.pdf">
+          <img class="card-img" src="images/video-1.jpg" alt="短影音 1">
+          <div class="card-body">
+            <span class="badge badge-video">短影片</span>
+            <div class="card-title">案例標題 A</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/video-2.pdf">
+          <img class="card-img" src="images/video-2.jpg" alt="短影音 2">
+          <div class="card-body">
+            <span class="badge badge-video">短影片</span>
+            <div class="card-title">案例標題 B</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/video-3.pdf">
+          <img class="card-img" src="images/video-3.jpg" alt="短影音 3">
+          <div class="card-body">
+            <span class="badge badge-video">短影片</span>
+            <div class="card-title">案例標題 C</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- UI/UX -->
+    <section class="section" id="uiux">
+      <h2 class="section-title">UI / UX</h2>
+      <div class="grid">
+        <button class="card" type="button" data-pdf="pdf/uiux-1.pdf">
+          <img class="card-img" src="images/uiux-1.jpg" alt="UIUX 1">
+          <div class="card-body">
+            <span class="badge badge-uiux">UIUX</span>
+            <div class="card-title">案例標題 A</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/uiux-2.pdf">
+          <img class="card-img" src="images/uiux-2.jpg" alt="UIUX 2">
+          <div class="card-body">
+            <span class="badge badge-uiux">UIUX</span>
+            <div class="card-title">案例標題 B</div>
+          </div>
+        </button>
+
+        <button class="card" type="button" data-pdf="pdf/uiux-3.pdf">
+          <img class="card-img" src="images/uiux-3.jpg" alt="UIUX 3">
+          <div class="card-body">
+            <span class="badge badge-uiux">UIUX</span>
+            <div class="card-title">案例標題 C</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
   </main>
 
+  <!-- PDF Modal（彈出視窗） -->
+  <div class="modal" id="pdfModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="PDF 瀏覽視窗">
+      <button class="modal-close" id="modalClose" type="button" aria-label="關閉">×</button>
+
+      <div class="modal-body">
+        <iframe id="pdfFrame" class="pdf-frame" src="" title="PDF Viewer"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // ===== 上方 tab：active + 滑動 pill + 滾動到區塊 =====
     const tabs = document.querySelectorAll('.menu .tab');
+    const pill = document.querySelector('.menu .pill');
+
+    function movePillTo(el) {
+      const menuRect = el.parentElement.getBoundingClientRect();
+      const tabRect = el.getBoundingClientRect();
+      pill.style.left = (tabRect.left - menuRect.left) + 'px';
+      pill.style.width = tabRect.width + 'px';
+    }
+
+    function setActive(tab) {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      movePillTo(tab);
+    }
+
+    function scrollToTarget(selector) {
+      const target = document.querySelector(selector);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+        setActive(tab);
+        scrollToTarget(tab.dataset.target);
       });
+    });
+
+    window.addEventListener('load', () => {
+      const active = document.querySelector('.menu .tab.active') || tabs[0];
+      setActive(active);
+    });
+
+    window.addEventListener('resize', () => {
+      const active = document.querySelector('.menu .tab.active') || tabs[0];
+      movePillTo(active);
+    });
+
+    // ===== PDF Modal：點卡片開啟 PDF，不開新分頁 =====
+    const modal = document.getElementById('pdfModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const pdfFrame = document.getElementById('pdfFrame');
+    const cards = document.querySelectorAll('.card[data-pdf]');
+
+    function openModal(pdfUrl) {
+      pdfFrame.src = pdfUrl;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+      pdfFrame.src = ""; // 清空，避免關閉後仍在播放/佔資源
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const pdfUrl = card.dataset.pdf;
+        if (pdfUrl) openModal(pdfUrl);
+      });
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // ESC 關閉
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
     });
   </script>
 
