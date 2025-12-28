@@ -12,9 +12,17 @@
 <header class="header">
   <img src="images/logo.png" class="logo" alt="Ying Portfolio">
 
-  <nav class="menu">
-    <span class="pill"></span>
+  <div class="intro">
+    <h1 class="name">鄒佳穎｜作品集</h1>
+    <p class="tagline">好奇心強的牡羊座，一起把生活靈感玩出新花樣吧！</p>
+    <div class="meta">
+      <span class="meta-item">Marketing / Visual / Video / UIUX</span>
+      <a class="mail" href="mailto:yin9423@gmail.com">yin9423@gmail.com</a>
+    </div>
+  </div>
 
+  <nav class="menu" aria-label="分類選單">
+    <span class="pill" aria-hidden="true"></span>
     <span class="tab active" data-target="#marketing">行銷專案</span>
     <span class="tab" data-target="#design">平面設計</span>
     <span class="tab" data-target="#video">短影音</span>
@@ -24,112 +32,243 @@
 
 <main class="container">
 
-<section class="section" id="marketing">
-  <h2 class="section-title">行銷專案</h2>
-  <div class="grid">
-    <button class="card" data-pdf="pdf/marketing/marketing-01.pdf">
-      <img class="card-img" src="images/marketing/marketing-01.jpg">
-      <div class="card-body">
-        <span class="badge">行銷</span>
-        <div class="card-title">案例標題 A</div>
-      </div>
-    </button>
-  </div>
-</section>
+  <!-- 行銷 -->
+  <section class="section" id="marketing">
+    <div class="section-head">
+      <h2 class="section-title">行銷專案</h2>
+      <p class="section-desc">活動企劃、內容策略、整合行銷與成效整理（可點擊查看 PDF）。</p>
+    </div>
 
-<section class="section" id="design">
-  <h2 class="section-title">平面設計</h2>
-  <div class="grid">
-    <button class="card" data-pdf="pdf/design/design-01.pdf">
-      <img class="card-img" src="images/design/design-01.jpg">
-      <div class="card-body">
-        <span class="badge">設計</span>
-        <div class="card-title">案例標題 B</div>
-      </div>
-    </button>
-  </div>
-</section>
+    <div class="grid">
+      <button class="card" data-pdf="pdf/marketing/marketing-01.pdf" type="button">
+        <img class="card-img" src="images/marketing/marketing-01.jpg" alt="行銷專案 01">
+        <div class="card-body">
+          <span class="badge badge-marketing">行銷</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 A</div>
+            <div class="card-sub">活動企劃｜素材整合｜投放摘要</div>
+          </div>
+        </div>
+      </button>
 
-<section class="section" id="video">
-  <h2 class="section-title">短影音</h2>
-  <div class="grid">
-    <button class="card" data-pdf="pdf/video/video-01.pdf">
-      <img class="card-img" src="images/video/video-01.jpg">
-      <div class="card-body">
-        <span class="badge">短影片</span>
-        <div class="card-title">案例標題 C</div>
-      </div>
-    </button>
-  </div>
-</section>
+      <button class="card" data-pdf="pdf/marketing/marketing-02.pdf" type="button">
+        <img class="card-img" src="images/marketing/marketing-02.jpg" alt="行銷專案 02">
+        <div class="card-body">
+          <span class="badge badge-marketing">行銷</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 B</div>
+            <div class="card-sub">社群內容｜數據回顧｜優化方向</div>
+          </div>
+        </div>
+      </button>
 
-<section class="section" id="uiux">
-  <h2 class="section-title">UI / UX</h2>
-  <div class="grid">
-    <button class="card" data-pdf="pdf/uiux/uiux-01.pdf">
-      <img class="card-img" src="images/uiux/uiux-01.jpg">
-      <div class="card-body">
-        <span class="badge">UIUX</span>
-        <div class="card-title">案例標題 D</div>
-      </div>
-    </button>
-  </div>
-</section>
+      <button class="card" data-pdf="pdf/marketing/marketing-03.pdf" type="button">
+        <img class="card-img" src="images/marketing/marketing-03.jpg" alt="行銷專案 03">
+        <div class="card-body">
+          <span class="badge badge-marketing">行銷</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 C</div>
+            <div class="card-sub">檔期企劃｜視覺統一｜落地執行</div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- 平面 -->
+  <section class="section" id="design">
+    <div class="section-head">
+      <h2 class="section-title">平面設計</h2>
+      <p class="section-desc">KV、Banner、印刷物與社群圖文（可點擊查看 PDF）。</p>
+    </div>
+
+    <div class="grid">
+      <button class="card" data-pdf="pdf/design/design-01.pdf" type="button">
+        <img class="card-img" src="images/design/design-01.jpg" alt="平面設計 01">
+        <div class="card-body">
+          <span class="badge badge-design">設計</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 A</div>
+            <div class="card-sub">KV 設計｜延伸版型｜印刷規格</div>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" data-pdf="pdf/design/design-02.pdf" type="button">
+        <img class="card-img" src="images/design/design-02.jpg" alt="平面設計 02">
+        <div class="card-body">
+          <span class="badge badge-design">設計</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 B</div>
+            <div class="card-sub">社群圖文｜系列化｜排版一致性</div>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" data-pdf="pdf/design/design-03.pdf" type="button">
+        <img class="card-img" src="images/design/design-03.jpg" alt="平面設計 03">
+        <div class="card-body">
+          <span class="badge badge-design">設計</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 C</div>
+            <div class="card-sub">Banner｜主視覺｜多尺寸套版</div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- 短影音 -->
+  <section class="section" id="video">
+    <div class="section-head">
+      <h2 class="section-title">短影音</h2>
+      <p class="section-desc">腳本、拍攝剪輯、封面與成效回顧（可點擊查看 PDF）。</p>
+    </div>
+
+    <div class="grid">
+      <button class="card" data-pdf="pdf/video/video-01.pdf" type="button">
+        <img class="card-img" src="images/video/video-01.jpg" alt="短影音 01">
+        <div class="card-body">
+          <span class="badge badge-video">短影片</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 A</div>
+            <div class="card-sub">腳本｜節奏｜封面｜完播分析</div>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" data-pdf="pdf/video/video-02.pdf" type="button">
+        <img class="card-img" src="images/video/video-02.jpg" alt="短影音 02">
+        <div class="card-body">
+          <span class="badge badge-video">短影片</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 B</div>
+            <div class="card-sub">新品｜開箱｜Hook｜留言互動</div>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" data-pdf="pdf/video/video-03.pdf" type="button">
+        <img class="card-img" src="images/video/video-03.jpg" alt="短影音 03">
+        <div class="card-body">
+          <span class="badge badge-video">短影片</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 C</div>
+            <div class="card-sub">活動｜花絮｜情緒設計｜收斂剪輯</div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- UIUX -->
+  <section class="section" id="uiux">
+    <div class="section-head">
+      <h2 class="section-title">UI / UX</h2>
+      <p class="section-desc">流程、Wireframe、UI 規範與協作紀錄（可點擊查看 PDF）。</p>
+    </div>
+
+    <div class="grid">
+      <button class="card" data-pdf="pdf/uiux/uiux-01.pdf" type="button">
+        <img class="card-img" src="images/uiux/uiux-01.jpg" alt="UIUX 01">
+        <div class="card-body">
+          <span class="badge badge-uiux">UIUX</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 A</div>
+            <div class="card-sub">流程｜UI｜元件｜規格整理</div>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" data-pdf="pdf/uiux/uiux-02.pdf" type="button">
+        <img class="card-img" src="images/uiux/uiux-02.jpg" alt="UIUX 02">
+        <div class="card-body">
+          <span class="badge badge-uiux">UIUX</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 B</div>
+            <div class="card-sub">需求拆解｜版型｜狀態｜交付</div>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" data-pdf="pdf/uiux/uiux-03.pdf" type="button">
+        <img class="card-img" src="images/uiux/uiux-03.jpg" alt="UIUX 03">
+        <div class="card-body">
+          <span class="badge badge-uiux">UIUX</span>
+          <div class="card-text">
+            <div class="card-title">案例標題 C</div>
+            <div class="card-sub">RWD｜資訊架構｜互動規範</div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </section>
 
 </main>
 
 <!-- PDF Modal -->
-<div class="modal" id="modal">
+<div class="modal" id="modal" aria-hidden="true">
   <div class="overlay"></div>
-  <div class="modal-panel">
-    <button class="close">×</button>
-    <iframe class="pdf"></iframe>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button class="close" type="button" aria-label="關閉">×</button>
+    <iframe class="pdf" title="PDF Viewer"></iframe>
   </div>
 </div>
 
 <script>
-/* 上方選單 */
-const tabs = document.querySelectorAll('.tab');
-const pill = document.querySelector('.pill');
+  // Tabs + pill
+  const tabs = document.querySelectorAll('.tab');
+  const pill = document.querySelector('.pill');
 
-function movePill(el){
-  const m = el.parentElement.getBoundingClientRect();
-  const r = el.getBoundingClientRect();
-  pill.style.left = (r.left - m.left) + 'px';
-  pill.style.width = r.width + 'px';
-}
+  function movePill(el){
+    if (!pill) return;
+    const pillStyle = window.getComputedStyle(pill);
+    if (pillStyle.display === 'none') return;
 
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    movePill(tab);
-    document.querySelector(tab.dataset.target)
-      .scrollIntoView({behavior:'smooth'});
-  });
-});
-
-window.addEventListener('load',()=>movePill(document.querySelector('.tab.active')));
-window.addEventListener('resize',()=>movePill(document.querySelector('.tab.active')));
-
-/* PDF Modal */
-const modal = document.getElementById('modal');
-const frame = document.querySelector('.pdf');
-
-document.querySelectorAll('.card').forEach(card=>{
-  card.onclick=()=>{
-    frame.src = card.dataset.pdf + '#zoom=page-width';
-    modal.classList.add('open');
-    document.body.style.overflow='hidden';
+    const menu = el.parentElement.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    pill.style.left = (r.left - menu.left) + 'px';
+    pill.style.width = r.width + 'px';
   }
-});
 
-document.querySelector('.close').onclick =
-document.querySelector('.overlay').onclick = ()=>{
-  modal.classList.remove('open');
-  frame.src='';
-  document.body.style.overflow='';
-};
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      movePill(tab);
+
+      const target = document.querySelector(tab.dataset.target);
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  window.addEventListener('load',()=>movePill(document.querySelector('.tab.active')));
+  window.addEventListener('resize',()=>movePill(document.querySelector('.tab.active')));
+
+  // PDF Modal
+  const modal = document.getElementById('modal');
+  const frame = document.querySelector('.pdf');
+
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      frame.src = card.dataset.pdf + '#zoom=page-width';
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+
+  function closeModal(){
+    modal.classList.remove('open');
+    frame.src='';
+    document.body.style.overflow='';
+  }
+
+  document.querySelector('.close').addEventListener('click', closeModal);
+  document.querySelector('.overlay').addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
 </script>
 
 </body>
