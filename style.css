@@ -4,12 +4,12 @@ body {
 
 /* LOGO 區 */
 .logo-area {
-  margin-bottom: 40px;   /* ← 調這裡 */
+  margin-bottom: 5px;   /* ← 調這裡 */
 }
 
 /* 四個選單那一排 */
 .menu {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 /* 每個選單文字 */
@@ -32,3 +32,4 @@ body {
 .menu .tab.active {
   border-bottom: 2px solid black;
 }
+
