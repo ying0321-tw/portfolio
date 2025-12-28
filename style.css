@@ -1,4 +1,12 @@
-body { font-family: Arial, sans-serif; }
+body { 
+  font-family: Arial, sans-serif; 
+}
+
+/* LOGO 區 */
+.logo-area {
+  margin-bottom: 40px;   /* ← 調這裡 */
+}
+
 /* 四個選單那一排 */
 .menu {
   margin-top: 20px;
@@ -12,10 +20,10 @@ body { font-family: Arial, sans-serif; }
   cursor: pointer;
 
   padding-bottom: 4px;
-  border-bottom: 2px solid transparent; /* 平常沒有底線 */
+  border-bottom: 2px solid transparent;
 }
 
-/* 滑過去有底線（可留可不留） */
+/* 滑過去有底線 */
 .menu .tab:hover {
   border-bottom: 2px solid black;
 }
@@ -24,4 +32,3 @@ body { font-family: Arial, sans-serif; }
 .menu .tab.active {
   border-bottom: 2px solid black;
 }
-
