@@ -26,15 +26,17 @@
 
   <!-- 動態腦袋 -->
 <script>
-  function setActive(el) {
-    // 先把全部 tab 的 active 移除
-    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-    // 再把你點到的那個加 active
-    el.classList.add("active");
-  }
-</script>
+  const tabs = document.querySelectorAll('.menu .tab');
 
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
+
 
 
