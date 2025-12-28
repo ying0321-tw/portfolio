@@ -1,38 +1,66 @@
-body { 
-  font-family: Arial, sans-serif; 
+/* 基本設定 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
+/* 版心寬度 */
+.header,
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 20px;
+}
+
+/* Header 分隔線（對齊草稿） */
+.header {
+  border-bottom: 1px solid #000;
+}
+
+/* LOGO */
 .logo {
-  height: 36px;
+  height: 36px;              /* 顯示高度 */
+  display: block;
 }
 
+/* 選單 */
 .menu {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  justify-content: flex-start;
+  gap: 16px;                 /* 手機基準等距 */
   margin-top: 12px;
 }
 
+/* 單一選單項 */
 .menu .tab {
-  font-size: 16px;
-  color: black;
+  font-size: 16px;           /* 手機可讀大小 */
+  color: #000;
   cursor: pointer;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-bottom: 2px solid transparent;
 }
 
+/* hover / active */
 .menu .tab:hover,
 .menu .tab.active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000;
 }
 
+/* 桌機放大 */
 @media (min-width: 1024px) {
   .menu {
-    gap: 40px;
+    gap: 40px;               /* 桌機等距 */
     margin-top: 24px;
   }
 
   .menu .tab {
-    font-size: 18px;
+    font-size: 18px;         /* 桌機字級 */
+  }
+}
+
+/* 手機可換行（保險） */
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;
   }
 }
