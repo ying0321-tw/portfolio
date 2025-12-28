@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>我的個人網站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOGO：最上面一行 -->
+  <div class="logo-area">
+    <img src="images/logo.png" class="logo" alt="LOGO">
+  </div>
+
+  <!-- 空一行 -->
+  <div class="space"></div>
+
+  <!-- 四個文字按鍵 -->
+  <div class="menu">
+    <span onclick="showContent('marketing')">行銷專案</span>
+    <span onclick="showContent('graphic')">平面設計</span>
+    <span onclick="showContent('video')">短影音</span>
+    <span onclick="showContent('uiux')">UI / UX</span>
+  </div>
+
+  <!-- 內容顯示區 -->
+  <div id="content">
+    請點上面的選單
+  </div>
+
+  <!-- 動態腦袋 -->
+  <script>
+    function showContent(type) {
+      const content = document.getElementById("content");
+
+      if (type === "marketing") {
+        content.innerText = "這裡是行銷專案內容";
+      } 
+      else if (type === "graphic") {
+        content.innerText = "這裡是平面設計內容";
+      } 
+      else if (type === "video") {
+        content.innerText = "這裡是短影音內容";
+      } 
+      else if (type === "uiux") {
+        content.innerText = "這裡是 UI / UX 內容";
+      }
+    }
+  </script>
+
+</body>
+</html>
