@@ -5,11 +5,11 @@
   --text: #111;
   --muted: rgba(0,0,0,.58);
 
-  /* 你給的色票近似（可再微調） */
-  --c-marketing: #E3C7CD; /* 近似 #E2CACD */
-  --c-design:    #2E7FA8; /* 近似 #2E7CA8 */
-  --c-uiux:      #F2C35F; /* 近似 #F1C061 */
-  --c-video:     #D8743A; /* 近似 #DA7338 */
+  /* ✅ 依你圖的色票（同色系接近） */
+  --c-marketing: #E2CACD; /* 行銷 */
+  --c-design:    #2E7CA8; /* 設計 */
+  --c-uiux:      #F1C061; /* UIUX */
+  --c-video:     #DA7338; /* 短影音 */
 
   --menu-gray: #f2f2f2;
 }
@@ -23,30 +23,32 @@ body{
   background:#fff;
 }
 
-/* ===== Header ===== */
+/* ===== Header（內容置中） ===== */
 .header{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 22px var(--pad) 18px;
   border-bottom: 1px solid var(--line);
 }
 
+.header-inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 22px var(--pad) 10px;
+}
+
 .logo{
-  height: 30px;
+  height: 44px;         /* ✅ LOGO 放大 */
   display:block;
 }
 
-/* intro：日本感（字級克制、密度舒服） */
 .intro{
   margin-top: 10px;
   display:grid;
-  gap: 6px;
+  gap: 8px;
 }
 
 .name{
   margin:0;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   letter-spacing: .6px;
 }
 
@@ -58,58 +60,48 @@ body{
   max-width: 56ch;
 }
 
-.meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px 14px;
-  align-items:center;
-}
-
-.meta-item{
+.email-text{
   font-size: 12px;
-  color: rgba(0,0,0,.55);
-  letter-spacing: .3px;
+  color: rgba(0,0,0,.62);
+  letter-spacing: .2px;
 }
 
-.mail{
-  font-size: 12px;
-  color: rgba(0,0,0,.72);
-  text-decoration:none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
-.mail:hover{
-  border-bottom: 1px solid rgba(0,0,0,.35);
+/* ===== ✅ 滿版灰底（讓灰色區域鋪滿，不留右側空白） ===== */
+.menu-wrap{
+  width: 100%;
+  background: transparent;
+  padding: 10px 0 18px;
 }
 
-/* ===== Menu：膠囊 + 平均分散 ===== */
 .menu{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 10px 12px;
+  border-radius: 9999px;
+  background: var(--menu-gray);
+
   position:relative;
   display:flex;
   align-items:center;
-
-  /* 平均分散，不集中左邊 */
-  justify-content: space-between;
   gap: 10px;
-
-  margin-top: 14px;
-  padding: 10px 12px;
-  background: var(--menu-gray);
-  border-radius: 9999px;
 }
 
+/* ✅ 4個按鈕平分整條灰色區域 */
 .menu .tab{
+  flex: 1;
+  text-align:center;
+  appearance:none;
+  border: 0;
+  background: transparent;
+
   position:relative;
   z-index:1;
 
-  flex: 1;
-  text-align:center;
-
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
 
-  padding: 10px 10px;
+  padding: 12px 8px;
   border-radius: 9999px;
 
   cursor:pointer;
@@ -121,7 +113,7 @@ body{
 
 .menu .tab:hover{ opacity: .78; }
 
-/* 滑動底（桌機/平板） */
+/* ✅ 滑動底（active 動畫） */
 .menu .pill{
   position:absolute;
   top:50%;
@@ -143,32 +135,19 @@ body{
 .container{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 28px var(--pad);
+  padding: 26px var(--pad);
 }
 
 .section{
-  padding-top: 28px;   /* scrollIntoView 預留 */
+  padding-top: 28px;
   margin-top: 28px;
 }
 
-.section-head{
-  margin-bottom: 16px;
-  display:grid;
-  gap: 6px;
-}
-
 .section-title{
-  margin:0;
+  margin:0 0 16px 0;
   font-size: 18px;
-  font-weight: 750;
+  font-weight: 800;
   letter-spacing: .4px;
-}
-
-.section-desc{
-  margin:0;
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.7;
 }
 
 /* ===== Grid：桌機 3 / 手機 1 ===== */
@@ -178,12 +157,10 @@ body{
   gap: 22px;
 }
 
-/* 平板可選：兩欄（如果你要平板也是一欄，把這段刪掉） */
 @media (max-width: 900px){
   .grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
-/* 手機：一欄 */
 @media (max-width: 640px){
   .grid{ grid-template-columns: 1fr; gap: 16px; }
 }
@@ -206,6 +183,12 @@ body{
   transition: filter 180ms ease, transform 180ms ease;
 }
 
+/* ✅ 沒放圖片時，不要出破圖 icon */
+.card-img.img-fallback{
+  background: rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
 .card:hover .card-img{
   filter: grayscale(100%) contrast(0.95);
   transform: translateY(-2px);
@@ -215,12 +198,7 @@ body{
   margin-top: 10px;
   display:flex;
   align-items:center;
-  gap: 12px;
-}
-
-.card-text{
-  display:grid;
-  gap: 3px;
+  gap: 10px;
 }
 
 .card-title{
@@ -229,13 +207,7 @@ body{
   letter-spacing: .2px;
 }
 
-.card-sub{
-  font-size: 12px;
-  color: rgba(0,0,0,.55);
-  line-height: 1.6;
-}
-
-/* ===== ICON Badge：彩色底 + 白字粗體 ===== */
+/* ===== ✅ ICON Badge：色底 + 白字粗體 ===== */
 .badge{
   display:inline-flex;
   align-items:center;
@@ -246,10 +218,10 @@ body{
 
   border-radius: 9999px;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 900;
 
-  color: #fff;              /* 白字 */
-  border: 1px solid rgba(0,0,0,.08);
+  color: #fff;
+  border: 1px solid rgba(0,0,0,.06);
 }
 
 .badge-marketing{ background: var(--c-marketing); }
@@ -312,21 +284,23 @@ body{
   margin-top: 52px;
 }
 
-/* ===== 手機：避免 pill 變圓 + 排版更緊 ===== */
+/* ===== 手機 ===== */
 @media (max-width: 768px){
-  .header{ padding: 18px 16px 14px; }
+  .header-inner{ padding: 18px 16px 8px; }
   .container{ padding: 22px 16px; }
 
-  .menu{
-    gap: 8px;
-    padding: 10px 10px;
-  }
+  .logo{ height: 40px; }
 
+  /* 手機不使用 pill，改成 active 塊 */
   .menu .pill{ display:none; }
+
+  .menu{
+    margin: 0 16px;
+  }
 
   .menu .tab{
     font-size: 13px;
-    padding: 10px 8px;
+    padding: 11px 8px;
   }
 
   .menu .tab.active{
