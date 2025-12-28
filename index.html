@@ -2,41 +2,33 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <title>我的個人網站</title>
+  <title>Ying Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- LOGO：最上面一行 -->
   <div class="logo-area">
     <img src="images/logo.png" class="logo" alt="LOGO">
   </div>
 
-  <!-- 空一行 -->
-  <div class="space"></div>
+  <div class="menu">
+    <span class="tab active">行銷專案</span>
+    <span class="tab">平面設計</span>
+    <span class="tab">短影音</span>
+    <span class="tab">UI / UX</span>
+  </div>
 
-<!-- 四個文字按鍵 -->
-<div class="menu">
-  <span class="tab" onclick="setActive(this)">行銷專案</span>
-  <span class="tab" onclick="setActive(this)">平面設計</span>
-  <span class="tab" onclick="setActive(this)">短影音</span>
-  <span class="tab" onclick="setActive(this)">UI / UX</span>
-</div>
+  <script>
+    const tabs = document.querySelectorAll('.menu .tab');
 
-  <!-- 動態腦袋 -->
-<script>
-  const tabs = document.querySelectorAll('.menu .tab');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
     });
-  });
-</script>
+  </script>
+
 </body>
 </html>
-
-
-
