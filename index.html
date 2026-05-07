@@ -1,244 +1,267 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ying Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuki Chou Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="site-header">
+    <a href="#" class="logo">YUKI CHOU <span>•</span></a>
 
-<header class="header">
-  <div class="header-inner">
-    <img src="images/logo.png" class="logo" alt="Ying portfolio">
-
-    <div class="intro">
-      <h1 class="name">鄒佳穎｜作品集</h1>
-      <p class="tagline">好奇心強的牡羊座，一起把生活靈感玩出新花樣吧！</p>
-
-      <!-- ✅ Email 純文字，不連結 -->
-      <div class="email-text">yin9423@gmail.com</div>
-    </div>
-  </div>
-
-  <!-- ✅ 滿版灰底 + 內部置中 -->
-  <div class="menu-wrap">
-    <nav class="menu" aria-label="分類選單">
-      <span class="pill" aria-hidden="true"></span>
-
-      <button class="tab active" type="button" data-target="#marketing">行銷專案</button>
-      <button class="tab" type="button" data-target="#design">平面設計</button>
-      <button class="tab" type="button" data-target="#video">短影音</button>
-      <button class="tab" type="button" data-target="#uiux">UI / UX</button>
+    <nav class="nav">
+      <a href="#about">ABOUT</a>
+      <a href="#works">WORKS</a>
+      <a href="#contact">CONTACT</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main class="container">
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
+          把設計、內容、品牌與人，<br />
+          整理成能被理解的視覺經驗。
+        </h1>
 
-  <!-- 行銷 -->
-  <section class="section" id="marketing">
-    <h2 class="section-title">行銷專案</h2>
+        <p class="hero-tags">
+          平面設計 × UIUX × 行銷企劃<br />
+          短影片製作 × 攝影
+        </p>
 
-    <div class="grid">
-      <button class="card" data-pdf="pdf/marketing/marketing-01.pdf" type="button">
-        <img class="card-img" src="images/marketing/marketing-01.jpg" alt="行銷專案 01"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-marketing">行銷</span>
-          <div class="card-title">專案標題 A</div>
+        <div class="scroll-hint">
+          <span></span>
+          SCROLL
         </div>
-      </button>
+      </div>
 
-      <button class="card" data-pdf="pdf/marketing/marketing-02.pdf" type="button">
-        <img class="card-img" src="images/marketing/marketing-02.jpg" alt="行銷專案 02"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-marketing">行銷</span>
-          <div class="card-title">專案標題 B</div>
-        </div>
-      </button>
+      <div class="connection-visual">
+        <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 260 C180 120, 230 80, 300 60 C390 20, 420 160, 520 155 C630 150, 660 80, 750 0" />
+          <path d="M40 260 C190 240, 290 300, 390 280 C500 260, 540 180, 650 150" />
+          <path d="M40 260 C210 400, 400 360, 520 300 C630 240, 650 210, 760 200" />
+          <path d="M300 60 C250 170, 300 200, 390 280" />
+          <path d="M650 150 C560 240, 560 310, 620 345" />
 
-      <button class="card" data-pdf="pdf/marketing/marketing-03.pdf" type="button">
-        <img class="card-img" src="images/marketing/marketing-03.jpg" alt="行銷專案 03"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-marketing">行銷</span>
-          <div class="card-title">專案標題 C</div>
+          <circle cx="40" cy="260" r="5" />
+          <circle cx="300" cy="60" r="5" />
+          <circle cx="390" cy="280" r="5" />
+          <circle cx="520" cy="300" r="5" />
+          <circle cx="650" cy="150" r="5" />
+          <circle cx="620" cy="345" r="5" />
+
+          <text x="282" y="36">DESIGN</text>
+          <text x="15" y="292">BRANDING</text>
+          <text x="368" y="306">PEOPLE</text>
+          <text x="505" y="332">PHOTO</text>
+          <text x="630" y="132">CONTENT</text>
+          <text x="600" y="382">VIDEO</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- MOVING GALLERY -->
+    <section class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <img src="images/work-01.jpg" alt="小島日和品牌視覺" />
         </div>
-      </button>
+        <div class="marquee-item">
+          <img src="images/work-02.jpg" alt="JoiiPet App" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-03.jpg" alt="台灣咖啡節" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-04.jpg" alt="品牌形象影片" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-05.jpg" alt="旅行攝影" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-06.jpg" alt="編輯設計" />
+        </div>
+
+        <!-- duplicate for loop -->
+        <div class="marquee-item">
+          <img src="images/work-01.jpg" alt="小島日和品牌視覺" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-02.jpg" alt="JoiiPet App" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-03.jpg" alt="台灣咖啡節" />
+        </div>
+        <div class="marquee-item">
+          <img src="images/work-04.jpg" alt="品牌形象影片" />
+        </div>
+      </div>
+
+      <div class="marquee-label">
+        GRAPHIC / UIUX / MARKETING / VIDEO / PHOTOGRAPHY
+        <span>•</span>
+        GRAPHIC / UIUX / MARKETING / VIDEO / PHOTOGRAPHY
+        <span>•</span>
+        GRAPHIC / UIUX / MARKETING / VIDEO / PHOTOGRAPHY
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="section-title">
+        <h2>About <span>•</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="images/profile.jpg" alt="Yuki Chou" />
+        </div>
+
+        <div class="about-copy">
+          <h3>
+            我關注的不是單一畫面，<br />
+            而是從策略、內容到視覺落地的完整連接。
+          </h3>
+
+          <p>
+            擅長從品牌目標出發，整合設計與內容思維，將資訊轉化為有結構、有溫度且能行動的視覺成果。
+            平面設計、UIUX 協作、行銷企劃、短影音製作與攝影，是我創作與執行的日常，也是串連所有專案的語言。
+          </p>
+        </div>
+
+        <div class="skill-list">
+          <div class="skill-item">
+            <span class="skill-icon">✍︎</span>
+            <div>
+              <h4>平面設計</h4>
+              <p>品牌視覺・印刷品・插畫</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-icon">▣</span>
+            <div>
+              <h4>UIUX 設計</h4>
+              <p>介面設計・使用者流程・原型</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-icon">↗</span>
+            <div>
+              <h4>行銷企劃</h4>
+              <p>策略發想・內容企劃・活動執行</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-icon">▶</span>
+            <div>
+              <h4>短影片製作</h4>
+              <p>腳本企劃・拍攝剪輯・影像敘事</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-icon">□</span>
+            <div>
+              <h4>攝影</h4>
+              <p>商業攝影・平面攝影・活動記錄</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" class="works">
+      <div class="works-header">
+        <h2>Works <span>•</span></h2>
+
+        <div class="filter-nav">
+          <button class="active">ALL</button>
+          <button>平面設計</button>
+          <button>UIUX</button>
+          <button>行銷專案</button>
+          <button>短影片</button>
+          <button>攝影</button>
+        </div>
+
+        <a href="#" class="view-all">VIEW ALL WORKS →</a>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <img src="images/work-01.jpg" alt="小島日和品牌視覺設計" />
+          <p class="category">平面設計</p>
+          <h3>小島日和｜品牌視覺設計</h3>
+          <p class="desc">從品牌命名、標語到包裝，建立專屬小島日常的視覺語言。</p>
+        </article>
+
+        <article class="work-card">
+          <img src="images/work-02.jpg" alt="JoiiPet App 介面設計" />
+          <p class="category">UIUX</p>
+          <h3>JoiiPet｜APP 介面設計</h3>
+          <p class="desc">打造重視近操作的寵物照護 App，提升使用體驗與品牌信任感。</p>
+        </article>
+
+        <article class="work-card">
+          <img src="images/work-03.jpg" alt="台灣咖啡節整合行銷專案" />
+          <p class="category">行銷專案</p>
+          <h3>台灣咖啡節｜整合行銷專案</h3>
+          <p class="desc">從活動企劃、視覺主視覺到社群推廣，整合線上線下資源。</p>
+        </article>
+
+        <article class="work-card">
+          <img src="images/work-04.jpg" alt="Brand Film 品牌形象影片" />
+          <p class="category">短影片</p>
+          <h3>Brand Film｜品牌形象影片</h3>
+          <p class="desc">企劃腳本、拍攝到剪輯節奏，呈現品牌故事與核心價值。</p>
+        </article>
+
+        <article class="work-card">
+          <img src="images/work-05.jpg" alt="Travel Photography 旅行攝影" />
+          <p class="category">攝影</p>
+          <h3>Travel Photography｜旅行攝影</h3>
+          <p class="desc">用影像記錄旅途中值得收藏的風景與情緒。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer id="contact" class="contact">
+      <div class="contact-title">
+        <h2>
+          Let’s<br />
+          connect <span>•</span>
+        </h2>
+      </div>
+
+      <div class="contact-copy">
+        <p>
+          如果你有合作或專案想法，<br />
+          歡迎與我聯繫。
+        </p>
+      </div>
+
+      <div class="contact-info">
+        <p><span>Email</span> hello@yukichou.com</p>
+        <p><span>Instagram</span> @yuki.creates</p>
+        <p><span>Behance</span> behance.net/yukichou</p>
+      </div>
+
+      <div class="contact-image">
+        <img src="images/contact.jpg" alt="contact visual" />
+      </div>
+    </footer>
+
+    <div class="bottom-bar">
+      <p>© 2024 Yuki Chou. All Rights Reserved.</p>
+      <a href="#">TOP →</a>
     </div>
-  </section>
-
-  <!-- 平面 -->
-  <section class="section" id="design">
-    <h2 class="section-title">平面設計</h2>
-
-    <div class="grid">
-      <button class="card" data-pdf="pdf/design/design-01.pdf" type="button">
-        <img class="card-img" src="images/design/design-01.jpg" alt="平面設計 01"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-design">設計</span>
-          <div class="card-title">專案標題 A</div>
-        </div>
-      </button>
-
-      <button class="card" data-pdf="pdf/design/design-02.pdf" type="button">
-        <img class="card-img" src="images/design/design-02.jpg" alt="平面設計 02"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-design">設計</span>
-          <div class="card-title">專案標題 B</div>
-        </div>
-      </button>
-
-      <button class="card" data-pdf="pdf/design/design-03.pdf" type="button">
-        <img class="card-img" src="images/design/design-03.jpg" alt="平面設計 03"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-design">設計</span>
-          <div class="card-title">專案標題 C</div>
-        </div>
-      </button>
-    </div>
-  </section>
-
-  <!-- 短影音 -->
-  <section class="section" id="video">
-    <h2 class="section-title">短影音</h2>
-
-    <div class="grid">
-      <button class="card" data-pdf="pdf/video/video-01.pdf" type="button">
-        <img class="card-img" src="images/video/video-01.jpg" alt="短影音 01"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-video">短影片</span>
-          <div class="card-title">專案標題 A</div>
-        </div>
-      </button>
-
-      <button class="card" data-pdf="pdf/video/video-02.pdf" type="button">
-        <img class="card-img" src="images/video/video-02.jpg" alt="短影音 02"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-video">短影片</span>
-          <div class="card-title">專案標題 B</div>
-        </div>
-      </button>
-
-      <button class="card" data-pdf="pdf/video/video-03.pdf" type="button">
-        <img class="card-img" src="images/video/video-03.jpg" alt="短影音 03"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-video">短影片</span>
-          <div class="card-title">專案標題 C</div>
-        </div>
-      </button>
-    </div>
-  </section>
-
-  <!-- UIUX -->
-  <section class="section" id="uiux">
-    <h2 class="section-title">UI / UX</h2>
-
-    <div class="grid">
-      <button class="card" data-pdf="pdf/uiux/uiux-01.pdf" type="button">
-        <img class="card-img" src="images/uiux/uiux-01.jpg" alt="UIUX 01"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-uiux">UIUX</span>
-          <div class="card-title">專案標題 A</div>
-        </div>
-      </button>
-
-      <button class="card" data-pdf="pdf/uiux/uiux-02.pdf" type="button">
-        <img class="card-img" src="images/uiux/uiux-02.jpg" alt="UIUX 02"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-uiux">UIUX</span>
-          <div class="card-title">專案標題 B</div>
-        </div>
-      </button>
-
-      <button class="card" data-pdf="pdf/uiux/uiux-03.pdf" type="button">
-        <img class="card-img" src="images/uiux/uiux-03.jpg" alt="UIUX 03"
-             onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
-        <div class="card-body">
-          <span class="badge badge-uiux">UIUX</span>
-          <div class="card-title">專案標題 C</div>
-        </div>
-      </button>
-    </div>
-  </section>
-
-</main>
-
-<!-- PDF Modal -->
-<div class="modal" id="modal" aria-hidden="true">
-  <div class="overlay"></div>
-  <div class="modal-panel" role="dialog" aria-modal="true">
-    <button class="close" type="button" aria-label="關閉">×</button>
-    <iframe class="pdf" title="PDF Viewer"></iframe>
-  </div>
-</div>
-
-<script>
-  // Tabs + pill + smooth scroll
-  const tabs = document.querySelectorAll('.tab');
-  const pill = document.querySelector('.pill');
-
-  function movePill(el){
-    if (!pill) return;
-    const style = window.getComputedStyle(pill);
-    if (style.display === 'none') return;
-
-    const menu = el.parentElement.getBoundingClientRect();
-    const r = el.getBoundingClientRect();
-    pill.style.left = (r.left - menu.left) + 'px';
-    pill.style.width = r.width + 'px';
-  }
-
-  tabs.forEach(tab=>{
-    tab.addEventListener('click',()=>{
-      tabs.forEach(t=>t.classList.remove('active'));
-      tab.classList.add('active');
-      movePill(tab);
-
-      const target = document.querySelector(tab.dataset.target);
-      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  });
-
-  window.addEventListener('load',()=>movePill(document.querySelector('.tab.active')));
-  window.addEventListener('resize',()=>movePill(document.querySelector('.tab.active')));
-
-  // PDF Modal
-  const modal = document.getElementById('modal');
-  const frame = document.querySelector('.pdf');
-
-  document.querySelectorAll('.card').forEach(card=>{
-    card.addEventListener('click',()=>{
-      frame.src = card.dataset.pdf + '#zoom=page-width';
-      modal.classList.add('open');
-      document.body.style.overflow='hidden';
-    });
-  });
-
-  function closeModal(){
-    modal.classList.remove('open');
-    frame.src='';
-    document.body.style.overflow='';
-  }
-
-  document.querySelector('.close').addEventListener('click', closeModal);
-  document.querySelector('.overlay').addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', (e)=>{
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-  });
-</script>
-
+  </main>
 </body>
 </html>
