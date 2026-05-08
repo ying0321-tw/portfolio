@@ -10,29 +10,21 @@
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="site-header">
-
-    <a href="#" class="logo">
-      YUKI CHOU <span>•</span>
-    </a>
+    <a href="#" class="logo">YUKI CHOU <span>•</span></a>
 
     <nav class="nav">
       <a href="#about">ABOUT</a>
       <a href="#works">WORKS</a>
       <a href="#contact">CONTACT</a>
     </nav>
-
   </header>
 
   <main>
-
     <!-- HERO -->
     <section class="hero">
-
       <div class="hero-left reveal-text">
-
         <h1>
           把設計、內容、品牌與人，<br />
           整理成能被理解的視覺經驗。
@@ -47,13 +39,10 @@
           <span></span>
           <p>SCROLL</p>
         </div>
-
       </div>
 
       <div class="hero-right">
-
         <svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg">
-
           <path d="M40 240 C180 120, 250 20, 360 70 C430 100, 460 190, 570 160 C660 130, 710 70, 820 0" />
           <path d="M40 240 C190 250, 280 280, 390 230 C510 180, 580 120, 700 120" />
           <path d="M40 240 C190 360, 330 360, 460 300 C610 230, 700 180, 820 180" />
@@ -69,65 +58,116 @@
 
           <text x="338" y="40">DESIGN / 設計</text>
           <text x="10" y="275">BRANDING / 品牌</text>
-          <text x="430" y="245">PEOPLE / 民眾</text>
+          <text x="430" y="245">PEOPLE / 人</text>
           <text x="500" y="330">PHOTO / 攝影</text>
-          <text x="680" y="100">CONTENT / 訊息</text>
+          <text x="680" y="100">CONTENT / 內容</text>
           <text x="665" y="385">VIDEO / 影像</text>
-
         </svg>
-
       </div>
-
     </section>
 
-    <!-- MARQUEE -->
-    <section class="marquee-section">
+    <!-- FEATURED SLIDER -->
+    <section class="featured-slider">
+      <div class="slider-track">
+        <article class="slider-card" data-modal="marketing">
+          <img src="images/work-03.jpg" alt="台灣咖啡節整合行銷專案" />
+          <div class="slider-info">
+            <h3>台灣咖啡節｜整合行銷專案</h3>
+            <p>行銷專案</p>
+          </div>
+        </article>
 
-      <div class="marquee-track">
+        <article class="slider-card" data-modal="graphic">
+          <img src="images/work-01.jpg" alt="小島日和品牌視覺設計" />
+          <div class="slider-info">
+            <h3>小島日和｜品牌視覺設計</h3>
+            <p>平面設計</p>
+          </div>
+        </article>
 
-        <div class="marquee-item">
-          <img src="images/work-03.jpg" alt="">
-        </div>
+        <article class="slider-card" data-modal="video">
+          <img src="images/work-04.jpg" alt="Brand Film 品牌形象影片" />
+          <div class="slider-info">
+            <h3>Brand Film｜品牌形象影片</h3>
+            <p>短影片</p>
+          </div>
+        </article>
 
-        <div class="marquee-item">
-          <img src="images/work-01.jpg" alt="">
-        </div>
+        <article class="slider-card" data-modal="photo">
+          <img src="images/work-05.jpg" alt="Travel Photography 旅行攝影" />
+          <div class="slider-info">
+            <h3>Travel Photography｜旅行攝影</h3>
+            <p>攝影</p>
+          </div>
+        </article>
 
-        <div class="marquee-item">
-          <img src="images/work-04.jpg" alt="">
-        </div>
+        <article class="slider-card" data-modal="uiux">
+          <img src="images/work-02.jpg" alt="JoiiPet APP 介面設計" />
+          <div class="slider-info">
+            <h3>JoiiPet｜APP 介面設計</h3>
+            <p>UIUX</p>
+          </div>
+        </article>
 
-        <div class="marquee-item">
-          <img src="images/work-05.jpg" alt="">
-        </div>
+        <!-- duplicate for infinite loop -->
+        <article class="slider-card" data-modal="marketing">
+          <img src="images/work-03.jpg" alt="台灣咖啡節整合行銷專案" />
+          <div class="slider-info">
+            <h3>台灣咖啡節｜整合行銷專案</h3>
+            <p>行銷專案</p>
+          </div>
+        </article>
 
-        <div class="marquee-item">
-          <img src="images/work-02.jpg" alt="">
-        </div>
+        <article class="slider-card" data-modal="graphic">
+          <img src="images/work-01.jpg" alt="小島日和品牌視覺設計" />
+          <div class="slider-info">
+            <h3>小島日和｜品牌視覺設計</h3>
+            <p>平面設計</p>
+          </div>
+        </article>
 
+        <article class="slider-card" data-modal="video">
+          <img src="images/work-04.jpg" alt="Brand Film 品牌形象影片" />
+          <div class="slider-info">
+            <h3>Brand Film｜品牌形象影片</h3>
+            <p>短影片</p>
+          </div>
+        </article>
+
+        <article class="slider-card" data-modal="photo">
+          <img src="images/work-05.jpg" alt="Travel Photography 旅行攝影" />
+          <div class="slider-info">
+            <h3>Travel Photography｜旅行攝影</h3>
+            <p>攝影</p>
+          </div>
+        </article>
+
+        <article class="slider-card" data-modal="uiux">
+          <img src="images/work-02.jpg" alt="JoiiPet APP 介面設計" />
+          <div class="slider-info">
+            <h3>JoiiPet｜APP 介面設計</h3>
+            <p>UIUX</p>
+          </div>
+        </article>
       </div>
 
-      <div class="marquee-label">
+      <div class="slider-label">
         MARKETING ／ GRAPHIC ／ VIDEO ／ PHOTOGRAPHY ／ UIUX
       </div>
-
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="about">
-
       <div class="section-title">
         <h2>About <span>•</span></h2>
       </div>
 
       <div class="about-grid">
-
         <div class="about-photo">
-          <img src="images/profile.jpg" alt="">
+          <img src="images/profile.jpg" alt="Yuki Chou 個人照片" />
         </div>
 
         <div class="about-copy">
-
           <h3>
             我關注的不是單一畫面，<br />
             而是從策略、內容到視覺落地的完整連接。
@@ -139,186 +179,101 @@
             平面設計、UIUX 協作、行銷企劃、短影音製作與攝影，
             是我創作與執行的日常，也是串連所有專案的語言。
           </p>
-
         </div>
-
       </div>
-
     </section>
 
     <!-- WORKS -->
     <section id="works" class="works">
-
       <div class="works-header">
-
-        <h2>
-          Works <span>•</span>
-        </h2>
+        <h2>Works <span>•</span></h2>
 
         <div class="filter-nav">
-
-          <button class="active" data-filter="all">
-            ALL
-          </button>
-
-          <button data-filter="marketing">
-            行銷專案
-          </button>
-
-          <button data-filter="graphic">
-            平面設計
-          </button>
-
-          <button data-filter="video">
-            短影片
-          </button>
-
-          <button data-filter="photo">
-            攝影
-          </button>
-
-          <button data-filter="uiux">
-            UIUX
-          </button>
-
+          <button class="active" type="button" data-filter="all">ALL</button>
+          <button type="button" data-filter="marketing">行銷專案</button>
+          <button type="button" data-filter="graphic">平面設計</button>
+          <button type="button" data-filter="video">短影片</button>
+          <button type="button" data-filter="photo">攝影</button>
+          <button type="button" data-filter="uiux">UIUX</button>
         </div>
-
       </div>
 
       <div class="work-grid">
-
-        <!-- 行銷專案 -->
-        <article class="work-card" data-category="marketing">
-
-          <img src="images/work-03.jpg" alt="">
-
-          <p class="category">
-            行銷專案
-          </p>
-
-          <h3>
-            台灣咖啡節｜整合行銷專案
-          </h3>
-
-          <p class="desc">
-            從活動企劃、視覺主視覺到社群推廣，
-            整合線上線下資源，提升活動聲量。
-          </p>
-
+        <article class="work-card" data-category="marketing" data-modal="marketing">
+          <img src="images/work-03.jpg" alt="台灣咖啡節整合行銷專案" />
+          <div class="work-line"></div>
+          <p class="category">行銷專案</p>
+          <h3>台灣咖啡節｜整合行銷專案</h3>
+          <p class="desc">從活動企劃、視覺主視覺到社群推廣，整合線上線下資源。</p>
         </article>
 
-        <!-- 平面設計 -->
-        <article class="work-card" data-category="graphic">
-
-          <img src="images/work-01.jpg" alt="">
-
-          <p class="category">
-            平面設計
-          </p>
-
-          <h3>
-            小島日和｜品牌視覺設計
-          </h3>
-
-          <p class="desc">
-            從品牌命名、標語到包裝，
-            建立專屬於小島日常的視覺語言。
-          </p>
-
+        <article class="work-card" data-category="graphic" data-modal="graphic">
+          <img src="images/work-01.jpg" alt="小島日和品牌視覺設計" />
+          <div class="work-line"></div>
+          <p class="category">平面設計</p>
+          <h3>小島日和｜品牌視覺設計</h3>
+          <p class="desc">從品牌命名、標語到包裝，建立專屬於小島日常的視覺語言。</p>
         </article>
 
-        <!-- 短影片 -->
-        <article class="work-card" data-category="video">
-
-          <img src="images/work-04.jpg" alt="">
-
-          <p class="category">
-            短影片
-          </p>
-
-          <h3>
-            Brand Film｜品牌形象影片
-          </h3>
-
-          <p class="desc">
-            企劃腳本、拍攝到剪輯節奏，
-            呈現品牌故事與核心價值。
-          </p>
-
+        <article class="work-card" data-category="video" data-modal="video">
+          <img src="images/work-04.jpg" alt="Brand Film 品牌形象影片" />
+          <div class="work-line"></div>
+          <p class="category">短影片</p>
+          <h3>Brand Film｜品牌形象影片</h3>
+          <p class="desc">企劃腳本、拍攝到剪輯節奏，呈現品牌故事與核心價值。</p>
         </article>
 
-        <!-- 攝影 -->
-        <article class="work-card" data-category="photo">
-
-          <img src="images/work-05.jpg" alt="">
-
-          <p class="category">
-            攝影
-          </p>
-
-          <h3>
-            Travel Photography｜旅行攝影
-          </h3>
-
-          <p class="desc">
-            用影像記錄旅途中值得收藏的
-            風景與情緒。
-          </p>
-
+        <article class="work-card" data-category="photo" data-modal="photo">
+          <img src="images/work-05.jpg" alt="Travel Photography 旅行攝影" />
+          <div class="work-line"></div>
+          <p class="category">攝影</p>
+          <h3>Travel Photography｜旅行攝影</h3>
+          <p class="desc">用影像記錄旅途中值得收藏的風景與情緒。</p>
         </article>
 
-        <!-- UIUX -->
-        <article class="work-card" data-category="uiux">
-
-          <img src="images/work-02.jpg" alt="">
-
-          <p class="category">
-            UIUX
-          </p>
-
-          <h3>
-            JoiiPet｜APP 介面設計
-          </h3>
-
-          <p class="desc">
-            打造重視近操作的寵物照護 App，
-            提升使用體驗與品牌信任感。
-          </p>
-
+        <article class="work-card" data-category="uiux" data-modal="uiux">
+          <img src="images/work-02.jpg" alt="JoiiPet APP 介面設計" />
+          <div class="work-line"></div>
+          <p class="category">UIUX</p>
+          <h3>JoiiPet｜APP 介面設計</h3>
+          <p class="desc">打造重視近操作的寵物照護 App，提升使用體驗與品牌信任感。</p>
         </article>
-
       </div>
-
     </section>
-
   </main>
 
   <!-- CONTACT -->
   <footer id="contact" class="contact">
-
     <div class="contact-title">
-
-      <h2>
-        Let’s connect <span>•</span>
-      </h2>
-
+      <h2>Let’s connect <span>•</span></h2>
     </div>
 
     <div class="contact-info">
-
-      <p>
-        hello@yukichou.com
-      </p>
-
-      <p>
-        @yuki.creates
-      </p>
-
+      <p>hello@yukichou.com</p>
+      <p>@yuki.creates</p>
     </div>
-
   </footer>
 
-  <script src="script.js"></script>
+  <!-- MODAL -->
+  <div class="modal" id="workModal">
+    <div class="modal-bg"></div>
 
+    <div class="modal-content">
+      <button class="modal-close" type="button">×</button>
+
+      <div class="modal-image">
+        <img id="modalImage" src="" alt="" />
+      </div>
+
+      <div class="modal-text">
+        <p id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
