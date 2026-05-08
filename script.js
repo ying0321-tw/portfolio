@@ -1,0 +1,15 @@
+const revealTargets = document.querySelectorAll(
+  '.section-title, .about-photo, .about-copy, .skill-item, .works-header, .work-card, .contact-title, .contact-copy, .contact-info, .contact-image'
+);
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+}, {
+  threshold: 0.18
+});
+
+revealTargets.forEach(target => observer.observe(target));
