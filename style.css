@@ -116,8 +116,9 @@ a{
 }
 
 .hero-right text{
-  font-size:12px;
+  font-size:11px;
   fill:#555;
+  letter-spacing:.04em;
 }
 
 @keyframes flow{
