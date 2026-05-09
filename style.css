@@ -85,9 +85,10 @@ button{
 
 .hero-left h1{
   font-size:64px;
-  line-height:1.4;
-  font-weight:500;
-  letter-spacing:-.04em;
+  line-height:1.22;
+  letter-spacing:-0.05em;
+  font-weight:600;
+  max-width:760px;
 }
 
 .hero-tags{
