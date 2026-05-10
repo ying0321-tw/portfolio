@@ -346,6 +346,71 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['短影片', '腳本企劃', '剪輯']
     },
 
+    video: {
+      category: '短影片',
+      title: '【扭蛋開箱】SR+二十世紀影業 異形',
+      type: 'mp4',
+      media: 'videos/brand-film.mp4',
+      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
+      contents: [
+        '短影音腳本企劃',
+        '拍攝分鏡安排',
+        '剪輯節奏設計',
+        '社群觀看情境整理'
+      ],
+      info: {
+        年份: '2026',
+        類型: 'Short Video',
+        角色: '腳本 / 拍攝 / 剪輯',
+        工具: 'CapCut'
+      },
+      tags: ['短影片', '腳本企劃', '剪輯']
+    },
+
+
+    video: {
+      category: '短影片',
+      title: '【扭蛋開箱】SR+二十世紀影業 異形',
+      type: 'mp4',
+      media: 'videos/brand-film.mp4',
+      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
+      contents: [
+        '短影音腳本企劃',
+        '拍攝分鏡安排',
+        '剪輯節奏設計',
+        '社群觀看情境整理'
+      ],
+      info: {
+        年份: '2026',
+        類型: 'Short Video',
+        角色: '腳本 / 拍攝 / 剪輯',
+        工具: 'CapCut'
+      },
+      tags: ['短影片', '腳本企劃', '剪輯']
+    },
+
+
+    video: {
+      category: '短影片',
+      title: '【扭蛋開箱】SR+二十世紀影業 異形',
+      type: 'mp4',
+      media: 'videos/brand-film.mp4',
+      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
+      contents: [
+        '短影音腳本企劃',
+        '拍攝分鏡安排',
+        '剪輯節奏設計',
+        '社群觀看情境整理'
+      ],
+      info: {
+        年份: '2026',
+        類型: 'Short Video',
+        角色: '腳本 / 拍攝 / 剪輯',
+        工具: 'CapCut'
+      },
+      tags: ['短影片', '腳本企劃', '剪輯']
+    },
+
     photo: {
       category: '攝影',
       title: '猴硐貓村｜旅行攝影',
