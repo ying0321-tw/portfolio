@@ -78,10 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     uiux: {
       category: 'UIUX',
-      title: 'JoiiPet｜APP 介面設計',
-      image: 'images/work-02.jpg',
-      desc: '梳理使用流程與介面層級，將品牌信任感與使用者操作體驗整合進 App 介面。',
-      tags: ['介面設計', '使用流程', '原型協作']
+      title: '迪士尼導覽 APP',
+      type: 'pdf',
+      media: 'files/disney-uiux.pdf',
+      desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP。',
+      tags: ['UIUX', 'APP', 'Disney']
     }
   };
 
