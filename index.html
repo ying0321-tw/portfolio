@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <a href="#" class="logo">TSOU CHIA YING <span>•</span></a>
 
@@ -22,7 +21,6 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-left reveal-text">
         <h1>
@@ -66,7 +64,6 @@
       </div>
     </section>
 
-    <!-- FEATURED SLIDER -->
     <section class="featured-slider">
       <div class="slider-track">
         <article class="slider-card" data-modal="marketing">
@@ -86,7 +83,7 @@
         </article>
 
         <article class="slider-card" data-modal="video">
-          <img src="images/work-04.jpg" alt="【扭蛋開箱】SR+二十世紀影業 異形" />
+          <img src="images/work-04.jpg" alt="扭蛋開箱短影片" />
           <div class="slider-info">
             <h3>扭蛋開箱｜扭蛋拍攝</h3>
             <p>短影片</p>
@@ -94,7 +91,7 @@
         </article>
 
         <article class="slider-card" data-modal="photo">
-          <img src="images/work-05.jpg" alt="猴硐貓村 旅行攝影" />
+          <img src="images/work-05.jpg" alt="猴硐貓村旅行攝影" />
           <div class="slider-info">
             <h3>猴硐貓村｜旅行攝影</h3>
             <p>攝影</p>
@@ -109,7 +106,6 @@
           </div>
         </article>
 
-        <!-- duplicate for infinite loop -->
         <article class="slider-card" data-modal="marketing">
           <img src="images/work-03.jpg" alt="黃石市場整合行銷專案" />
           <div class="slider-info">
@@ -127,7 +123,7 @@
         </article>
 
         <article class="slider-card" data-modal="video">
-          <img src="images/work-04.jpg" alt="【扭蛋開箱】SR+二十世紀影業 異形" />
+          <img src="images/work-04.jpg" alt="扭蛋開箱短影片" />
           <div class="slider-info">
             <h3>扭蛋開箱｜扭蛋拍攝</h3>
             <p>短影片</p>
@@ -135,14 +131,14 @@
         </article>
 
         <article class="slider-card" data-modal="photo">
-          <img src="images/work-05.jpg" alt="猴硐貓村 旅行攝影" />
+          <img src="images/work-05.jpg" alt="猴硐貓村旅行攝影" />
           <div class="slider-info">
             <h3>猴硐貓村｜旅行攝影</h3>
             <p>攝影</p>
           </div>
         </article>
 
-        <article class="work-card" data-category="uiux" data-modal="uiux">
+        <article class="slider-card" data-modal="uiux">
           <img src="images/work-02.jpg" alt="迪士尼導覽 APP 介面設計" />
           <div class="slider-info">
             <h3>迪士尼導覽｜APP 介面設計</h3>
@@ -156,7 +152,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="about">
       <div class="section-title">
         <h2>About <span>•</span></h2>
@@ -183,7 +178,6 @@
       </div>
     </section>
 
-    <!-- WORKS -->
     <section id="works" class="works">
       <div class="works-header">
         <h2>Works <span>•</span></h2>
@@ -216,7 +210,7 @@
         </article>
 
         <article class="work-card" data-category="video" data-modal="video">
-          <img src="images/work-04.jpg" alt="【扭蛋開箱】SR+二十世紀影業 異形" />
+          <img src="images/work-04.jpg" alt="扭蛋開箱短影片" />
           <div class="work-line"></div>
           <p class="category">短影片</p>
           <h3>扭蛋開箱｜扭蛋拍攝</h3>
@@ -224,7 +218,7 @@
         </article>
 
         <article class="work-card" data-category="photo" data-modal="photo">
-          <img src="images/work-05.jpg" alt="猴硐貓村 旅行攝影" />
+          <img src="images/work-05.jpg" alt="猴硐貓村旅行攝影" />
           <div class="work-line"></div>
           <p class="category">攝影</p>
           <h3>猴硐貓村｜旅行攝影</h3>
@@ -236,13 +230,12 @@
           <div class="work-line"></div>
           <p class="category">UIUX</p>
           <h3>迪士尼導覽｜APP 介面設計</h3>
-          <p class="desc">整合即時定位的樂園導覽 App，強化同伴連結與智慧遊園體驗。。</p>
+          <p class="desc">整合即時定位的樂園導覽 App，強化同伴連結與智慧遊園體驗。</p>
         </article>
       </div>
     </section>
   </main>
 
-  <!-- CONTACT -->
   <footer id="contact" class="contact">
     <div class="contact-title">
       <h2>Let’s connect <span>•</span></h2>
@@ -253,24 +246,23 @@
     </div>
   </footer>
 
-  <!-- MODAL -->
- <div class="modal" id="workModal">
-  <div class="modal-bg"></div>
+  <div class="modal" id="workModal">
+    <div class="modal-bg"></div>
 
-  <div class="modal-content">
-    <button class="modal-close" type="button">×</button>
+    <div class="modal-content">
+      <button class="modal-close" type="button">×</button>
 
-    <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-media" id="modalMedia"></div>
 
-    <div class="modal-text">
-      <p id="modalCategory"></p>
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <div class="modal-tags" id="modalTags"></div>
+      <div class="modal-text">
+        <p id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
