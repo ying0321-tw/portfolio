@@ -441,6 +441,39 @@ button{
   background:#000;
 }
 
+.normal-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.long-image{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.audio-box{
+  min-height:420px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:28px;
+  padding:48px;
+  background:#f3eee7;
+}
+
+.audio-box p{
+  color:var(--text);
+  font-size:22px;
+  letter-spacing:.04em;
+}
+
+.audio-box audio{
+  width:min(520px,100%);
+}
+
 .video-frame{
   position:relative;
   width:100%;
