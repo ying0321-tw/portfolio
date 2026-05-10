@@ -51,31 +51,39 @@ document.addEventListener('DOMContentLoaded', () => {
     marketing: {
       category: '行銷專案',
       title: '台灣咖啡節｜整合行銷專案',
-      image: 'images/work-03.jpg',
+      type: 'image',
+      media: 'images/work-03.jpg',
       desc: '從活動企劃、視覺主視覺到社群推廣，整合線上與線下資源，讓專案不只是曝光，而是形成具體的溝通節奏。',
       tags: ['活動企劃', '社群推廣', '整合行銷']
     },
+
     graphic: {
       category: '平面設計',
       title: '小島日和｜品牌視覺設計',
-      image: 'images/work-01.jpg',
+      type: 'image',
+      media: 'images/work-01.jpg',
       desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
       tags: ['品牌視覺', '包裝設計', '排版']
     },
+
     video: {
       category: '短影片',
       title: 'Brand Film｜品牌形象影片',
-      image: 'images/work-04.jpg',
+      type: 'youtube',
+      media: 'https://www.youtube.com/embed/你的影片ID',
       desc: '從腳本企劃、拍攝到剪輯節奏，將品牌故事轉換成能快速理解並留下記憶點的影像內容。',
       tags: ['腳本企劃', '拍攝', '剪輯']
     },
+
     photo: {
       category: '攝影',
       title: 'Travel Photography｜旅行攝影',
-      image: 'images/work-05.jpg',
+      type: 'image',
+      media: 'images/work-05.jpg',
       desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒，建立具有敘事性的視覺素材。',
       tags: ['構圖', '光影', '情緒紀錄']
     },
+
     uiux: {
       category: 'UIUX',
       title: '迪士尼導覽 APP',
@@ -87,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const modal = document.querySelector('#workModal');
-  const modalImage = document.querySelector('#modalImage');
+  const modalMedia = document.querySelector('#modalMedia');
   const modalCategory = document.querySelector('#modalCategory');
   const modalTitle = document.querySelector('#modalTitle');
   const modalDesc = document.querySelector('#modalDesc');
@@ -95,13 +103,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.modal-close');
   const modalBg = document.querySelector('.modal-bg');
 
+  function renderMedia(data) {
+    if (data.type === 'pdf') {
+      return `
+        <iframe
+          src="${data.media}"
+          title="${data.title}">
+        </iframe>
+      `;
+    }
+
+    if (data.type === 'youtube') {
+      return `
+        <div class="video-frame">
+          <iframe
+            src="${data.media}"
+            title="${data.title}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      `;
+    }
+
+    if (data.type === 'mp4') {
+      return `
+        <video controls>
+          <source src="${data.media}" type="video/mp4">
+          您的瀏覽器不支援影片播放。
+        </video>
+      `;
+    }
+
+    if (data.type === 'longImage') {
+      return `
+        <img class="long-image" src="${data.media}" alt="${data.title}">
+      `;
+    }
+
+    return `
+      <img class="normal-image" src="${data.media}" alt="${data.title}">
+    `;
+  }
+
   function openModal(key) {
     const data = worksData[key];
 
-    if (!data || !modal) return;
+    if (!data || !modal || !modalMedia) return;
 
-    modalImage.src = data.image;
-    modalImage.alt = data.title;
+    modalMedia.innerHTML = renderMedia(data);
+
     modalCategory.textContent = data.category;
     modalTitle.textContent = data.title;
     modalDesc.textContent = data.desc;
@@ -115,9 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function closeModal() {
-    if (!modal) return;
+    if (!modal || !modalMedia) return;
 
     modal.classList.remove('active');
+    modalMedia.innerHTML = '';
     document.body.style.overflow = '';
   }
 
