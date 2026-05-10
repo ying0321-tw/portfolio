@@ -354,8 +354,6 @@ button{
 
 /* MODAL */
 
-/* MODAL */
-
 .modal{
   position:fixed;
   inset:0;
@@ -386,7 +384,7 @@ button{
   display:grid;
   grid-template-columns:minmax(0,1.65fr) minmax(320px,.75fr);
   gap:52px;
-  background:#fbfaf7;
+  background:var(--paper);
   overflow:hidden;
 }
 
@@ -409,84 +407,26 @@ button{
   background:#f3eee7;
 }
 
-.modal-media iframe,
-.modal-media object{
-  width:100%;
-  height:100%;
-  border:0;
-  display:block;
-  background:#fff;
-}
-
-/* 預防下載 */
-.pdf-viewer{
-  width:100%;
-  height:100%;
-  min-height:70vh;
-  border:0;
-  display:block;
-  background:#fff;
-}
-
 .modal-media img{
   width:100%;
   height:auto;
   display:block;
 }
 
-.modal-media video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  background:#000;
-}
-
-.normal-image{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.long-image{
+.modal-image-file{
   width:100%;
   height:auto;
   display:block;
 }
 
-.audio-box{
-  min-height:420px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:28px;
-  padding:48px;
-  background:#f3eee7;
-}
-
-.audio-box p{
-  color:var(--text);
-  font-size:22px;
-  letter-spacing:.04em;
-}
-
-.audio-box audio{
-  width:min(520px,100%);
-}
-
-.video-frame{
-  position:relative;
+.modal-video{
   width:100%;
-  aspect-ratio:16/9;
+  height:100%;
+  object-fit:contain;
+  display:block;
   background:#000;
 }
 
-.video-frame iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-}
 .modal-text{
   align-self:center;
 }
@@ -567,59 +507,6 @@ button{
   font-size:13px;
 }
 
-/* 平板 */
-@media(max-width:1200px){
-  .modal-content{
-    width:92vw;
-    height:88vh;
-    grid-template-columns:1fr;
-    grid-template-rows:minmax(0,1fr) auto;
-    gap:28px;
-    padding:36px;
-    overflow:auto;
-  }
-
-  .modal-media{
-    height:58vh;
-  }
-
-  .modal-text{
-    padding-right:0;
-  }
-
-  .modal-text h2{
-    font-size:38px;
-  }
-}
-
-/* 手機 */
-@media(max-width:768px){
-  .modal-content{
-    width:94vw;
-    height:90vh;
-    margin:5vh auto;
-    padding:24px;
-  }
-
-  .modal-media{
-    height:52vh;
-  }
-
-  .modal-close{
-    top:14px;
-    right:18px;
-    font-size:36px;
-  }
-
-  .modal-text h2{
-    font-size:30px;
-  }
-
-  .modal-text > p:nth-child(3){
-    font-size:15px;
-    line-height:1.9;
-  }
-}
 /* SCROLL ANIMATION */
 
 .reveal-text,
@@ -639,10 +526,7 @@ button{
   transition:1s cubic-bezier(.19,1,.22,1);
 }
 
-/* =========================
-TABLET RWD
-適合平板舒適觀看
-========================= */
+/* TABLET RWD */
 
 @media(max-width:1200px){
   .site-header{
@@ -702,9 +586,21 @@ TABLET RWD
   }
 
   .modal-content{
+    width:92vw;
+    height:88vh;
     grid-template-columns:1fr;
-    width:min(760px,90vw);
-    gap:36px;
+    grid-template-rows:minmax(0,1fr) auto;
+    gap:28px;
+    padding:36px;
+    overflow:auto;
+  }
+
+  .modal-media{
+    height:58vh;
+  }
+
+  .modal-text{
+    padding-right:0;
   }
 
   .modal-text h2{
@@ -712,10 +608,7 @@ TABLET RWD
   }
 }
 
-/* =========================
-MOBILE RWD
-適合手機舒適觀看
-========================= */
+/* MOBILE RWD */
 
 @media(max-width:768px){
   .site-header{
@@ -861,32 +754,33 @@ MOBILE RWD
   }
 
   .modal-content{
-    width:92vw;
-    max-height:88vh;
-    margin:6vh auto;
-    padding:28px 24px;
-    gap:28px;
+    width:94vw;
+    height:90vh;
+    margin:5vh auto;
+    padding:24px;
+  }
+
+  .modal-media{
+    height:52vh;
   }
 
   .modal-close{
     top:14px;
     right:18px;
-    font-size:34px;
+    font-size:36px;
   }
 
   .modal-text h2{
     font-size:30px;
   }
 
-  .modal-tags span{
-    font-size:12px;
+  .modal-text > p:nth-child(3){
+    font-size:15px;
+    line-height:1.9;
   }
 }
 
-/* =========================
-SMALL MOBILE
-小手機再微調
-========================= */
+/* SMALL MOBILE */
 
 @media(max-width:480px){
   .nav{
