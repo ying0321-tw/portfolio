@@ -107,13 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (data.type === 'pdf') {
   return `
     <object
-      data="${data.media}#toolbar=0&navpanes=0&scrollbar=1"
-      type="application/pdf">
       <iframe
-        src="${data.media}#toolbar=0&navpanes=0&scrollbar=1"
-        title="${data.title}">
-      </iframe>
-    </object>
+      class="pdf-viewer"
+      src="${data.media}#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+      title="${data.title}">
+    </iframe>
   `;
 }
 
