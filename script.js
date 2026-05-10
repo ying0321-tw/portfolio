@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Works 分類切換 */
   const filterButtons = document.querySelectorAll('.filter-nav button');
-  const workCards = document.querySelectorAll('.work-card');
+  const workCards = document.querySelectorAll('.work-grid .work-card');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -37,17 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (filter === 'all' || category === filter) {
           card.classList.remove('hide');
-          card.classList.add('show', 'is-visible');
+          card.classList.add('is-visible');
         } else {
           card.classList.add('hide');
-          card.classList.remove('show');
         }
       });
     });
   });
 
   /* 作品彈窗資料
-     type 只支援：
+     只支援：
      image = JPG 圖片
      mp4   = MP4 影片
   */
@@ -67,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       info: {
         年份: '2025',
         類型: 'Marketing Project',
-        角色: '企劃 / 品牌整合',
+        角色: '企劃 / 品牌整合'
       },
       tags: ['行銷企劃', '品牌敘事', '社群內容']
     },
@@ -130,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'UIUX',
       title: '迪士尼導覽 APP',
       type: 'image',
-      media: 'images/disney-uiux.jpg',
+      media: 'images/work-02.jpg',
       desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
       contents: [
         '使用者痛點整理',
@@ -154,7 +153,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.modal-close');
   const modalBg = document.querySelector('.modal-bg');
 
+  function isAllowedMedia(data) {
+    if (!data || !data.media) return false;
+
+    const file = data.media.toLowerCase();
+
+    if (data.type === 'image') {
+      return file.endsWith('.jpg') || file.endsWith('.jpeg');
+    }
+
+    if (data.type === 'mp4') {
+      return file.endsWith('.mp4');
+    }
+
+    return false;
+  }
+
   function renderMedia(data) {
+    if (!isAllowedMedia(data)) {
+      return `
+        <div class="media-error">
+          此作品檔案格式不支援，請使用 JPG 或 MP4。
+        </div>
+      `;
+    }
+
     if (data.type === 'mp4') {
       return `
         <video class="modal-video" controls playsinline>
