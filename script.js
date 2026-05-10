@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['構圖', '光影', '情緒紀錄']
     },
 
-    uiux: {
-      category: 'UIUX',
+uiux: {
+  category: 'UIUX',
   title: '迪士尼導覽 APP',
-  type: 'pdf',
-  media: 'files/disney-uiux.jpg',
+  type: 'longImage',
+  media: 'images/disney-uiux.jpg',
   desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
   contents: [
     '使用者研究與旅程地圖',
@@ -115,19 +115,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.modal-close');
   const modalBg = document.querySelector('.modal-bg');
 
-  function renderMedia(data) {
-    if (data.type === 'pdf') {
+function renderMedia(data) {
+  if (data.type === 'mp3') {
+    return `
+      <div class="audio-box">
+        <p>${data.audioTitle || data.title}</p>
+        <audio controls>
+          <source src="${data.media}" type="audio/mpeg">
+          您的瀏覽器不支援音訊播放。
+        </audio>
+      </div>
+    `;
+  }
+
+  if (data.type === 'longImage') {
+    return `
+      <img class="long-image" src="${data.media}" alt="${data.title}">
+    `;
+  }
+
   return `
-    <object
-      class="pdf-viewer"
-      data="${data.media}"
-      type="application/pdf">
-      <iframe
-        class="pdf-viewer"
-        src="${data.media}"
-        title="${data.title}">
-      </iframe>
-    </object>
+    <img class="normal-image" src="${data.media}" alt="${data.title}">
   `;
 }
 
