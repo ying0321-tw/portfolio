@@ -105,13 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderMedia(data) {
     if (data.type === 'pdf') {
-      return `
-        <iframe
-          src="${data.media}"
-          title="${data.title}">
-        </iframe>
-      `;
-    }
+  return `
+    <object
+      data="${data.media}#toolbar=0&navpanes=0&scrollbar=1"
+      type="application/pdf">
+      <iframe
+        src="${data.media}#toolbar=0&navpanes=0&scrollbar=1"
+        title="${data.title}">
+      </iframe>
+    </object>
+  `;
+}
 
     if (data.type === 'youtube') {
       return `
