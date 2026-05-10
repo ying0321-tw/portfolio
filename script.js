@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     uiux: {
       category: 'UIUX',
       title: '迪士尼導覽 APP',
-      type: 'pdf',
+      type: 'jpg',
       media: 'files/disney-uiux.jpg',
       desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP。',
       tags: ['UIUX', 'APP', 'Disney']
@@ -160,12 +160,46 @@ document.addEventListener('DOMContentLoaded', () => {
     modalMedia.innerHTML = renderMedia(data);
 
     modalCategory.textContent = data.category;
-    modalTitle.textContent = data.title;
-    modalDesc.textContent = data.desc;
+modalTitle.textContent = data.title;
+modalDesc.textContent = data.desc;
 
-    modalTags.innerHTML = data.tags
-      .map(tag => `<span>${tag}</span>`)
-      .join('');
+const contentList = data.contents
+  ? `
+    <div class="modal-section">
+      <h4>專案內容</h4>
+      <ul>
+        ${data.contents.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+  `
+  : '';
+
+const infoList = data.info
+  ? `
+    <div class="modal-section">
+      <h4>專案資訊</h4>
+      <dl>
+        ${Object.entries(data.info).map(([key, value]) => `
+          <div>
+            <dt>${key}</dt>
+            <dd>${value}</dd>
+          </div>
+        `).join('')}
+      </dl>
+    </div>
+  `
+  : '';
+
+modalTags.innerHTML = `
+  ${contentList}
+  ${infoList}
+  <div class="modal-section">
+    <h4>標籤</h4>
+    <div class="tag-list">
+      ${data.tags.map(tag => `<span>${tag}</span>`).join('')}
+    </div>
+  </div>
+`;
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
