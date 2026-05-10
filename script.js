@@ -127,21 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     uiux: {
       category: 'UIUX',
-      title: '迪士尼導覽 APP',
-      type: 'image',
-      media: 'images/disney-uiux.jpg',
-      desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
-      contents: [
-        '使用者痛點整理',
-        '資訊架構與流程設計',
-        'UI 視覺與元件規劃',
-        'APP 功能情境設計'
-      ],
-      info: {
-        工具: 'Figma'
-      },
-      tags: ['UIUX', 'APP', 'Disney', 'GPS']
-    }
+      category: 'UIUX',
+  title: '迪士尼導覽 APP',
+  type: 'image',
+  media: 'files/disney-uiux.jpg',
+  desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
+  contents: [
+    '使用者痛點整理',
+    '資訊架構與流程設計',
+    'UI 視覺與元件規劃',
+    'APP 功能情境設計'
+  ],
+  info: {
+    工具: 'Figma'
+  },
+  tags: ['UIUX', 'APP', 'Disney', 'GPS']
+}
   };
 
   const modal = document.querySelector('#workModal');
