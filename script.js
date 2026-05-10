@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     category: '平面設計',
     title: '協助犬｜品牌視覺設計',
     type: 'image',
-    media: 'images/work-01.jpg',
+    media: 'files/dog-long.jpg',
     desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
     contents: ['品牌視覺方向', '包裝與延伸物設計', '版面與字級系統', '視覺應用整理'],
     info: { 工具: 'Illustrator / Photoshop' },
