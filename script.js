@@ -119,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   graphic2: {
     category: '平面設計',
-    title: '平面設計 02｜專案名稱',
+    title: '西洋風味香料 美食特餐｜膠裝刊物設計',
     type: 'image',
-    media: 'files/graphic02-detail.jpg',
-    desc: '請替換成此設計專案的詳細介紹。',
-    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    media: 'files/book-long.jpg',
+    desc: '以西洋香料文化為主軸，結合料理與風味美學，透過編輯排版呈現多國經典香料特色與美食靈感。',
+    contents: ['32頁膠裝刊物', '編輯排版設計', '收錄7個西洋經典風味主題', '介紹24種特色香料與料理文化'],
     info: { 工具: 'Illustrator / Photoshop' },
     tags: ['平面設計', '視覺']
   },
