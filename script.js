@@ -51,468 +51,300 @@ document.addEventListener('DOMContentLoaded', () => {
      mp4   = MP4 影片
   */
   const worksData = {
-    marketing: {
-      category: '行銷專案',
-      title: '板橋 YELLOWSTONE｜整合行銷專案',
-      type: 'image',
-      media: 'images/work-03.jpg',
-      desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源，讓專案不只是曝光，而是形成具體的溝通節奏。',
-      contents: [
-        '品牌規劃',
-        '社群內容企劃',
-        '活動視覺整合',
-        '專案成效整理'
-      ],
-      info: {
-        年份: '2025',
-        類型: 'Marketing Project',
-        角色: '企劃 / 品牌整合'
-      },
-      tags: ['行銷企劃', '品牌敘事', '社群內容']
-    },
-
-    marketing: {
-      category: '行銷專案',
-      title: '板橋 YELLOWSTONE｜整合行銷專案',
-      type: 'image',
-      media: 'images/work-03.jpg',
-      desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源，讓專案不只是曝光，而是形成具體的溝通節奏。',
-      contents: [
-        '品牌規劃',
-        '社群內容企劃',
-        '活動視覺整合',
-        '專案成效整理'
-      ],
-      info: {
-        年份: '2025',
-        類型: 'Marketing Project',
-        角色: '企劃 / 品牌整合'
-      },
-      tags: ['行銷企劃', '品牌敘事', '社群內容']
-    },
-
-    marketing: {
-      category: '行銷專案',
-      title: '板橋 YELLOWSTONE｜整合行銷專案',
-      type: 'image',
-      media: 'images/work-03.jpg',
-      desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源，讓專案不只是曝光，而是形成具體的溝通節奏。',
-      contents: [
-        '品牌規劃',
-        '社群內容企劃',
-        '活動視覺整合',
-        '專案成效整理'
-      ],
-      info: {
-        年份: '2025',
-        類型: 'Marketing Project',
-        角色: '企劃 / 品牌整合'
-      },
-      tags: ['行銷企劃', '品牌敘事', '社群內容']
-    },
-
-    marketing: {
-      category: '行銷專案',
-      title: '板橋 YELLOWSTONE｜整合行銷專案',
-      type: 'image',
-      media: 'images/work-03.jpg',
-      desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源，讓專案不只是曝光，而是形成具體的溝通節奏。',
-      contents: [
-        '品牌規劃',
-        '社群內容企劃',
-        '活動視覺整合',
-        '專案成效整理'
-      ],
-      info: {
-        年份: '2025',
-        類型: 'Marketing Project',
-        角色: '企劃 / 品牌整合'
-      },
-      tags: ['行銷企劃', '品牌敘事', '社群內容']
-    },
-
-    marketing: {
-      category: '行銷專案',
-      title: '板橋 YELLOWSTONE｜整合行銷專案',
-      type: 'image',
-      media: 'images/work-03.jpg',
-      desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源，讓專案不只是曝光，而是形成具體的溝通節奏。',
-      contents: [
-        '品牌規劃',
-        '社群內容企劃',
-        '活動視覺整合',
-        '專案成效整理'
-      ],
-      info: {
-        年份: '2025',
-        類型: 'Marketing Project',
-        角色: '企劃 / 品牌整合'
-      },
-      tags: ['行銷企劃', '品牌敘事', '社群內容']
-    },
-    
-    graphic: {
-      category: '平面設計',
-      title: '協助犬｜品牌視覺設計',
-      type: 'image',
-      media: 'images/work-01.jpg',
-      desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
-      contents: [
-        '品牌視覺方向',
-        '包裝與延伸物設計',
-        '版面與字級系統',
-        '視覺應用整理'
-      ],
-      info: {
-        工具: 'Illustrator / Photoshop'
-      },
-      tags: ['品牌視覺', '包裝設計', '排版']
-    },
-
-    graphic: {
-      category: '平面設計',
-      title: '協助犬｜品牌視覺設計',
-      type: 'image',
-      media: 'images/work-01.jpg',
-      desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
-      contents: [
-        '品牌視覺方向',
-        '包裝與延伸物設計',
-        '版面與字級系統',
-        '視覺應用整理'
-      ],
-      info: {
-        工具: 'Illustrator / Photoshop'
-      },
-      tags: ['品牌視覺', '包裝設計', '排版']
-    },
-
-    graphic: {
-      category: '平面設計',
-      title: '協助犬｜品牌視覺設計',
-      type: 'image',
-      media: 'images/work-01.jpg',
-      desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
-      contents: [
-        '品牌視覺方向',
-        '包裝與延伸物設計',
-        '版面與字級系統',
-        '視覺應用整理'
-      ],
-      info: {
-        工具: 'Illustrator / Photoshop'
-      },
-      tags: ['品牌視覺', '包裝設計', '排版']
-    },
-
-    graphic: {
-      category: '平面設計',
-      title: '協助犬｜品牌視覺設計',
-      type: 'image',
-      media: 'images/work-01.jpg',
-      desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
-      contents: [
-        '品牌視覺方向',
-        '包裝與延伸物設計',
-        '版面與字級系統',
-        '視覺應用整理'
-      ],
-      info: {
-        工具: 'Illustrator / Photoshop'
-      },
-      tags: ['品牌視覺', '包裝設計', '排版']
-    },
-
-    graphic: {
-      category: '平面設計',
-      title: '協助犬｜品牌視覺設計',
-      type: 'image',
-      media: 'images/work-01.jpg',
-      desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
-      contents: [
-        '品牌視覺方向',
-        '包裝與延伸物設計',
-        '版面與字級系統',
-        '視覺應用整理'
-      ],
-      info: {
-        工具: 'Illustrator / Photoshop'
-      },
-      tags: ['品牌視覺', '包裝設計', '排版']
-    },
-    
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-
-    video: {
-      category: '短影片',
-      title: '【扭蛋開箱】SR+二十世紀影業 異形',
-      type: 'mp4',
-      media: 'videos/brand-film.mp4',
-      desc: '從腳本企劃、拍攝到剪輯節奏，提供扭蛋玩家玩具的樂趣。',
-      contents: [
-        '短影音腳本企劃',
-        '拍攝分鏡安排',
-        '剪輯節奏設計',
-        '社群觀看情境整理'
-      ],
-      info: {
-        年份: '2026',
-        類型: 'Short Video',
-        角色: '腳本 / 拍攝 / 剪輯',
-        工具: 'CapCut'
-      },
-      tags: ['短影片', '腳本企劃', '剪輯']
-    },
-
-    photo: {
-      category: '攝影',
-      title: '猴硐貓村｜旅行攝影',
-      type: 'image',
-      media: 'images/work-05.jpg',
-      desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒，建立具有敘事性的視覺素材。',
-      contents: [
-        '光線與構圖觀察',
-        '場景情緒紀錄',
-        '影像色調整理',
-        '可延伸素材挑選'
-      ],
-      tags: ['攝影', '光影', '情緒紀錄']
-    },
-
-    photo: {
-      category: '攝影',
-      title: '猴硐貓村｜旅行攝影',
-      type: 'image',
-      media: 'images/work-05.jpg',
-      desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒，建立具有敘事性的視覺素材。',
-      contents: [
-        '光線與構圖觀察',
-        '場景情緒紀錄',
-        '影像色調整理',
-        '可延伸素材挑選'
-      ],
-      tags: ['攝影', '光影', '情緒紀錄']
-    },
-
-    photo: {
-      category: '攝影',
-      title: '猴硐貓村｜旅行攝影',
-      type: 'image',
-      media: 'images/work-05.jpg',
-      desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒，建立具有敘事性的視覺素材。',
-      contents: [
-        '光線與構圖觀察',
-        '場景情緒紀錄',
-        '影像色調整理',
-        '可延伸素材挑選'
-      ],
-      tags: ['攝影', '光影', '情緒紀錄']
-    },
-    
-    uiux: {
-      category: 'UIUX',
-      category: 'UIUX',
-  title: '迪士尼導覽 APP',
-  type: 'image',
-  media: 'files/disney-uiux.jpg',
-  desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
-  contents: [
-    '使用者痛點整理',
-    '資訊架構與流程設計',
-    'UI 視覺與元件規劃',
-    'APP 功能情境設計'
-  ],
-  info: {
-    工具: 'Figma'
+  marketing1: {
+    category: '行銷專案',
+    title: '板橋 YELLOWSTONE｜整合行銷專案',
+    type: 'image',
+    media: 'images/work-03.jpg',
+    desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源。',
+    contents: ['品牌規劃', '社群內容企劃', '活動視覺整合', '專案成效整理'],
+    info: { 年份: '2025', 類型: 'Marketing Project', 角色: '企劃 / 品牌整合' },
+    tags: ['行銷企劃', '品牌敘事', '社群內容']
   },
-  tags: ['UIUX', 'APP', 'Disney', 'GPS']
-}
 
-    uiux: {
-      category: 'UIUX',
-      category: 'UIUX',
-  title: '迪士尼導覽 APP',
-  type: 'image',
-  media: 'files/disney-uiux.jpg',
-  desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
-  contents: [
-    '使用者痛點整理',
-    '資訊架構與流程設計',
-    'UI 視覺與元件規劃',
-    'APP 功能情境設計'
-  ],
-  info: {
-    工具: 'Figma'
+  marketing2: {
+    category: '行銷專案',
+    title: '行銷專案 02｜專案名稱',
+    type: 'image',
+    media: 'files/marketing02-detail.jpg',
+    desc: '請替換成此專案的詳細介紹。',
+    contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
+    info: { 類型: 'Marketing Project' },
+    tags: ['行銷企劃', '社群']
   },
-  tags: ['UIUX', 'APP', 'Disney', 'GPS']
-}
 
-  uiux: {
-      category: 'UIUX',
-      category: 'UIUX',
-  title: '迪士尼導覽 APP',
-  type: 'image',
-  media: 'files/disney-uiux.jpg',
-  desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
-  contents: [
-    '使用者痛點整理',
-    '資訊架構與流程設計',
-    'UI 視覺與元件規劃',
-    'APP 功能情境設計'
-  ],
-  info: {
-    工具: 'Figma'
+  marketing3: {
+    category: '行銷專案',
+    title: '行銷專案 03｜專案名稱',
+    type: 'image',
+    media: 'files/marketing03-detail.jpg',
+    desc: '請替換成此專案的詳細介紹。',
+    contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
+    info: { 類型: 'Marketing Project' },
+    tags: ['行銷企劃', '社群']
   },
-  tags: ['UIUX', 'APP', 'Disney', 'GPS']
-}
-  };
+
+  marketing4: {
+    category: '行銷專案',
+    title: '行銷專案 04｜專案名稱',
+    type: 'image',
+    media: 'files/marketing04-detail.jpg',
+    desc: '請替換成此專案的詳細介紹。',
+    contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
+    info: { 類型: 'Marketing Project' },
+    tags: ['行銷企劃', '社群']
+  },
+
+  marketing5: {
+    category: '行銷專案',
+    title: '行銷專案 05｜專案名稱',
+    type: 'image',
+    media: 'files/marketing05-detail.jpg',
+    desc: '請替換成此專案的詳細介紹。',
+    contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
+    info: { 類型: 'Marketing Project' },
+    tags: ['行銷企劃', '社群']
+  },
+
+  graphic1: {
+    category: '平面設計',
+    title: '協助犬｜品牌視覺設計',
+    type: 'image',
+    media: 'images/work-01.jpg',
+    desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
+    contents: ['品牌視覺方向', '包裝與延伸物設計', '版面與字級系統', '視覺應用整理'],
+    info: { 工具: 'Illustrator / Photoshop' },
+    tags: ['品牌視覺', '包裝設計', '排版']
+  },
+
+  graphic2: {
+    category: '平面設計',
+    title: '平面設計 02｜專案名稱',
+    type: 'image',
+    media: 'files/graphic02-detail.jpg',
+    desc: '請替換成此設計專案的詳細介紹。',
+    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    info: { 工具: 'Illustrator / Photoshop' },
+    tags: ['平面設計', '視覺']
+  },
+
+  graphic3: {
+    category: '平面設計',
+    title: '平面設計 03｜專案名稱',
+    type: 'image',
+    media: 'files/graphic03-detail.jpg',
+    desc: '請替換成此設計專案的詳細介紹。',
+    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    info: { 工具: 'Illustrator / Photoshop' },
+    tags: ['平面設計', '視覺']
+  },
+
+  graphic4: {
+    category: '平面設計',
+    title: '平面設計 04｜專案名稱',
+    type: 'image',
+    media: 'files/graphic04-detail.jpg',
+    desc: '請替換成此設計專案的詳細介紹。',
+    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    info: { 工具: 'Illustrator / Photoshop' },
+    tags: ['平面設計', '視覺']
+  },
+
+  graphic5: {
+    category: '平面設計',
+    title: '平面設計 05｜專案名稱',
+    type: 'image',
+    media: 'files/graphic05-detail.jpg',
+    desc: '請替換成此設計專案的詳細介紹。',
+    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    info: { 工具: 'Illustrator / Photoshop' },
+    tags: ['平面設計', '視覺']
+  },
+
+  graphic6: {
+    category: '平面設計',
+    title: '平面設計 06｜專案名稱',
+    type: 'image',
+    media: 'files/graphic06-detail.jpg',
+    desc: '請替換成此設計專案的詳細介紹。',
+    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    info: { 工具: 'Illustrator / Photoshop' },
+    tags: ['平面設計', '視覺']
+  },
+
+  video1: {
+    category: '短影片',
+    title: '扭蛋開箱｜扭蛋拍攝',
+    type: 'mp4',
+    media: 'videos/brand-film.mp4',
+    desc: '從腳本企劃、拍攝到剪輯節奏，呈現扭蛋玩家感受玩具的樂趣。',
+    contents: ['短影音腳本企劃', '拍攝分鏡安排', '剪輯節奏設計'],
+    info: { 類型: 'Short Video', 工具: 'CapCut' },
+    tags: ['短影片', '腳本企劃', '剪輯']
+  },
+
+  video2: {
+    category: '短影片',
+    title: '短影片 02｜專案名稱',
+    type: 'mp4',
+    media: 'files/video02-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video3: {
+    category: '短影片',
+    title: '短影片 03｜專案名稱',
+    type: 'mp4',
+    media: 'files/video03-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video4: {
+    category: '短影片',
+    title: '短影片 04｜專案名稱',
+    type: 'mp4',
+    media: 'files/video04-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video5: {
+    category: '短影片',
+    title: '短影片 05｜專案名稱',
+    type: 'mp4',
+    media: 'files/video05-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video6: {
+    category: '短影片',
+    title: '短影片 06｜專案名稱',
+    type: 'mp4',
+    media: 'files/video06-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video7: {
+    category: '短影片',
+    title: '短影片 07｜專案名稱',
+    type: 'mp4',
+    media: 'files/video07-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video8: {
+    category: '短影片',
+    title: '短影片 08｜專案名稱',
+    type: 'mp4',
+    media: 'files/video08-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video9: {
+    category: '短影片',
+    title: '短影片 09｜專案名稱',
+    type: 'mp4',
+    media: 'files/video09-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  video10: {
+    category: '短影片',
+    title: '短影片 10｜專案名稱',
+    type: 'mp4',
+    media: 'files/video10-detail.mp4',
+    desc: '請替換成此短影片專案的詳細介紹。',
+    contents: ['腳本企劃', '拍攝', '剪輯'],
+    info: { 類型: 'Short Video' },
+    tags: ['短影片']
+  },
+
+  photo1: {
+    category: '攝影',
+    title: '猴硐貓村｜旅行攝影',
+    type: 'image',
+    media: 'images/work-05.jpg',
+    desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒。',
+    contents: ['光線與構圖觀察', '場景情緒紀錄', '影像色調整理'],
+    tags: ['攝影', '光影', '情緒紀錄']
+  },
+
+  photo2: {
+    category: '攝影',
+    title: '攝影 02｜作品名稱',
+    type: 'image',
+    media: 'files/photo02-detail.jpg',
+    desc: '請替換成此攝影作品的詳細介紹。',
+    contents: ['影像拍攝', '色調整理', '素材挑選'],
+    tags: ['攝影']
+  },
+
+  photo3: {
+    category: '攝影',
+    title: '攝影 03｜作品名稱',
+    type: 'image',
+    media: 'files/photo03-detail.jpg',
+    desc: '請替換成此攝影作品的詳細介紹。',
+    contents: ['影像拍攝', '色調整理', '素材挑選'],
+    tags: ['攝影']
+  },
+
+  uiux1: {
+    category: 'UIUX',
+    title: '迪士尼導覽 APP',
+    type: 'image',
+    media: 'files/disney-uiux.jpg',
+    desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
+    contents: ['使用者痛點整理', '資訊架構與流程設計', 'UI 視覺與元件規劃', 'APP 功能情境設計'],
+    info: { 工具: 'Figma' },
+    tags: ['UIUX', 'APP', 'Disney', 'GPS']
+  },
+
+  uiux2: {
+    category: 'UIUX',
+    title: 'UIUX 02｜專案名稱',
+    type: 'image',
+    media: 'files/uiux02-detail.jpg',
+    desc: '請替換成此 UIUX 專案的詳細介紹。',
+    contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
+    info: { 工具: 'Figma' },
+    tags: ['UIUX', 'APP']
+  },
+
+  uiux3: {
+    category: 'UIUX',
+    title: 'UIUX 03｜專案名稱',
+    type: 'image',
+    media: 'files/uiux03-detail.jpg',
+    desc: '請替換成此 UIUX 專案的詳細介紹。',
+    contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
+    info: { 工具: 'Figma' },
+    tags: ['UIUX', 'APP']
+  }
+};
 
   const modal = document.querySelector('#workModal');
   const modalMedia = document.querySelector('#modalMedia');
