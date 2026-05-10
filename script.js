@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'UIUX',
       title: '迪士尼導覽 APP',
       type: 'image',
-      media: 'images/work-02.jpg',
+      media: 'images/disney-uiux.jpg',
       desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
       contents: [
         '使用者痛點整理',
