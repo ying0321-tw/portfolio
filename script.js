@@ -336,10 +336,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   uiux3: {
     category: 'UIUX',
-    title: 'UIUX 03｜專案名稱',
+    title: '蛋舖官網｜關於我們',
     type: 'image',
-    media: 'files/uiux03-detail.jpg',
-    desc: '請替換成此 UIUX 專案的詳細介紹。',
+    media: 'files/91toy-long.jpg',
+    desc: '以品牌展示與合作提案為核心，重新規劃網站視覺與資訊架構，強化品牌形象與市場吸引力。',
     contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
     info: { 工具: 'Figma' },
     tags: ['UIUX', 'APP']
