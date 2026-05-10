@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'UIUX',
       title: '迪士尼導覽 APP',
       type: 'pdf',
-      media: 'files/disney-uiux.pdf',
+      media: 'files/disney-uiux.jpg',
       desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP。',
       tags: ['UIUX', 'APP', 'Disney']
     }
