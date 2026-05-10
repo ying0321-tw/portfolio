@@ -325,10 +325,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   uiux2: {
     category: 'UIUX',
-    title: 'UIUX 02｜專案名稱',
+    title: '官網設計｜和正農作',
     type: 'image',
-    media: 'files/uiux02-detail.jpg',
-    desc: '請替換成此 UIUX 專案的詳細介紹。',
+    media: 'files/uiux-long.jpg',
+    desc: '以自然職人風格重新建構品牌官網，整合購物打造更直覺且具溫度感的烘焙品牌。',
     contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
     info: { 工具: 'Figma' },
     tags: ['UIUX', 'APP']
