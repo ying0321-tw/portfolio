@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '從活動企劃、品牌敘事、視覺主軸到社群推廣，整合線上與線下資源。',
     contents: ['品牌規劃', '社群內容企劃', '活動視覺整合', '專案成效整理'],
     info: { 年份: '2025', 類型: 'Marketing Project', 角色: '企劃 / 品牌整合' },
-    tags: ['行銷企劃', '品牌敘事', '社群內容']
   },
 
   marketing2: {
@@ -70,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此專案的詳細介紹。',
     contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
     info: { 類型: 'Marketing Project' },
-    tags: ['行銷企劃', '社群']
   },
 
   marketing3: {
@@ -81,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此專案的詳細介紹。',
     contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
     info: { 類型: 'Marketing Project' },
-    tags: ['行銷企劃', '社群']
   },
 
   marketing4: {
@@ -92,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此專案的詳細介紹。',
     contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
     info: { 類型: 'Marketing Project' },
-    tags: ['行銷企劃', '社群']
   },
 
   marketing5: {
@@ -103,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此專案的詳細介紹。',
     contents: ['專案企劃', '社群內容', '活動執行', '成效整理'],
     info: { 類型: 'Marketing Project' },
-    tags: ['行銷企劃', '社群']
   },
 
   graphic1: {
@@ -114,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
     contents: ['品牌視覺方向', '包裝與延伸物設計', '版面與字級系統', '視覺應用整理'],
     info: { 工具: 'Illustrator / Photoshop' },
-    tags: ['品牌視覺', '包裝設計', '排版']
   },
 
   graphic2: {
@@ -125,18 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '以西洋香料文化為主軸，結合料理與風味美學，透過編輯排版呈現多國經典香料特色與美食靈感。',
     contents: ['32頁膠裝刊物', '編輯排版設計', '收錄7個西洋經典風味主題', '介紹24種特色香料與料理文化'],
     info: { 工具: 'Illustrator / Photoshop' },
-    tags: ['平面設計', '視覺']
   },
 
   graphic3: {
     category: '平面設計',
-    title: '平面設計 03｜專案名稱',
+    title: '包裝設計｜拉拉山水蜜桃商品',
     type: 'image',
-    media: 'files/graphic03-detail.jpg',
+    media: 'files/lala-long.jpg',
     desc: '請替換成此設計專案的詳細介紹。',
-    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    contents: ['水蜜桃果醬禮盒：獨立包裝與半透明外盒設計', '精緻冰棒包裝：神話插圖結合燙金工藝', '品牌視覺整合：產品攝影、故事與排版設計'],
     info: { 工具: 'Illustrator / Photoshop' },
-    tags: ['平面設計', '視覺']
   },
 
   graphic4: {
@@ -147,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此設計專案的詳細介紹。',
     contents: ['視覺設計', '版面規劃', '延伸應用'],
     info: { 工具: 'Illustrator / Photoshop' },
-    tags: ['平面設計', '視覺']
   },
 
   graphic5: {
@@ -158,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此設計專案的詳細介紹。',
     contents: ['視覺設計', '版面規劃', '延伸應用'],
     info: { 工具: 'Illustrator / Photoshop' },
-    tags: ['平面設計', '視覺']
   },
 
   graphic6: {
@@ -169,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此設計專案的詳細介紹。',
     contents: ['視覺設計', '版面規劃', '延伸應用'],
     info: { 工具: 'Illustrator / Photoshop' },
-    tags: ['平面設計', '視覺']
   },
 
   video1: {
@@ -180,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '從腳本企劃、拍攝到剪輯節奏，呈現扭蛋玩家感受玩具的樂趣。',
     contents: ['短影音腳本企劃', '拍攝分鏡安排', '剪輯節奏設計'],
     info: { 類型: 'Short Video', 工具: 'CapCut' },
-    tags: ['短影片', '腳本企劃', '剪輯']
   },
 
   video2: {
@@ -191,7 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video3: {
@@ -202,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video4: {
@@ -213,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video5: {
@@ -224,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video6: {
@@ -235,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video7: {
@@ -246,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video8: {
@@ -257,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video9: {
@@ -268,7 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   video10: {
@@ -279,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '請替換成此短影片專案的詳細介紹。',
     contents: ['腳本企劃', '拍攝', '剪輯'],
     info: { 類型: 'Short Video' },
-    tags: ['短影片']
   },
 
   photo1: {
@@ -289,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
     media: 'images/work-05.jpg',
     desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒。',
     contents: ['光線與構圖觀察', '場景情緒紀錄', '影像色調整理'],
-    tags: ['攝影', '光影', '情緒紀錄']
   },
 
   photo2: {
@@ -299,7 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
     media: 'files/photo02-detail.jpg',
     desc: '請替換成此攝影作品的詳細介紹。',
     contents: ['影像拍攝', '色調整理', '素材挑選'],
-    tags: ['攝影']
   },
 
   photo3: {
@@ -309,7 +286,6 @@ document.addEventListener('DOMContentLoaded', () => {
     media: 'files/photo03-detail.jpg',
     desc: '請替換成此攝影作品的詳細介紹。',
     contents: ['影像拍攝', '色調整理', '素材挑選'],
-    tags: ['攝影']
   },
 
   uiux1: {
@@ -320,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
     contents: ['使用者痛點整理', '資訊架構與流程設計', 'UI 視覺與元件規劃', 'APP 功能情境設計'],
     info: { 工具: 'Figma' },
-    tags: ['UIUX', 'APP', 'Disney', 'GPS']
   },
 
   uiux2: {
@@ -331,7 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '以自然職人風格重新建構品牌官網，整合購物打造更直覺且具溫度感的烘焙品牌。',
     contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
     info: { 工具: 'Figma' },
-    tags: ['UIUX', 'APP']
   },
 
   uiux3: {
@@ -342,7 +316,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desc: '以品牌展示與合作提案為核心，重新規劃網站視覺與資訊架構，強化品牌形象與市場吸引力。',
     contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
     info: { 工具: 'Figma' },
-    tags: ['UIUX', 'APP']
   }
 };
 
