@@ -133,11 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   graphic4: {
     category: '平面設計',
-    title: '平面設計 04｜專案名稱',
+    title: '包裝設計｜沙茶匠',
     type: 'image',
-    media: 'files/graphic04-detail.jpg',
-    desc: '請替換成此設計專案的詳細介紹。',
-    contents: ['視覺設計', '版面規劃', '延伸應用'],
+    media: 'files/so-long.jpg',
+    desc: '以「職人匠心」為核心，將傳統醬料轉化為精緻伴手禮，透過職人表情、色彩與菜品圖示區分四款口味，落實「看圖即懂」的設計邏輯，提升選購便利性與品牌細膩質感。',
+    contents: ['系列包裝設計：以職人神情與色彩直觀區分 4 款口味', '禮品結構規劃：雷雕手提袋與膠條封口設計', '視覺資訊系統：整合料理建議圖示與手寫感品牌識別'],
     info: { 工具: 'Illustrator / Photoshop' },
   },
 
