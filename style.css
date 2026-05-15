@@ -390,15 +390,67 @@ button{
   top:50%;
   transform:translateY(-50%);
   z-index:90;
+
   display:flex;
   flex-direction:column;
   gap:10px;
+
   padding:12px 10px;
+
   background:rgba(251,250,247,.86);
+
   border:1px solid var(--line);
+
   border-radius:999px;
+
   backdrop-filter:blur(12px);
+
   box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:
+  opacity .35s ease,
+  transform .35s ease;
+}
+
+.floating-work-filter.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.floating-work-filter button{
+
+  border:none;
+
+  background:transparent;
+
+  color:var(--sub);
+
+  font-size:12px;
+
+  letter-spacing:.08em;
+
+  padding:8px 10px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+  white-space:nowrap;
+
+}
+
+.floating-work-filter button:hover,
+.floating-work-filter button.active{
+
+  background:var(--text);
+
+  color:var(--paper);
+
 }
 
 .floating-work-filter button{
