@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video1: {
       category: '短影片',
       title: '扭蛋開箱｜AED 迷你造型急救包',
-      embed: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+      embed: 'https://www.youtube.com/embed/yR1RM2RJkBk',
       desc: '從腳本企劃、拍攝到剪輯節奏，呈現扭蛋玩家感受玩具的樂趣。',
       contents: ['短影音腳本企劃', '拍攝分鏡安排', '剪輯節奏設計'],
       info: { 類型: 'Short Video', 工具: 'CapCut' }
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video3: {
       category: '短影片',
       title: '扭蛋開箱｜特攝系列電視播放機',
-      embed: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+      embed: 'https://www.youtube.com/embed/qUu6v1Oc0Js',
       desc: '以產品功能與收藏亮點作為影片鉤子，強化觀看與收藏興趣。',
       contents: ['腳本企劃', '商品展示', '剪輯節奏'],
       info: { 類型: 'Short Video' }
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video4: {
       category: '短影片',
       title: '扭蛋開箱｜ICE 敲冰塊遊戲組',
-      embed: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+      embed: 'https://www.youtube.com/embed/d3u5aKXNcO0',
       desc: '用遊戲情境帶出商品玩法，讓觀眾快速理解趣味點。',
       contents: ['情境腳本', '拍攝', '剪輯'],
       info: { 類型: 'Short Video' }
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video5: {
       category: '短影片',
       title: '扭蛋開箱｜鬼娃恰吉軟膠公仔',
-      embed: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+      embed: 'https://www.youtube.com/embed/Y10-U7yfRO4',
       desc: '以角色記憶點與商品細節作為切入，提升短影音的吸引力。',
       contents: ['商品開箱', '鏡頭安排', '剪輯'],
       info: { 類型: 'Short Video' }
