@@ -305,8 +305,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBg = document.querySelector('.modal-bg');
 
   function renderMedia(data) {
-    if (data.embed) {
-      return `
+
+  /* 可嵌入影片 */
+
+  if (data.embed) {
+
+    return `
+      <div class="video-wrap">
+
         <iframe
           class="embed-video"
           src="${data.embed}"
@@ -314,66 +320,78 @@ document.addEventListener('DOMContentLoaded', () => {
           allowfullscreen
           frameborder="0">
         </iframe>
-      `;
-    }
 
-    if (data.type === 'image' && data.media) {
-      return `
-        <img
-          class="modal-image-file"
-          src="${data.media}"
-          alt="${data.title}">
-      `;
-    }
+        ${data.link ? `
+          <a
+            class="video-link"
+            href="${data.link}"
+            target="_blank"
+            rel="noopener">
 
-    return `
-      <div class="media-error">
-        此作品目前尚未設定媒體內容。
+            若影片無法播放，點此開啟外部影片
+
+          </a>
+        ` : ''}
+
       </div>
     `;
   }
 
-  function renderDetail(data) {
-    const contentList = data.contents
-      ? `
-        <div class="modal-section">
-          <h4>專案內容</h4>
-          <ul>
-            ${data.contents.map((item) => `<li>${item}</li>`).join('')}
-          </ul>
-        </div>
-      `
-      : '';
 
-    const infoList = data.info
-      ? `
-        <div class="modal-section">
-          <h4>專案資訊</h4>
-          <dl>
-            ${Object.entries(data.info).map(([key, value]) => `
-              <div>
-                <dt>${key}</dt>
-                <dd>${value}</dd>
-              </div>
-            `).join('')}
-          </dl>
-        </div>
-      `
-      : '';
+  /* 純連結影片 */
 
-    const tagList = data.tags
-      ? `
-        <div class="modal-section">
-          <h4>標籤</h4>
-          <div class="tag-list">
-            ${data.tags.map((tag) => `<span>${tag}</span>`).join('')}
-          </div>
-        </div>
-      `
-      : '';
+  if (data.link) {
 
-    return contentList + infoList + tagList;
+    return `
+      <div class="external-video-box">
+
+        <p>
+          此作品影片請至外部平台觀看
+        </p>
+
+        <a
+          href="${data.link}"
+          target="_blank"
+          rel="noopener">
+
+          開啟影片
+
+        </a>
+
+      </div>
+    `;
   }
+
+
+  /* 圖片 */
+
+  if (
+      data.type==="image"
+      &&
+      data.media
+  ){
+
+    return `
+
+      <img
+      class="modal-image-file"
+      src="${data.media}"
+      alt="${data.title}">
+
+    `;
+  }
+
+
+  return`
+
+    <div class="media-error">
+
+      此作品目前尚未設定媒體內容。
+
+    </div>
+
+  `;
+}
 
   function openModal(key) {
     const data = worksData[key];
