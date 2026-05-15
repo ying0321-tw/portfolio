@@ -689,285 +689,62 @@ button{
 }
 
 
-/* MOBILE RWD */
-
+/* 修正手機 Works 3欄擠壓 */
 @media(max-width:768px){
-  .site-header{
-    padding:20px 24px;
-  }
-
-  .logo{
-    font-size:12px;
-  }
-
-  .nav{
-    gap:18px;
-  }
-
-  .nav a{
-    font-size:11px;
-  }
-
-  .hero{
-    padding:130px 24px 76px;
-    gap:44px;
-  }
-
-  .hero-left h1{
-    font-size:38px;
-    line-height:1.45;
-  }
-
-  .hero-tags{
-    margin-top:28px;
-    font-size:15px;
-  }
-
-  .scroll-hint{
-    margin-top:58px;
-  }
-
-  .hero-right svg{
-    width:116%;
-    margin-left:-8%;
-  }
-
-  .hero-right text{
-    font-size:9.5px;
-  }
-
-  .slider-card{
-    width:78vw;
-    padding:50px 24px 42px;
-  }
-
-  .slider-info{
-    margin-top:34px;
-    padding-top:20px;
-  }
-
-  .slider-info h3{
-    font-size:18px;
-    line-height:1.6;
-  }
-
-  .slider-label{
-    padding:14px 24px;
-    font-size:10px;
-    letter-spacing:.12em;
-  }
-
-  .about{
-    padding:88px 24px;
-  }
-
-  .section-title h2,
-  .works-header h2,
-  .contact-title h2{
-    font-size:54px;
-  }
-
-  .about-grid{
-    margin-top:36px;
-    grid-template-columns:1fr;
-    gap:28px;
-  }
-
-  .about-photo{
-    max-width:160px;
-    margin:0;
-  }
-
-  .about-photo img{
-    aspect-ratio:4/5;
-  }
-
-  .about-copy h3{
-    font-size:24px;
-    line-height:1.65;
-  }
-
-  .about-copy p{
-    font-size:14px;
-    line-height:2;
-  }
-
-  .works{
-    padding:0 24px 100px;
-  }
-
-  .works-header{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:22px;
-  }
-
-  .filter-nav{
-    width:100%;
-    overflow-x:auto;
-    flex-wrap:nowrap;
-    white-space:nowrap;
-    gap:22px;
-    padding-bottom:10px;
-  }
-
-  .filter-nav button{
-    font-size:13px;
-    flex:0 0 auto;
-  }
-
   .work-grid{
-    margin-top:44px;
     grid-template-columns:repeat(3,1fr) !important;
-    gap:18px !important;
+    gap:18px 14px !important;
+  }
+
+  .work-card{
+    min-width:0;
   }
 
   .work-card img{
+    width:100%;
     aspect-ratio:1/1;
     object-fit:cover;
   }
 
   .work-line{
-    margin:14px 0 8px;
+    display:none;
   }
 
   .category{
-    font-size:10px;
-    line-height:1.4;
-    letter-spacing:.04em;
+    margin-top:8px;
+    font-size:9px;
+    line-height:1.2;
+    letter-spacing:.02em;
   }
 
   .work-card h3{
-    font-size:12px;
-    line-height:1.45;
+    font-size:11px;
+    line-height:1.35;
     margin-top:4px;
+    font-weight:500;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
   }
 
   .desc{
-    display:none;
-  }
-
-  .contact{
-    padding:80px 24px 100px;
-  }
-
-  .floating-work-filter{
-    left:50%;
-    right:auto;
-    top:auto;
-    bottom:18px;
-    transform:translateX(-50%);
-    flex-direction:row;
-    max-width:calc(100vw - 32px);
-    overflow-x:auto;
-    border-radius:999px;
-    padding:8px;
-  }
-
-  .floating-work-filter button{
-    font-size:11px;
-    padding:7px 9px;
-    flex:0 0 auto;
-  }
-
-  .modal-content{
-    width:94vw;
-    height:90vh;
-    margin:5vh auto;
-    padding:24px;
-    gap:22px;
-  }
-
-  .modal-media{
-    height:48vh;
-  }
-
-  .modal-close{
-    top:14px;
-    right:18px;
-    font-size:36px;
-  }
-
-  .modal-text h2{
-    font-size:30px;
-  }
-
-  .modal-text > p:nth-child(3){
-    font-size:15px;
-    line-height:1.9;
-  }
-
-  .embed-video{
-    min-height:300px;
+    display:none !important;
   }
 }
 
-
-/* SMALL MOBILE */
-
+/* 超小手機再縮一點 */
 @media(max-width:480px){
-  .nav{
-    display:none;
-  }
-
-  .site-header{
-    padding:18px 20px;
-  }
-
-  .hero{
-    padding:120px 20px 70px;
-  }
-
-  .hero-left h1{
-    font-size:33px;
-  }
-
-  .hero-tags{
-    font-size:14px;
-  }
-
-  .slider-card{
-    width:86vw;
-    padding:46px 22px 38px;
-  }
-
-  .about,
-  .works,
-  .contact{
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  .section-title h2,
-  .works-header h2,
-  .contact-title h2{
-    font-size:48px;
-  }
-
-  .about-copy h3{
-    font-size:23px;
-  }
-
   .work-grid{
-    grid-template-columns:repeat(3,1fr) !important;
-    gap:14px !important;
+    gap:16px 12px !important;
   }
 
   .work-card h3{
-    font-size:11px;
-    line-height:1.4;
+    font-size:10.5px;
   }
 
   .category{
-    font-size:9px;
-  }
-
-  .modal-content{
-    width:94vw;
-    padding:24px 20px;
-  }
-
-  .modal-text h2{
-    font-size:27px;
+    font-size:8.5px;
   }
 }
