@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>TSOU CHIA YING Portfolio</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -23,10 +22,7 @@
   <main>
     <section class="hero">
       <div class="hero-left reveal-text">
-        <h1>
-          讓內容更貼近人的感受，
-          溝通將自然發生。
-        </h1>
+        <h1>讓內容更貼近人的感受，溝通將自然發生。</h1>
 
         <p class="hero-tags">
           行銷企劃 × 平面設計<br />
@@ -39,7 +35,7 @@
         </div>
       </div>
 
-      <div class="hero-right">
+      <div class="hero-right" aria-hidden="true">
         <svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg">
           <path d="M40 240 C180 120, 250 20, 360 70 C430 100, 460 190, 570 160 C660 130, 710 70, 820 0" />
           <path d="M40 240 C190 250, 280 280, 390 230 C510 180, 580 120, 700 120" />
@@ -64,92 +60,91 @@
       </div>
     </section>
 
-    <section class="featured-slider">
+    <section class="featured-slider" aria-label="Featured works carousel">
       <div class="slider-track">
-        <article class="slider-card" data-modal="marketing">
-          <img src="images/work-03.jpg" alt="黃石市場整合行銷專案" />
+        <article class="slider-card" data-modal="marketing1">
+          <img src="files/work-03.jpg" alt="板橋 YELLOWSTONE 整合行銷專案" loading="lazy" />
           <div class="slider-info">
-            <h3>板橋YELLOWSTONE｜整合行銷專案</h3>
+            <h3>板橋 YELLOWSTONE｜整合行銷專案</h3>
             <p>行銷專案</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="graphic">
-          <img src="files/dog01.jpg" alt="協助犬Logo設計" />
+        <article class="slider-card" data-modal="graphic1">
+          <img src="files/dog01.jpg" alt="協助犬品牌視覺設計" loading="lazy" />
           <div class="slider-info">
-            <h3>CIS｜企業識別系統</h3>
+            <h3>協助犬｜品牌視覺設計</h3>
             <p>品牌視覺設計</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="video">
-          <img src="images/work-04.jpg" alt="扭蛋開箱短影片" />
+        <article class="slider-card" data-modal="video1">
+          <img src="files/work-04.jpg" alt="扭蛋開箱短影片" loading="lazy" />
           <div class="slider-info">
-            <h3>扭蛋開箱｜扭蛋拍攝</h3>
+            <h3>扭蛋開箱｜短影音企劃</h3>
             <p>短影片</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="photo">
-          <img src="images/work-05.jpg" alt="猴硐貓村旅行攝影" />
-          <div class="slider-info">
-            <h3>猴硐貓村｜旅行攝影</h3>
-            <p>攝影</p>
-          </div>
-        </article>
-
-        <article class="slider-card" data-modal="uiux">
-          <img src="files/disney01.jpg" alt="迪士尼導覽 APP 介面設計" />
+        <article class="slider-card" data-modal="uiux1">
+          <img src="files/disney01.jpg" alt="迪士尼導覽 APP 介面設計" loading="lazy" />
           <div class="slider-info">
             <h3>迪士尼導覽｜APP 介面設計</h3>
             <p>UIUX</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="marketing">
-          <img src="images/work-03.jpg" alt="黃石市場整合行銷專案" />
+        <article class="slider-card" data-modal="uiux3">
+          <img src="files/91toy.jpg" alt="蛋舖官網關於我們頁面設計" loading="lazy" />
           <div class="slider-info">
-            <h3>板橋YELLOWSTONE｜整合行銷專案</h3>
+            <h3>蛋舖官網｜關於我們</h3>
+            <p>UIUX</p>
+          </div>
+        </article>
+
+        <!-- duplicate group for seamless loop -->
+        <article class="slider-card" data-modal="marketing1" aria-hidden="true">
+          <img src="files/work-03.jpg" alt="" loading="lazy" />
+          <div class="slider-info">
+            <h3>板橋 YELLOWSTONE｜整合行銷專案</h3>
             <p>行銷專案</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="graphic">
-          <img src="files/dog01.jpg" alt="協助犬Logo設計" />
+        <article class="slider-card" data-modal="graphic1" aria-hidden="true">
+          <img src="files/dog01.jpg" alt="" loading="lazy" />
           <div class="slider-info">
-            <h3>CIS｜企業識別系統</h3>
+            <h3>協助犬｜品牌視覺設計</h3>
             <p>品牌視覺設計</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="video">
-          <img src="images/work-04.jpg" alt="扭蛋開箱短影片" />
+        <article class="slider-card" data-modal="video1" aria-hidden="true">
+          <img src="files/work-04.jpg" alt="" loading="lazy" />
           <div class="slider-info">
-            <h3>扭蛋開箱｜扭蛋拍攝</h3>
+            <h3>扭蛋開箱｜短影音企劃</h3>
             <p>短影片</p>
           </div>
         </article>
 
-        <article class="slider-card" data-modal="photo">
-          <img src="images/work-05.jpg" alt="猴硐貓村旅行攝影" />
-          <div class="slider-info">
-            <h3>猴硐貓村｜旅行攝影</h3>
-            <p>攝影</p>
-          </div>
-        </article>
-
-        <article class="slider-card" data-modal="uiux">
-          <img src="files/disney01.jpg" alt="迪士尼導覽 APP 介面設計" />
+        <article class="slider-card" data-modal="uiux1" aria-hidden="true">
+          <img src="files/disney01.jpg" alt="" loading="lazy" />
           <div class="slider-info">
             <h3>迪士尼導覽｜APP 介面設計</h3>
             <p>UIUX</p>
           </div>
         </article>
+
+        <article class="slider-card" data-modal="uiux3" aria-hidden="true">
+          <img src="files/91toy.jpg" alt="" loading="lazy" />
+          <div class="slider-info">
+            <h3>蛋舖官網｜關於我們</h3>
+            <p>UIUX</p>
+          </div>
+        </article>
       </div>
 
-      <div class="slider-label">
-        MARKETING ／ GRAPHIC ／ VIDEO ／ PHOTOGRAPHY ／ UIUX
-      </div>
+      <div class="slider-label">MARKETING ／ GRAPHIC ／ VIDEO ／ PHOTOGRAPHY ／ UIUX</div>
     </section>
 
     <section id="about" class="about">
@@ -159,7 +154,7 @@
 
       <div class="about-grid">
         <div class="about-photo">
-          <img src="files/ying.jpg" alt="TSOU CHIA YING 個人照片" />
+          <img src="files/ying.jpg" alt="TSOU CHIA YING 個人照片" loading="lazy" />
         </div>
 
         <div class="about-copy">
@@ -169,10 +164,8 @@
           </h3>
 
           <p>
-            擅長從品牌目標出發，整合設計與內容思維，
-            將資訊轉化為有結構、有溫度且能行動的視覺成果。
-            平面設計、UIUX 協作、行銷企劃、短影音製作與攝影，
-            是我創作與執行的日常，也是串連所有專案的語言。
+            擅長從品牌目標出發，整合設計與內容思維，將資訊轉化為有結構、有溫度且能行動的視覺成果。
+            平面設計、UIUX 協作、行銷企劃、短影音製作與攝影，是我創作與執行的日常，也是串連所有專案的語言。
           </p>
         </div>
       </div>
@@ -182,7 +175,7 @@
       <div class="works-header">
         <h2>Works <span>•</span></h2>
 
-        <div class="filter-nav">
+        <div class="filter-nav" aria-label="作品分類">
           <button class="active" type="button" data-filter="all">ALL</button>
           <button type="button" data-filter="marketing">行銷專案</button>
           <button type="button" data-filter="graphic">平面設計</button>
@@ -193,227 +186,178 @@
       </div>
 
       <div class="work-grid">
-  <!-- 行銷專案 5個 -->
-  <article class="work-card" data-category="marketing" data-modal="marketing1">
-    <img src="images/work-03.jpg" alt="板橋YELLOWSTONE 整合行銷專案" />
-    <div class="work-line"></div>
-    <p class="category">行銷專案</p>
-    <h3>板橋YELLOWSTONE｜整合行銷專案</h3>
-    <p class="desc">從品牌定調到社群推廣、活動企劃，整合線上線下資源。</p>
-  </article>
+        <!-- 行銷專案：保留 5 個，適合履歷瀏覽 -->
+        <article class="work-card" data-category="marketing" data-modal="marketing1">
+          <img src="files/work-03.jpg" alt="板橋 YELLOWSTONE 整合行銷專案" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">行銷專案</p>
+          <h3>板橋 YELLOWSTONE｜整合行銷專案</h3>
+          <p class="desc">從品牌定調到社群推廣、活動企劃，整合線上線下資源。</p>
+        </article>
 
-  <article class="work-card" data-category="marketing" data-modal="marketing2">
-    <img src="files/marketing02.jpg" alt="東森購物 MOD商城 />
-    <div class="work-line"></div>
-    <p class="category">行銷專案</p>
-    <h3>東森購物 MOD商城｜雙11狂歡購</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="marketing" data-modal="marketing2">
+          <img src="files/marketing02.jpg" alt="東森購物 MOD 商城雙 11 專案" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">行銷專案</p>
+          <h3>東森購物 MOD 商城｜雙11狂歡購</h3>
+          <p class="desc">整合活動主題、檔期視覺與銷售溝通，提升促購理解度。</p>
+        </article>
 
-  <article class="work-card" data-category="marketing" data-modal="marketing3">
-    <img src="files/marketing03.jpg" alt="蛋舖官網機制優化" />
-    <div class="work-line"></div>
-    <p class="category">行銷專案</p>
-    <h3>蛋舖官網｜會員回購機制</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="marketing" data-modal="marketing3">
+          <img src="files/marketing03.jpg" alt="蛋舖官網會員回購機制" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">行銷專案</p>
+          <h3>蛋舖官網｜會員回購機制</h3>
+          <p class="desc">以會員行為與回訪動機為核心，規劃促進回購的互動機制。</p>
+        </article>
 
-  <article class="work-card" data-category="marketing" data-modal="marketing4">
-    <img src="files/marketing04.jpg" alt="蛋舖社群短影片策略" />
-    <div class="work-line"></div>
-    <p class="category">行銷專案</p>
-    <h3>蛋舖社群短影片策略｜扭蛋開箱</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="marketing" data-modal="marketing4">
+          <img src="files/marketing04.jpg" alt="蛋舖社群短影片策略" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">行銷專案</p>
+          <h3>蛋舖社群短影片策略｜扭蛋開箱</h3>
+          <p class="desc">以分享性、反差感與商品記憶點規劃短影音內容方向。</p>
+        </article>
 
-  <article class="work-card" data-category="marketing" data-modal="marketing5">
-    <img src="files/marketing05.jpg" alt="香山濕地" />
-    <div class="work-line"></div>
-    <p class="category">行銷專案</p>
-    <h3>香山濕地｜展場文字歸納</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="marketing" data-modal="marketing5">
+          <img src="files/marketing05.jpg" alt="香山濕地展場文字歸納" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">行銷專案</p>
+          <h3>香山濕地｜展場文字歸納</h3>
+          <p class="desc">將環境教育資訊整理成更適合展場閱讀的內容架構。</p>
+        </article>
 
-  <!-- 平面設計 6個 -->
-  <article class="work-card" data-category="graphic" data-modal="graphic1">
-    <img src="files/dog01.jpg" alt="協助犬 Logo 設計" />
-    <div class="work-line"></div>
-    <p class="category">CIS｜企業識別系統</p>
-    <h3>協助犬｜品牌視覺設計</h3>
-    <p class="desc">從品牌命名、標語到包裝，建立視覺語言。</p>
-  </article>
+        <!-- 平面設計：精簡為 5 個 -->
+        <article class="work-card" data-category="graphic" data-modal="graphic1">
+          <img src="files/dog01.jpg" alt="協助犬 Logo 設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">CIS｜企業識別系統</p>
+          <h3>協助犬｜品牌視覺設計</h3>
+          <p class="desc">從品牌命名、標語到包裝，建立視覺語言。</p>
+        </article>
 
-  <article class="work-card" data-category="graphic" data-modal="graphic2">
-    <img src="files/book01.jpg" alt="平面設計 02" />
-    <div class="work-line"></div>
-    <p class="category">平面設計</p>
-    <h3>西洋風味香料 美食特餐｜膠裝刊物</h3>
-    <p class="desc">以西洋香料文化為主軸，結合料理與風味美學，透過編輯排版呈現多國經典香料特色與美食靈感。</p>
-  </article>
+        <article class="work-card" data-category="graphic" data-modal="graphic2">
+          <img src="files/book01.jpg" alt="西洋風味香料美食特餐膠裝刊物" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">平面設計</p>
+          <h3>西洋風味香料 美食特餐｜膠裝刊物</h3>
+          <p class="desc">以西洋香料文化為主軸，透過編輯排版呈現風味美學。</p>
+        </article>
 
-  <article class="work-card" data-category="graphic" data-modal="graphic3">
-    <img src="files/lala01.jpg" alt="平面設計 03" />
-    <div class="work-line"></div>
-    <p class="category">平面設計</p>
-    <h3>包裝設計｜拉拉山水蜜桃商品</h3>
-    <p class="desc">以「高山果實的純粹」為核心，融合現代美學與在地農產特色。</p>
-  </article>
+        <article class="work-card" data-category="graphic" data-modal="graphic3">
+          <img src="files/lala01.jpg" alt="拉拉山水蜜桃商品包裝設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">平面設計</p>
+          <h3>包裝設計｜拉拉山水蜜桃商品</h3>
+          <p class="desc">融合現代美學與在地農產特色，呈現高山果實的純粹。</p>
+        </article>
 
-  <article class="work-card" data-category="graphic" data-modal="graphic4">
-    <img src="files/so01.jpg" alt="平面設計 04" />
-    <div class="work-line"></div>
-    <p class="category">平面設計</p>
-    <h3>包裝設計｜沙茶匠</h3>
-    <p class="desc">以「職人匠心」為核心，將傳統醬料轉化為精緻伴手禮</p>
-  </article>
+        <article class="work-card" data-category="graphic" data-modal="graphic4">
+          <img src="files/so01.jpg" alt="沙茶匠包裝設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">平面設計</p>
+          <h3>包裝設計｜沙茶匠</h3>
+          <p class="desc">以職人匠心為核心，將傳統醬料轉化為精緻伴手禮。</p>
+        </article>
 
-  <article class="work-card" data-category="graphic" data-modal="graphic5">
-    <img src="files/graphic05.jpg" alt="平面設計 05" />
-    <div class="work-line"></div>
-    <p class="category">平面設計</p>
-    <h3>蛋舖周邊設計｜出貨袋、員工服設計</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="graphic" data-modal="graphic5">
+          <img src="files/graphic05.jpg" alt="蛋舖周邊設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">平面設計</p>
+          <h3>蛋舖周邊設計｜出貨袋、員工服</h3>
+          <p class="desc">延伸品牌識別於實體接觸點，強化門市與出貨體驗。</p>
+        </article>
 
-  <article class="work-card" data-category="graphic" data-modal="graphic6">
-    <img src="files/graphic06.jpg" alt="平面設計 06" />
-    <div class="work-line"></div>
-    <p class="category">平面設計</p>
-    <h3>蛋舖｜門市海報</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <!-- 短影片：由 10 個精簡為 5 個 -->
+        <article class="work-card" data-category="video" data-modal="video1">
+          <img src="files/work-04.jpg" alt="AED 迷你造型急救包扭蛋短影片" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">短影片</p>
+          <h3>扭蛋開箱｜AED 迷你造型急救包</h3>
+          <p class="desc">從腳本企劃、拍攝到剪輯節奏，呈現玩具樂趣。</p>
+        </article>
 
-  <!-- 短影片 10個 -->
-  <article class="work-card" data-category="video" data-modal="video1">
-    <img src="images/work-04.jpg" alt="扭蛋開箱短影片" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>扭蛋開箱｜AED迷你造型急救包</h3>
-    <p class="desc">從腳本企劃、拍攝到剪輯節奏，呈現玩具樂趣。</p>
-  </article>
+        <article class="work-card" data-category="video" data-modal="video2">
+          <img src="files/video02.jpg" alt="蛋舖雙 11 活動宣傳影片" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">短影片</p>
+          <h3>蛋舖雙11｜活動宣傳影片</h3>
+          <p class="desc">以檔期節奏與優惠資訊，轉化為短影音宣傳內容。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video2">
-    <img src="files/video02-long.mp4" alt="扭蛋開箱短影片" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>蛋舖雙11｜活動宣傳影片</h3>
-  </article>
+        <article class="work-card" data-category="video" data-modal="video3">
+          <img src="files/video03.jpg" alt="特攝系列電視播放機短影片" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">短影片</p>
+          <h3>扭蛋開箱｜特攝系列電視播放機 VOL.1</h3>
+          <p class="desc">透過近拍與操作展示，放大商品趣味與收藏感。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video3">
-    <img src="files/video03.jpg" alt="短影片 03" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>扭蛋開箱｜特攝系列電視播放機VOL.1</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="video" data-modal="video4">
+          <img src="files/video04.jpg" alt="ICE 敲冰塊遊戲組短影片" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">短影片</p>
+          <h3>扭蛋開箱｜ICE 敲冰塊遊戲組</h3>
+          <p class="desc">以互動玩法作為內容亮點，提高觀看停留與分享誘因。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video4">
-    <img src="files/video04.jpg" alt="短影片 04" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>扭蛋開箱｜ICE敲冰塊遊戲組</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="video" data-modal="video5">
+          <img src="files/video05.jpg" alt="鬼娃恰吉復古包裝軟膠公仔短影片" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">短影片</p>
+          <h3>扭蛋開箱｜鬼娃恰吉復古包裝軟膠公仔</h3>
+          <p class="desc">以角色反差與包裝記憶點，建立短影音吸引力。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video5">
-    <img src="files/video05.jpg" alt="短影片 05" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>扭蛋開箱｜鬼娃恰吉復古包裝軟膠公仔</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <!-- 攝影：保留 3 個 -->
+        <article class="work-card" data-category="photo" data-modal="photo1">
+          <img src="files/work-05.jpg" alt="猴硐貓村旅行攝影" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">攝影</p>
+          <h3>猴硐貓村｜旅行攝影</h3>
+          <p class="desc">用影像記錄旅途中值得收藏的風景與情緒。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video6">
-    <img src="files/video06.jpg" alt="短影片 06" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>收納盒開箱｜大創珠鍊吊飾收納盒</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="photo" data-modal="photo2">
+          <img src="files/photo02.jpg" alt="攝影作品 02" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">攝影</p>
+          <h3>攝影 02｜作品名稱</h3>
+          <p class="desc">以光線、構圖與色調建立情緒。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video7">
-    <img src="files/video07.jpg" alt="短影片 07" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>節日開箱｜鬼門開</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="photo" data-modal="photo3">
+          <img src="files/photo03.jpg" alt="攝影作品 03" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">攝影</p>
+          <h3>攝影 03｜作品名稱</h3>
+          <p class="desc">整理可用於品牌與社群延伸的影像素材。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video8">
-    <img src="files/video08.jpg" alt="短影片 08" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>聯名美食開箱｜必勝客 庫洛魔法使套餐</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <!-- UIUX：保留 3 個，對 HR 更聚焦 -->
+        <article class="work-card" data-category="uiux" data-modal="uiux1">
+          <img src="files/disney01.jpg" alt="迪士尼導覽 APP 介面設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">UIUX</p>
+          <h3>迪士尼導覽｜APP 介面設計</h3>
+          <p class="desc">整合即時定位的樂園導覽 App，強化智慧遊園體驗。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video9">
-    <img src="files/video09.jpg" alt="短影片 09" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>扭蛋開箱｜星之卡比火車遊戲公仔</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
+        <article class="work-card" data-category="uiux" data-modal="uiux2">
+          <img src="files/uiux02.jpg" alt="和正農作官網設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">UIUX</p>
+          <h3>官網設計｜和正農作</h3>
+          <p class="desc">以自然職人風格重新建構品牌官網，打造直覺且有溫度的購物體驗。</p>
+        </article>
 
-  <article class="work-card" data-category="video" data-modal="video10">
-    <img src="files/video10.jpg" alt="短影片 10" />
-    <div class="work-line"></div>
-    <p class="category">短影片</p>
-    <h3>扭蛋開箱｜可以沖水的馬桶模型P2</h3>
-    <p class="desc">請替換成此專案的簡短介紹。</p>
-  </article>
-
-  <!-- 攝影 3個 -->
-  <article class="work-card" data-category="photo" data-modal="photo1">
-    <img src="images/work-05.jpg" alt="猴硐貓村 旅行攝影" />
-    <div class="work-line"></div>
-    <p class="category">攝影</p>
-    <h3>猴硐貓村｜旅行攝影</h3>
-    <p class="desc">用影像記錄旅途中值得收藏的風景與情緒。</p>
-  </article>
-
-  <article class="work-card" data-category="photo" data-modal="photo2">
-    <img src="files/photo02.jpg" alt="攝影 02" />
-    <div class="work-line"></div>
-    <p class="category">攝影</p>
-    <h3>攝影 02｜作品名稱</h3>
-    <p class="desc">請替換成此作品的簡短介紹。</p>
-  </article>
-
-  <article class="work-card" data-category="photo" data-modal="photo3">
-    <img src="files/photo03.jpg" alt="攝影 03" />
-    <div class="work-line"></div>
-    <p class="category">攝影</p>
-    <h3>攝影 03｜作品名稱</h3>
-    <p class="desc">請替換成此作品的簡短介紹。</p>
-  </article>
-
-  <!-- UIUX 3個 -->
-  <article class="work-card" data-category="uiux" data-modal="uiux1">
-    <img src="files/disney01.jpg" alt="迪士尼導覽 APP 介面設計" />
-    <div class="work-line"></div>
-    <p class="category">UIUX</p>
-    <h3>迪士尼導覽｜APP 介面設計</h3>
-    <p class="desc">整合即時定位的樂園導覽 App，強化智慧遊園體驗。</p>
-  </article>
-
-  <article class="work-card" data-category="uiux" data-modal="uiux2">
-    <img src="files/uiux02.jpg" alt="UIUX 02" />
-    <div class="work-line"></div>
-    <p class="category">UIUX</p>
-    <h3>官網設計｜和正農作</h3>
-    <p class="desc">以自然職人風格重新建構品牌官網，整合購物打造更直覺且具溫度感的烘焙品牌。</p>
-  </article>
-
-  <article class="work-card" data-category="uiux" data-modal="uiux3">
-    <img src="files/91toy.jpg" alt="UIUX 03" />
-    <div class="work-line"></div>
-    <p class="category">UIUX</p>
-    <h3>蛋舖官網｜關於我們</h3>
-    <p class="desc">以品牌展示與合作提案為核心，重新規劃網站視覺與資訊架構，強化品牌形象與市場吸引力。</p>
-  </article>
-</div>
-        
+        <article class="work-card" data-category="uiux" data-modal="uiux3">
+          <img src="files/91toy.jpg" alt="蛋舖官網關於我們頁面設計" loading="lazy" />
+          <div class="work-line"></div>
+          <p class="category">UIUX</p>
+          <h3>蛋舖官網｜關於我們</h3>
+          <p class="desc">以品牌展示與合作提案為核心，強化品牌形象與市場吸引力。</p>
+        </article>
       </div>
     </section>
   </main>
@@ -428,11 +372,11 @@
     </div>
   </footer>
 
-  <div class="modal" id="workModal">
+  <div class="modal" id="workModal" aria-hidden="true">
     <div class="modal-bg"></div>
 
-    <div class="modal-content">
-      <button class="modal-close" type="button">×</button>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="關閉作品介紹">×</button>
 
       <div class="modal-media" id="modalMedia"></div>
 
