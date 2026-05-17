@@ -1067,3 +1067,406 @@ button{
     font-size:27px;
   }
 }
+
+
+/* ===== 2026 Portfolio UI/RWD Optimization ===== */
+/* Remove the old carousel block completely. */
+.featured-slider,
+.slider-track,
+.slider-card,
+.slider-label{
+  display:none !important;
+}
+
+/* Works is now the first main section after hero. */
+.works{
+  padding:40px 48px 140px;
+}
+
+.works-header{
+  display:block;
+}
+
+/* Top horizontal filter is removed; only the floating filter remains. */
+.works-header .filter-nav{
+  display:none !important;
+}
+
+.work-card{
+  border-radius:18px;
+}
+
+.work-card img{
+  border-radius:10px;
+  background:#eee8df;
+}
+
+/* Combined About + Contact section */
+.about-contact{
+  padding:110px 48px 120px;
+}
+
+.about-contact-grid{
+  margin-top:48px;
+  display:grid;
+  grid-template-columns:220px minmax(0,760px);
+  gap:54px;
+  align-items:start;
+}
+
+.contact-mail{
+  display:inline-flex;
+  align-items:center;
+  margin-top:30px;
+  padding:12px 22px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--text);
+  font-size:14px;
+  letter-spacing:.04em;
+  background:rgba(251,250,247,.72);
+}
+
+.contact-mail:hover{
+  background:var(--text);
+  color:var(--paper);
+}
+
+/* Floating filter appears only while browsing Works. */
+.floating-work-filter{
+  opacity:0;
+  pointer-events:none;
+}
+
+.floating-work-filter.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Modal: safer desktop layout */
+.modal-content{
+  align-items:stretch;
+}
+
+.modal-text{
+  position:relative;
+  z-index:2;
+  background:var(--paper);
+}
+
+.video-wrap{
+  width:100%;
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.video-link{
+  align-self:flex-start;
+  display:inline-flex;
+  padding:10px 18px;
+  border-radius:999px;
+  background:var(--text);
+  color:var(--paper);
+  font-size:13px;
+}
+
+.external-video-box{
+  position:relative;
+  min-height:520px;
+  padding:48px 32px;
+  background:
+    radial-gradient(circle at center, rgba(154,130,105,.14), transparent 42%),
+    #f3eee7;
+}
+
+.external-video-box::before{
+  content:'▶';
+  width:88px;
+  height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--text);
+  color:var(--paper);
+  font-size:34px;
+  line-height:1;
+  box-shadow:0 16px 40px rgba(0,0,0,.16);
+  text-indent:5px;
+}
+
+.external-video-box p{
+  max-width:360px;
+  color:var(--sub);
+  font-size:16px;
+  line-height:1.8;
+}
+
+.external-video-box a{
+  padding:14px 28px;
+  font-size:15px;
+  box-shadow:0 10px 26px rgba(0,0,0,.12);
+}
+
+.external-video-box a:hover,
+.video-link:hover{
+  transform:translateY(-1px);
+}
+
+@media(max-width:1200px){
+  .works{
+    padding:36px 40px 118px;
+  }
+
+  .work-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:42px 36px;
+  }
+
+  .work-card img{
+    aspect-ratio:3/4;
+    object-fit:cover;
+  }
+
+  .work-card h3{
+    font-size:22px;
+  }
+
+  .about-contact{
+    padding:96px 40px 108px;
+  }
+
+  .about-contact-grid{
+    grid-template-columns:200px minmax(0,1fr);
+    gap:44px;
+  }
+
+  .modal-content{
+    width:92vw;
+    height:88vh;
+    display:flex;
+    flex-direction:column;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .modal-text{
+    order:1;
+    align-self:stretch;
+    overflow:visible;
+    max-height:none;
+    padding-right:0;
+  }
+
+  .modal-media{
+    order:2;
+    height:auto;
+    max-height:none;
+    min-height:0;
+    overflow:visible;
+  }
+
+  .modal-media img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .embed-video{
+    height:56vh;
+    min-height:430px;
+  }
+
+  .external-video-box{
+    min-height:430px;
+  }
+}
+
+@media(max-width:768px){
+  .hero{
+    min-height:72vh;
+  }
+
+  .hero-right{
+    display:none;
+  }
+
+  .works{
+    padding:18px 24px 92px;
+  }
+
+  .work-grid{
+    margin-top:42px;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:34px 22px !important;
+  }
+
+  .work-card img{
+    aspect-ratio:3/4;
+    border-radius:8px;
+  }
+
+  .category{
+    margin-top:18px;
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+
+  .work-card h3{
+    margin-top:8px;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-line-clamp:3;
+  }
+
+  .desc{
+    display:none !important;
+  }
+
+  .work-line{
+    display:block;
+    margin:24px 0 0;
+  }
+
+  .floating-work-filter{
+    bottom:18px;
+    gap:8px;
+    max-width:calc(100vw - 28px);
+    padding:9px;
+  }
+
+  .floating-work-filter button{
+    font-size:12px;
+    padding:8px 11px;
+  }
+
+  .about-contact{
+    padding:86px 24px 110px;
+  }
+
+  .about-contact-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .contact-title h2{
+    font-size:48px;
+    line-height:1.05;
+  }
+
+  .contact-mail{
+    width:fit-content;
+    margin-top:26px;
+  }
+
+  .modal-content{
+    width:94vw;
+    height:90vh;
+    margin:5vh auto;
+    padding:28px 24px 34px;
+    gap:26px;
+    display:flex;
+    flex-direction:column;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .modal-close{
+    position:sticky;
+    top:0;
+    align-self:flex-end;
+    width:42px;
+    height:42px;
+    margin:-12px -8px -10px 0;
+    background:rgba(251,250,247,.9);
+    border-radius:50%;
+    z-index:10;
+  }
+
+  .modal-text{
+    order:1;
+    overflow:visible;
+    max-height:none;
+    background:var(--paper);
+  }
+
+  .modal-media{
+    order:2;
+    height:auto !important;
+    max-height:none;
+    overflow:visible;
+    background:#f3eee7;
+  }
+
+  .modal-text h2{
+    font-size:28px;
+    line-height:1.35;
+  }
+
+  .modal-text > p:nth-child(3){
+    font-size:15px;
+    line-height:1.95;
+  }
+
+  .modal-section{
+    margin-top:28px;
+    padding-top:24px;
+  }
+
+  .embed-video{
+    width:100%;
+    height:62vh;
+    min-height:360px;
+  }
+
+  .external-video-box{
+    min-height:360px;
+    padding:42px 24px;
+  }
+
+  .external-video-box::before{
+    width:74px;
+    height:74px;
+    font-size:28px;
+  }
+}
+
+@media(max-width:480px){
+  .works{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .work-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:30px 18px !important;
+  }
+
+  .work-card h3{
+    font-size:15px;
+  }
+
+  .category{
+    font-size:11px;
+  }
+
+  .contact-title h2{
+    font-size:42px;
+  }
+
+  .about-contact{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .modal-content{
+    padding:24px 20px 32px;
+  }
+
+  .modal-text h2{
+    font-size:26px;
+  }
+}
