@@ -53,21 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const floatingFilter = document.querySelector('#floatingWorkFilter');
-  const featuredSlider = document.querySelector('.featured-slider');
+  const worksSectionForFloating = document.querySelector('#works');
+  const contactSectionForFloating = document.querySelector('#contact');
 
   function toggleFloatingFilter() {
-    if (!floatingFilter || !featuredSlider) return;
+    if (!floatingFilter || !worksSectionForFloating) return;
 
-    const sliderBottom = featuredSlider.getBoundingClientRect().bottom;
+    const worksRect = worksSectionForFloating.getBoundingClientRect();
+    const contactRect = contactSectionForFloating
+      ? contactSectionForFloating.getBoundingClientRect()
+      : null;
 
-    if (sliderBottom <= 0) {
-      floatingFilter.classList.add('show');
-    } else {
-      floatingFilter.classList.remove('show');
-    }
+    const hasReachedWorks = worksRect.top <= window.innerHeight * 0.62;
+    const stillInWorks = contactRect ? contactRect.top > window.innerHeight * 0.72 : true;
+
+    floatingFilter.classList.toggle('show', hasReachedWorks && stillInWorks);
   }
 
-  window.addEventListener('scroll', toggleFloatingFilter);
+  window.addEventListener('scroll', toggleFloatingFilter, { passive: true });
+  window.addEventListener('resize', toggleFloatingFilter);
   toggleFloatingFilter();
 
 
@@ -336,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (data.link && data.link !== 'https://youtu.be/') {
       return `
         <div class="external-video-box">
-          <p>此作品影片請至外部平台觀看</p>
+          <p>點擊下方按鈕，開啟完整短影片作品。</p>
           <a href="${data.link}" target="_blank" rel="noopener">
             開啟影片
           </a>
