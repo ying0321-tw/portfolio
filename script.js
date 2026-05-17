@@ -316,36 +316,20 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  function escapeHtml(value) {
-    return String(value ?? '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  function getPrimaryImage(data) {
-    if (data.type === 'image' && data.media) return data.media;
-    if (data.cover) return data.cover;
-    return '';
-  }
-
   function renderMedia(data) {
     if (data.embed) {
       return `
         <div class="video-wrap">
           <iframe
             class="embed-video"
-            src="${escapeHtml(data.embed)}"
-            title="${escapeHtml(data.title)}"
+            src="${data.embed}"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             frameborder="0">
           </iframe>
 
           ${data.link ? `
-            <a class="video-link" href="${escapeHtml(data.link)}" target="_blank" rel="noopener">
+            <a class="video-link" href="${data.link}" target="_blank" rel="noopener">
               若影片無法播放，點此開啟外部影片
             </a>
           ` : ''}
@@ -354,12 +338,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (data.link && data.link !== 'https://youtu.be/') {
-      const cover = data.cover || '';
       return `
-        <div class="external-video-box" ${cover ? `style="--video-cover:url('${escapeHtml(cover)}')"` : ''}>
-          <div class="video-play-mark">▶</div>
-          <p>點擊下方按鈕，開啟完整短影片作品。</p>
-          <a href="${escapeHtml(data.link)}" target="_blank" rel="noopener">
+        <div class="external-video-box">
+          <a class="video-play-hotspot" href="${data.link}" target="_blank" rel="noopener" aria-label="播放影片">
+            <span>▶</span>
+          </a>
+          <p class="video-mobile-note">點擊下方按鈕，開啟完整短影片作品。</p>
+          <a class="video-cta-button" href="${data.link}" target="_blank" rel="noopener">
             播放影片
           </a>
         </div>
@@ -370,8 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <img
           class="modal-image-file"
-          src="${escapeHtml(data.media)}"
-          alt="${escapeHtml(data.title)}">
+          src="${data.media}"
+          alt="${data.title}">
       `;
     }
 
@@ -382,68 +367,35 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  function renderSummaryCard(title, items) {
-    if (!items || !items.length) return '';
-
-    return `
-      <section class="summary-card">
-        <h4>${escapeHtml(title)}</h4>
-        <ul>
-          ${items.slice(0, 4).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-        </ul>
-      </section>
-    `;
-  }
-
-  function renderInfoCard(info) {
-    if (!info) return '';
-
-    return `
-      <section class="summary-card">
-        <h4>使用工具 / 資訊</h4>
-        <dl>
-          ${Object.entries(info).map(([key, value]) => `
-            <div>
-              <dt>${escapeHtml(key)}</dt>
-              <dd>${escapeHtml(value)}</dd>
-            </div>
-          `).join('')}
-        </dl>
-      </section>
-    `;
-  }
-
   function renderDetail(data) {
-    const primaryImage = getPrimaryImage(data);
-    const isVideo = Boolean(data.link && data.link !== 'https://youtu.be/') || Boolean(data.embed);
-    const actionText = isVideo ? '播放影片' : '查看完整作品';
-    const actionHref = isVideo ? (data.link || '#') : '#modalMedia';
-    const actionTarget = isVideo ? 'target="_blank" rel="noopener"' : '';
-
-    const responsibility = data.responsibility || data.contents || [];
-    const highlights = data.highlights || data.contents || [];
-
-    return `
-      ${primaryImage ? `
-        <div class="modal-mobile-cover">
-          <img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(data.title)}">
+    const contentList = data.contents
+      ? `
+        <div class="modal-section">
+          <h4>專案內容</h4>
+          <ul>
+            ${data.contents.map((item) => `<li>${item}</li>`).join('')}
+          </ul>
         </div>
-      ` : ''}
+      `
+      : '';
 
-      <a class="modal-main-cta ${isVideo ? 'is-video' : ''}" href="${escapeHtml(actionHref)}" ${actionTarget}>
-        <span>${isVideo ? '▶' : '↘'}</span>${actionText}
-      </a>
+    const infoList = data.info
+      ? `
+        <div class="modal-section">
+          <h4>專案資訊</h4>
+          <dl>
+            ${Object.entries(data.info).map(([key, value]) => `
+              <div>
+                <dt>${key}</dt>
+                <dd>${value}</dd>
+              </div>
+            `).join('')}
+          </dl>
+        </div>
+      `
+      : '';
 
-      <div class="modal-summary-grid">
-        ${renderSummaryCard('我負責', responsibility)}
-        ${renderSummaryCard('專案重點', highlights)}
-        ${renderInfoCard(data.info)}
-      </div>
-
-      ${!isVideo ? `
-        <p class="mobile-long-note">往下滑可查看完整長圖作品。</p>
-      ` : ''}
-    `;
+    return contentList + infoList;
   }
 
   function openModal(key, element) {
@@ -451,29 +403,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!data || !modal || !modalMedia) return;
 
-    const cardImage = element?.querySelector('img')?.getAttribute('src');
-    const viewData = { ...data, cover: data.cover || cardImage || data.media || '' };
+    modalMedia.innerHTML = renderMedia(data);
+    modalCategory.textContent = data.category || '';
+    modalTitle.textContent = data.title || '';
+    modalDesc.textContent = data.desc || '';
+    modalTags.innerHTML = renderDetail(data);
 
-    modalMedia.innerHTML = renderMedia(viewData);
-    modalCategory.textContent = viewData.category || '';
-    modalTitle.textContent = viewData.title || '';
-    modalDesc.textContent = viewData.desc || '';
-    modalTags.innerHTML = renderDetail(viewData);
-
-    const year = viewData.info?.年份 || viewData.year || '';
-    modal.querySelector('.modal-year')?.remove();
-    if (year && closeBtn) {
-      closeBtn.insertAdjacentHTML('beforebegin', `<span class="modal-year">${escapeHtml(year)}</span>`);
-    }
-
-    modal.classList.toggle('is-video-modal', Boolean(viewData.link || viewData.embed));
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    modal.querySelector('.modal-main-cta[href="#modalMedia"]')?.addEventListener('click', (event) => {
-      event.preventDefault();
-      modalMedia.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
   }
 
   function closeModal() {
