@@ -188,52 +188,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     video1: {
       category: '短影片',
-      title: '扭蛋開箱｜AED 迷你造型急救包',
-      link: 'https://youtu.be/yR1RM2RJkBk',
-      cover:'files/video01.jpg',
-      desc: '從腳本企劃、拍攝到剪輯節奏，呈現扭蛋玩家感受玩具的樂趣。',
-      contents: ['短影音腳本企劃', '拍攝分鏡安排', '剪輯節奏設計'],
-      info: { 類型: 'Short Video', 工具: 'CapCut' }
+      title: 'LED磁吸插座燈 P2',
+      type: 'video',
+      cover: 'files/video01.jpg',
+      embed: 'https://www.youtube.com/embed/ut150V2baEw',
+      desc: '以商品細節與生活場景切入，快速建立使用想像與購買情境。',
+      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
+      info: { 工具: 'CapCut / Photoshop' },
+      performance: [
+        { value: '51K+', label: 'Facebook' },
+        { value: '2.6K', label: 'Instagram' },
+        { value: '857', label: 'YouTube' }
+      ]
     },
 
     video2: {
       category: '短影片',
-      title: '蛋舖雙11｜活動宣傳影片',
-      link: 'https://www.facebook.com/share/r/18tYVkZhxq/',
-      cover:'files/video02.jpg',
-      desc: '以活動促購為主軸，透過短影音快速傳達檔期優惠與參與動機。',
-      contents: ['活動腳本', '商品拍攝', '節奏剪輯'],
-      info: { 類型: 'Short Video' }
+      title: 'Calbee薯條危機遊戲模型 P2',
+      type: 'video',
+      cover: 'files/video02.jpg',
+      embed: 'https://www.youtube.com/embed/U1M6qN8hOu4',
+      desc: '結合開箱與遊玩過程，放大緊張感與互動樂趣。',
+      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
+      info: { 工具: 'CapCut / Photoshop' },
+      performance: [
+        { value: '34K+', label: 'Facebook' },
+        { value: '2.7K', label: 'Instagram' },
+        { value: '572', label: 'YouTube' }
+      ]
     },
 
     video3: {
       category: '短影片',
-      title: '扭蛋開箱｜特攝系列電視播放機',
-      link: 'https://youtu.be/qUu6v1Oc0Js',
-      cover:'files/video03.jpg',
-      desc: '以產品功能與收藏亮點作為影片鉤子，強化觀看與收藏興趣。',
-      contents: ['腳本企劃', '商品展示', '剪輯節奏'],
-      info: { 類型: 'Short Video' }
+      title: '必勝客魔法 PIZZA 開箱',
+      type: 'video',
+      cover: 'files/video03.jpg',
+      embed: 'https://www.youtube.com/embed/o1hKGAlXOvM',
+      desc: '結合聯名話題與現場紀錄，強化觀看真實感與討論度。',
+      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
+      info: { 工具: 'CapCut / Photoshop' },
+      performance: [
+        { value: '66K+', label: 'Facebook' },
+        { value: '2.7K', label: 'Instagram' },
+        { value: '3K', label: 'YouTube' }
+      ]
     },
 
     video4: {
       category: '短影片',
-      title: '扭蛋開箱｜ICE 敲冰塊遊戲組',
-      link: 'https://youtu.be/d3u5aKXNcO0',
-      cover:'files/video04.jpg',
-      desc: '用遊戲情境帶出商品玩法，讓觀眾快速理解趣味點。',
-      contents: ['情境腳本', '拍攝', '剪輯'],
-      info: { 類型: 'Short Video' }
+      title: 'IKEA 相框改造',
+      type: 'video',
+      cover: 'files/video04.jpg',
+      embed: 'https://www.youtube.com/embed/o1hKGAlXOvM',
+      desc: '從玩具收納痛點出發，分享改造方式與實際應用情境。',
+      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
+      info: { 工具: 'CapCut / Photoshop' },
+      performance: [
+        { value: '210K+', label: 'Facebook' },
+        { value: '18K', label: 'Instagram' },
+        { value: '24K', label: 'YouTube' }
+      ]
     },
 
     video5: {
       category: '短影片',
-      title: '扭蛋開箱｜鬼娃恰吉軟膠公仔',
-      link: 'https://youtu.be/Y10-U7yfRO4',
-      cover:'files/video05.jpg',
-      desc: '以角色記憶點與商品細節作為切入，提升短影音的吸引力。',
-      contents: ['商品開箱', '鏡頭安排', '剪輯'],
-      info: { 類型: 'Short Video' }
+      title: '大創收納盒開箱',
+      type: 'video',
+      cover: 'files/video05.jpg',
+      embed: 'https://www.youtube.com/embed/Bl2svrqsHVY',
+      desc: '以收納情境切入，協助玩家快速找到整理靈感。',
+      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
+      info: { 工具: 'CapCut / Photoshop' },
+      performance: [
+        { value: '140K+', label: 'Facebook' },
+        { value: '6.8K', label: 'Instagram' },
+        { value: '1.5K', label: 'YouTube' }
+      ]
     },
 
     photo1: {
@@ -322,6 +352,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderMedia(data) {
+    if (data.type === 'video' && data.cover && data.embed) {
+      return `
+        <button
+          class="external-video-box video-cover-box"
+          type="button"
+          data-embed="${data.embed}"
+          aria-label="播放 ${data.title}"
+          style="background-image:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('${data.cover}');">
+        </button>
+      `;
+    }
+
     if (data.embed) {
       return `
         <div class="video-wrap">
@@ -342,25 +384,16 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-if (data.link && data.link !== 'https://youtu.be/') {
-  return `
-    <a
-      class="external-video-box"
-      href="${data.link}"
-      target="_blank"
-      rel="noopener"
-      style="
-      background:
-      linear-gradient(
-      rgba(0,0,0,.15),
-      rgba(0,0,0,.15)),
-      url('${data.cover}');
-      background-size:cover;
-      background-position:center;
-      "
-    ></a>
-  `;
-}
+    if (data.link && data.link !== 'https://youtu.be/') {
+      return `
+        <a 
+          class="external-video-box"
+          href="${data.link}" 
+          target="_blank" 
+          rel="noopener"
+        ></a>
+      `;
+    }
 
     if (data.type === 'image' && data.media) {
       return `
@@ -406,7 +439,29 @@ if (data.link && data.link !== 'https://youtu.be/') {
       `
       : '';
 
-    return contentList + infoList;
+    const performanceList = data.performance
+      ? `
+        <div class="modal-section performance-section">
+          <h4>Performance</h4>
+          <div class="performance-grid">
+            ${data.performance.map((item) => `
+              <div class="performance-item">
+                <strong>${item.value}</strong>
+                <span>${item.label}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `
+      : '';
+
+    const note=`
+<div class="more-video-note">
+更多短影片作品：<br>
+Facebook｜蛋舖－線上轉蛋就素快
+</div>`;
+
+return contentList + infoList + performanceList + note;
   }
 
   function openModal(key, element) {
@@ -431,6 +486,27 @@ if (data.link && data.link !== 'https://youtu.be/') {
     modalMedia.innerHTML = '';
     document.body.style.overflow = '';
   }
+
+  document.addEventListener('click', (e) => {
+    const videoCover = e.target.closest('.video-cover-box');
+
+    if (!videoCover || !modalMedia) return;
+
+    const embedUrl = videoCover.dataset.embed;
+
+    if (!embedUrl) return;
+
+    modalMedia.innerHTML = `
+      <iframe
+        class="embed-video"
+        src="${embedUrl}?autoplay=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        frameborder="0">
+      </iframe>
+    `;
+  });
+
 
   document.querySelectorAll('[data-modal]').forEach((item) => {
     item.addEventListener('click', () => {
