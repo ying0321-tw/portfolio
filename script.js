@@ -339,12 +339,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (data.link && data.link !== 'https://youtu.be/') {
       return `
-        <div class="external-video-box">
-          <p>點擊下方按鈕，開啟完整短影片作品。</p>
-          <a href="${data.link}" target="_blank" rel="noopener">
-            開啟影片
-          </a>
-        </div>
+        <a 
+          class="external-video-box"
+          href="${data.link}" 
+          target="_blank" 
+          rel="noopener"
+        ></a>
       `;
     }
 
