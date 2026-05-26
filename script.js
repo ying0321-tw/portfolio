@@ -337,16 +337,25 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-    if (data.link && data.link !== 'https://youtu.be/') {
-      return `
-        <a 
-          class="external-video-box"
-          href="${data.link}" 
-          target="_blank" 
-          rel="noopener"
-        ></a>
-      `;
-    }
+if (data.link && data.link !== 'https://youtu.be/') {
+  return `
+    <a
+      class="external-video-box"
+      href="${data.link}"
+      target="_blank"
+      rel="noopener"
+      style="
+      background:
+      linear-gradient(
+      rgba(0,0,0,.15),
+      rgba(0,0,0,.15)),
+      url('${data.cover}');
+      background-size:cover;
+      background-position:center;
+      "
+    ></a>
+  `;
+}
 
     if (data.type === 'image' && data.media) {
       return `
