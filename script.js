@@ -190,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: '短影片',
       title: '扭蛋開箱｜AED 迷你造型急救包',
       link: 'https://youtu.be/yR1RM2RJkBk',
+      cover:'files/video01.jpg',
       desc: '從腳本企劃、拍攝到剪輯節奏，呈現扭蛋玩家感受玩具的樂趣。',
       contents: ['短影音腳本企劃', '拍攝分鏡安排', '剪輯節奏設計'],
       info: { 類型: 'Short Video', 工具: 'CapCut' }
@@ -199,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: '短影片',
       title: '蛋舖雙11｜活動宣傳影片',
       link: 'https://www.facebook.com/share/r/18tYVkZhxq/',
+      cover:'files/video02.jpg',
       desc: '以活動促購為主軸，透過短影音快速傳達檔期優惠與參與動機。',
       contents: ['活動腳本', '商品拍攝', '節奏剪輯'],
       info: { 類型: 'Short Video' }
@@ -208,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: '短影片',
       title: '扭蛋開箱｜特攝系列電視播放機',
       link: 'https://youtu.be/qUu6v1Oc0Js',
+      cover:'files/video03.jpg',
       desc: '以產品功能與收藏亮點作為影片鉤子，強化觀看與收藏興趣。',
       contents: ['腳本企劃', '商品展示', '剪輯節奏'],
       info: { 類型: 'Short Video' }
@@ -217,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: '短影片',
       title: '扭蛋開箱｜ICE 敲冰塊遊戲組',
       link: 'https://youtu.be/d3u5aKXNcO0',
+      cover:'files/video04.jpg',
       desc: '用遊戲情境帶出商品玩法，讓觀眾快速理解趣味點。',
       contents: ['情境腳本', '拍攝', '剪輯'],
       info: { 類型: 'Short Video' }
@@ -226,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: '短影片',
       title: '扭蛋開箱｜鬼娃恰吉軟膠公仔',
       link: 'https://youtu.be/Y10-U7yfRO4',
+      cover:'files/video05.jpg',
       desc: '以角色記憶點與商品細節作為切入，提升短影音的吸引力。',
       contents: ['商品開箱', '鏡頭安排', '剪輯'],
       info: { 類型: 'Short Video' }
