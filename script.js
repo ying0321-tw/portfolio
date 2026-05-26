@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video2: {
       category: '短影片',
       title: '蛋舖雙11｜活動宣傳影片',
-      link: 'https://youtu.be/',
+      link: 'https://www.facebook.com/share/r/18tYVkZhxq/',
       desc: '以活動促購為主軸，透過短影音快速傳達檔期優惠與參與動機。',
       contents: ['活動腳本', '商品拍攝', '節奏剪輯'],
       info: { 類型: 'Short Video' }
