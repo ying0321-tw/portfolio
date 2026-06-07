@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: '行銷專案',
       title: '板橋 YELLOWSTONE｜整合行銷專案',
       type: 'image',
-      media: 'files/work-03.jpg',
+      media: 'files/work-03-3.jpg',
       desc: '從品牌策略、社群企劃、活動視覺到線上線下推廣，協助市場改建後重新建立與在地生活的連結。',
       contents: ['品牌定位', '社群內容企劃', '活動視覺整合', '專案成效整理'],
       info: { 年份: '2025', 類型: 'Marketing Project', 角色: '企劃 / 品牌整合' }
