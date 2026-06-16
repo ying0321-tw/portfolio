@@ -3,171 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我都在忙些什麼？｜鄒佳穎</title>
+  <title>Observation Cube｜觀測紀錄</title>
+  <meta name="description" content="Observation Cube｜把觀察到的訊號，整理成可以被理解的樣子。" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="theme-dark">
-  <div class="stars" aria-hidden="true"></div>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="starfield" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a class="brand" href="#top"><span class="cube-mark"></span>我都在忙些什麼？</a>
-    <nav class="top-nav" aria-label="主選單">
-      <a href="#observatories">觀測領域</a>
-      <a href="#featured">觀測紀錄</a>
-      <a href="#contact">聯絡我</a>
-      <button class="torch-toggle" id="themeToggle" type="button" aria-label="切換深淺模式">
-        <span class="torch-icon"></span>
-        <span class="torch-label">觀測模式</span>
-      </button>
+    <a class="brand" href="#home" aria-label="回到首頁">
+      <span class="brand-cube" aria-hidden="true"></span>
+      <span>OBSERVATION<br>CUBE</span>
+    </a>
+
+    <nav class="main-nav" aria-label="主要導覽">
+      <a class="active" href="#home">首頁</a>
+      <a href="#planning">企劃</a>
+      <a href="#design">設計</a>
+      <a href="#video">短影片</a>
+      <a href="#uiux">UIUX</a>
+      <a href="#photo">攝影</a>
     </nav>
+
+    <div class="header-actions">
+      <button class="mode-toggle" type="button" aria-label="切換觀測 / 分析模式">
+        <span class="torch">🔥</span>
+        <span class="mode-label">Analysis Mode</span>
+        <span class="toggle-dot"></span>
+      </button>
+      <button class="menu-toggle" type="button" aria-label="開啟選單">☰</button>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero panel" aria-label="首頁觀測站">
+  <aside class="side-links" aria-label="快速連結">
+    <a href="#about">ABOUT <span>＋</span></a>
+    <a href="mailto:hello@chia-ying.tw">EMAIL <span>✉</span></a>
+  </aside>
+
+  <main>
+    <section id="home" class="hero section-panel">
       <div class="hero-copy">
-        <p class="section-kicker">OBSERVATION STATION</p>
-        <h1>我都在<br />忙些什麼？</h1>
-        <p>嗨，我是鄒佳穎。</p>
-        <p>如果你問我都在忙些什麼，<br />答案通常是：什麼都沾一點。</p>
-        <p>企劃、設計、短影片、UIUX，<br />偶爾也會拿起相機到處拍。</p>
-        <p class="hero-note">歡迎進入我的觀測站。</p>
-        <a class="scroll-link" href="#observatories">SCROLL <span></span></a>
+        <p class="eyebrow">OBSERVE</p>
+        <h1>觀測紀錄</h1>
+        <div class="rule"></div>
+        <p class="lead">把觀察到的訊號，<br>整理成可以被理解的樣子。</p>
+        <p class="body-copy">企劃、設計、短影片、UIUX，<br>以及那些讓我停下來思考的瞬間。</p>
+        <a class="primary-button" href="#observatory">開始觀測 <span>→</span></a>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit"></div>
-        <div class="satellite">
-          <span class="panel-left"></span>
+      <div class="cube-stage" aria-label="Observation Cube 視覺主體">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="satellite" aria-hidden="true">
           <span class="sat-body"></span>
-          <span class="panel-right"></span>
+          <span class="sat-panel left"></span>
+          <span class="sat-panel right"></span>
         </div>
-        <div class="station station-home">
-          <div class="station-top"><span class="antenna"></span></div>
-          <div class="station-front"><span class="glow-door"></span></div>
-          <div class="station-side"></div>
-          <span class="station-label">HOME<br /><small>觀測站</small></span>
+        <div class="holo-cube hero-cube" aria-hidden="true">
+          <span class="face top"></span>
+          <span class="face left"></span>
+          <span class="face right"></span>
+          <span class="inner-cube"></span>
         </div>
+        <div class="scan-ring"></div>
+        <div class="cube-label observe">OBSERVE<br><b>觀察</b></div>
+        <div class="cube-label organise">ORGANISE<br><b>整理</b></div>
+        <div class="cube-label create">CREATE<br><b>創造</b></div>
+      </div>
+
+      <div class="scroll-indicator">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section id="observatory" class="observatory section-panel">
+      <div class="section-head">
+        <p class="eyebrow">OBSERVATION STATION</p>
+        <h2>選擇一個觀測領域</h2>
+        <p>不同類型的作品，會用不同方式紀錄：從企劃、視覺、影像到介面與攝影。</p>
+      </div>
+
+      <div class="domain-map" aria-label="五個觀測領域">
+        <article class="domain-card cyan" id="planning" data-category="planning">
+          <p class="number">01</p>
+          <div class="mini-cube"><span class="icon">◉</span></div>
+          <h3>企劃</h3>
+          <p>Planning</p>
+          <small>策略・企劃・整合</small>
+          <button type="button">查看觀測紀錄 →</button>
+        </article>
+
+        <article class="domain-card purple" id="design" data-category="design">
+          <p class="number">02</p>
+          <div class="mini-cube"><span class="icon">△</span></div>
+          <h3>設計</h3>
+          <p>Design</p>
+          <small>品牌・平面・視覺</small>
+          <button type="button">查看觀測紀錄 →</button>
+        </article>
+
+        <article class="domain-card amber" id="video" data-category="video">
+          <p class="number">03</p>
+          <div class="mini-cube"><span class="icon">▻</span></div>
+          <h3>短影片</h3>
+          <p>Video</p>
+          <small>短片・剪輯・敘事</small>
+          <button type="button">查看觀測紀錄 →</button>
+        </article>
+
+        <article class="domain-card teal" id="uiux" data-category="uiux">
+          <p class="number">04</p>
+          <div class="mini-cube"><span class="icon">◎</span></div>
+          <h3>UIUX</h3>
+          <p>UIUX</p>
+          <small>介面・體驗・系統</small>
+          <button type="button">查看觀測紀錄 →</button>
+        </article>
+
+        <article class="domain-card blue" id="photo" data-category="photo">
+          <p class="number">05</p>
+          <div class="mini-cube"><span class="icon">✦</span></div>
+          <h3>攝影</h3>
+          <p>Photography</p>
+          <small>影像・紀錄・觀察</small>
+          <button type="button">查看觀測紀錄 →</button>
+        </article>
       </div>
     </section>
 
-    <section id="observatories" class="observatories panel" aria-label="五大觀測領域">
-      <div class="panel-head">
-        <p class="section-kicker">02 / OBSERVATORIES</p>
-        <h2>五大觀測領域</h2>
-        <p>選一個訊號，看看我都在哪些地方停留過。</p>
+    <section id="records" class="records section-panel">
+      <div class="records-visual">
+        <p class="eyebrow" id="recordsEyebrow">DESIGN CUBE</p>
+        <h2 id="recordsTitle">設計</h2>
+        <p id="recordsDesc">把抽象的想法，轉譯成看得見的樣子。</p>
+        <div class="holo-cube records-cube" aria-hidden="true"><span class="face top"></span><span class="face left"></span><span class="face right"></span><span class="inner-cube"></span></div>
       </div>
 
-      <div class="orbit-map">
-        <button class="domain domain-planning" data-category="planning" type="button">
-          <span class="domain-num">01</span>
-          <span class="mini-platform tower"></span>
-          <strong>企劃</strong>
-          <em>最近在想這些</em>
-        </button>
-        <button class="domain domain-design" data-category="design" type="button">
-          <span class="domain-num">02</span>
-          <span class="mini-platform prism"></span>
-          <strong>設計</strong>
-          <em>最近在畫這些</em>
-        </button>
-        <button class="domain domain-video" data-category="video" type="button">
-          <span class="domain-num">03</span>
-          <span class="mini-platform projector"></span>
-          <strong>短影片</strong>
-          <em>最近在拍這些</em>
-        </button>
-        <button class="domain domain-uiux" data-category="uiux" type="button">
-          <span class="domain-num">04</span>
-          <span class="mini-platform orbit-icon"></span>
-          <strong>UIUX</strong>
-          <em>最近在研究這些</em>
-        </button>
-        <button class="domain domain-photo" data-category="photo" type="button">
-          <span class="domain-num">05</span>
-          <span class="mini-platform chart"></span>
-          <strong>攝影</strong>
-          <em>最近看到這些</em>
-        </button>
-        <div class="map-center">
-          <div class="mini-platform home-dot"></div>
-          <span>HOME</span>
-        </div>
+      <div class="records-list">
+        <div class="records-filter" id="categoryTabs" aria-label="分類切換"></div>
+        <div class="project-grid" id="projectGrid"></div>
       </div>
     </section>
 
-    <section id="fieldView" class="field-view panel" aria-label="分類觀測頁">
-      <div class="field-visual">
-        <p class="section-kicker" id="fieldIndex">03 / DESIGN OBSERVATORY</p>
-        <h2 id="fieldTitle">DESIGN<br />OBSERVATORY</h2>
-        <p id="fieldDesc">把想法轉譯成看得見的樣子。</p>
-        <button class="back-home" id="backToMap" type="button">← 回到觀測站</button>
-        <div class="large-platform" id="fieldIcon"><span></span></div>
-      </div>
-      <div class="record-list">
-        <div class="record-head">
-          <h3>觀測紀錄</h3>
-          <div class="tabs">
-            <button class="active" type="button">ALL</button>
-            <button type="button">WORK</button>
-            <button type="button">NOTE</button>
-          </div>
-        </div>
-        <div id="categoryRecords" class="records"></div>
-      </div>
-    </section>
-
-    <section id="featured" class="featured panel" aria-label="精選作品">
-      <div class="panel-head split">
-        <div>
-          <p class="section-kicker">04 / SELECTED RECORDS</p>
-          <h2>最近做的事（精選）</h2>
-        </div>
-        <a href="#observatories">查看全部作品 →</a>
-      </div>
-      <div class="featured-grid" id="featuredGrid"></div>
-    </section>
-
-    <section id="projectView" class="project-view panel" aria-label="專案詳情">
-      <aside class="project-side">
-        <button class="back-home" id="backToField" type="button">← 返回分類</button>
-        <p class="breadcrumb" id="breadcrumb">HOME ＞ DESIGN ＞ SIGMA CIS</p>
+    <section id="project" class="project-detail section-panel">
+      <aside class="project-sidebar">
+        <p class="breadcrumb" id="breadcrumb">HOME / DESIGN / SIGMA CIS</p>
         <h2 id="projectTitle">SIGMA CIS</h2>
-        <p id="projectMeta">品牌識別設計</p>
-        <ol>
-          <li>這件事是怎麼開始的？</li>
-          <li>我主要負責什麼？</li>
-          <li>最後變成了這樣。</li>
-          <li>我當時怎麼想的。</li>
-        </ol>
+        <p id="projectType">品牌識別設計</p>
+        <p id="projectYear">2025</p>
+        <a class="back-link" href="#records">← 返回觀測紀錄</a>
       </aside>
-      <article class="project-content">
-        <section class="project-section open">
-          <button type="button">01　這件事是怎麼開始的？ <span>−</span></button>
-          <div class="project-body" id="projectStart"></div>
-        </section>
-        <section class="project-section">
-          <button type="button">02　這次，我主要負責…… <span>＋</span></button>
-          <div class="project-body" id="projectRole"></div>
-        </section>
-        <section class="project-section">
-          <button type="button">03　最後變成了這樣。 <span>＋</span></button>
-          <div class="project-body" id="projectResult"></div>
-        </section>
-        <section class="project-section">
-          <button type="button">04　我當時怎麼想的。 <span>＋</span></button>
-          <div class="project-body" id="projectThought"></div>
-        </section>
-      </article>
+
+      <div class="project-content">
+        <div class="project-hero-media" id="projectMedia"></div>
+        <div class="accordion" id="projectAccordion"></div>
+      </div>
     </section>
 
-    <section id="contact" class="contact panel">
+    <section id="about" class="about section-panel">
       <div>
-        <p class="section-kicker">CONTACT</p>
-        <h2>有興趣合作或聊聊想法？</h2>
-        <p>歡迎聯絡我。</p>
+        <p class="eyebrow">ABOUT</p>
+        <h2>關於我</h2>
       </div>
-      <a href="mailto:hello@chia-ying.tw">hello@chia-ying.tw</a>
+      <p>我喜歡觀察生活中的細節，也喜歡把混亂的資訊變得更清楚。這裡收錄了企劃、設計、短影音、UIUX 與攝影等不同形式的觀測紀錄。</p>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© 2026 OBSERVATION CUBE</p>
+    <a href="mailto:hello@chia-ying.tw">hello@chia-ying.tw</a>
+    <p>Designed & Built by Chia Ying Tsou</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
