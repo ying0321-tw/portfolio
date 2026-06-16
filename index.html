@@ -1,319 +1,181 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>TSOU CHIA YING Portfolio</title>
-
+  <title>我都在忙些什麼？｜鄒佳穎</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <a href="#" class="logo">TSOU CHIA YING <span>•</span></a>
+  <div class="stars" aria-hidden="true"></div>
 
-    <nav class="nav">
-      <a href="#works">WORKS</a>
-      <a href="#contact">ABOUT / CONTACT</a>
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="回到首頁">
+      <span class="brand-mark">◇</span>
+      <span>我都在忙些什麼？</span>
+    </a>
+
+    <nav class="main-nav" aria-label="主選單">
+      <a href="#observatories">觀測領域</a>
+      <a href="#featured">觀測紀錄</a>
+      <a href="#contact">聯絡我</a>
+      <button class="torch-toggle" id="themeToggle" type="button" aria-label="切換深淺模式">
+        <span class="torch-icon">🔥</span>
+        <span class="torch-text">點亮</span>
+      </button>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-left reveal-text">
-        <h1>
-          讓內容更貼近人的感受，
-          溝通將自然發生。
-        </h1>
-
-        <p class="hero-tags">
-          行銷企劃 × 平面設計<br />
-          短影片製作 × 攝影 × UIUX
-        </p>
-
-        <div class="scroll-hint">
-          <span></span>
-          <p>SCROLL</p>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">OBSERVATION STATION</p>
+        <h1>我都在<br />忙些什麼？</h1>
+        <div class="hero-text">
+          <p>嗨，我是鄒佳穎。</p>
+          <p>如果你問我都在忙些什麼，<br />答案通常是：什麼都沾一點。</p>
+          <p>企劃、設計、短影片、UIUX，<br />偶爾也會拿起相機到處拍。</p>
+          <p>這裡整理了一些做過的事，<br />也記錄了一些當時在想什麼。</p>
+          <p>歡迎隨便逛逛。</p>
         </div>
       </div>
 
-      <div class="hero-right">
-        <svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg">
-          <path d="M40 240 C180 120, 250 20, 360 70 C430 100, 460 190, 570 160 C660 130, 710 70, 820 0" />
-          <path d="M40 240 C190 250, 280 280, 390 230 C510 180, 580 120, 700 120" />
-          <path d="M40 240 C190 360, 330 360, 460 300 C610 230, 700 180, 820 180" />
-          <path d="M360 70 C320 180, 360 220, 450 220" />
-          <path d="M700 120 C620 220, 620 300, 680 350" />
+      <div class="hero-visual reveal" aria-label="漂浮觀測站主視覺">
+        <div class="satellite" aria-hidden="true">
+          <span class="solar solar-left"></span>
+          <span class="satellite-core"></span>
+          <span class="solar solar-right"></span>
+        </div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="cube cube-home">
+          <div class="cube-top">
+            <span class="antenna"></span>
+            <span class="signal-dot"></span>
+          </div>
+          <div class="cube-face cube-front"><span>HOME</span></div>
+          <div class="cube-face cube-side"></div>
+        </div>
+      </div>
 
-          <circle cx="40" cy="240" r="5" />
-          <circle cx="360" cy="70" r="5" />
-          <circle cx="450" cy="220" r="5" />
-          <circle cx="520" cy="300" r="5" />
-          <circle cx="700" cy="120" r="5" />
-          <circle cx="680" cy="350" r="5" />
+      <a href="#observatories" class="scroll-hint">SCROLL</a>
+    </section>
 
-          <text x="338" y="40">DESIGN / 設計</text>
-          <text x="10" y="275">BRANDING / 品牌</text>
-          <text x="430" y="245">PEOPLE / 人</text>
-          <text x="500" y="330">PHOTO / 攝影</text>
-          <text x="680" y="100">CONTENT / 內容</text>
-          <text x="665" y="385">VIDEO / 影像</text>
-        </svg>
+    <section class="observatories section" id="observatories">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SELECT SIGNAL</p>
+        <h2>選一個觀測領域</h2>
+        <p>每個領域都是一個漂浮空間，收著不同階段做過的事。</p>
+      </div>
+
+      <div class="station-map reveal" id="stationMap">
+        <article class="station-node planning" data-category="planning">
+          <button type="button">
+            <span class="node-number">01</span>
+            <span class="mini-platform tower"></span>
+            <strong>企劃</strong>
+            <small>最近在想這些</small>
+          </button>
+        </article>
+
+        <article class="station-node design" data-category="design">
+          <button type="button">
+            <span class="node-number">02</span>
+            <span class="mini-platform prism"></span>
+            <strong>設計</strong>
+            <small>最近在畫這些</small>
+          </button>
+        </article>
+
+        <article class="station-node video" data-category="video">
+          <button type="button">
+            <span class="node-number">03</span>
+            <span class="mini-platform projector"></span>
+            <strong>短影片</strong>
+            <small>最近在拍這些</small>
+          </button>
+        </article>
+
+        <article class="station-node uiux" data-category="uiux">
+          <button type="button">
+            <span class="node-number">04</span>
+            <span class="mini-platform orbit-system"></span>
+            <strong>UIUX</strong>
+            <small>最近在研究這些</small>
+          </button>
+        </article>
+
+        <article class="station-node photo" data-category="photo">
+          <button type="button">
+            <span class="node-number">05</span>
+            <span class="mini-platform constellation"></span>
+            <strong>攝影</strong>
+            <small>最近看到這些</small>
+          </button>
+        </article>
+
+        <div class="map-center" aria-hidden="true">
+          <span>HOME</span>
+        </div>
       </div>
     </section>
 
-    <section id="works" class="works">
-      <div class="works-header behance-works-header">
-        <div>
-          <p class="works-kicker">Selected Portfolio</p>
-          <h2>Works <span>•</span></h2>
-          <p class="works-lead">像 Behance 一樣先用作品封面快速瀏覽，點擊卡片後再看完整專案內容。</p>
-        </div>
-
-        <div class="filter-nav works-tabs" aria-label="作品分類">
-          <button class="active" type="button" data-filter="all">ALL</button>
-          <button type="button" data-filter="marketing">行銷</button>
-          <button type="button" data-filter="graphic">設計</button>
-          <button type="button" data-filter="video">影片</button>
-          <button type="button" data-filter="photo">攝影</button>
-          <button type="button" data-filter="uiux">UIUX</button>
-        </div>
+    <section class="section category-panel" id="categoryPanel" aria-live="polite">
+      <div class="category-intro reveal">
+        <p class="eyebrow" id="categoryEyebrow">OBSERVATORY 02</p>
+        <h2 id="categoryTitle">設計</h2>
+        <p id="categoryDesc">把抽象的想法，轉譯成看得見的樣子。</p>
       </div>
+      <div class="project-grid" id="categoryProjects"></div>
+    </section>
 
-      <div class="work-grid">
-        <article class="work-card" data-category="marketing" data-modal="marketing1">
-          <img src="files/work-03.jpg" alt="板橋 YELLOWSTONE 整合行銷專案" />
-          <div class="work-line"></div>
-          <p class="category">行銷專案</p>
-          <h3>板橋 YELLOWSTONE｜整合行銷專案</h3>
-          <p class="desc">從品牌定調到社群推廣、活動企劃，整合線上線下資源。</p>
-        </article>
+    <section class="section featured" id="featured">
+      <div class="section-heading reveal">
+        <p class="eyebrow">FEATURED RECORDS</p>
+        <h2>精選觀測紀錄</h2>
+      </div>
+      <div class="project-grid" id="featuredProjects"></div>
+    </section>
 
-        <article class="work-card" data-category="marketing" data-modal="marketing2">
-          <img src="files/marketing02.jpg" alt="東森購物 MOD 商城" />
-          <div class="work-line"></div>
-          <p class="category">行銷專案</p>
-          <h3>東森購物 MOD 商城｜雙11狂歡購</h3>
-          <p class="desc">整合活動溝通、版面素材與銷售檔期內容。</p>
-        </article>
+    <section class="section project-detail" id="projectDetail" hidden>
+      <button type="button" class="back-button" id="backToCategory">← 返回觀測領域</button>
+      <div class="detail-layout">
+        <aside class="detail-side">
+          <p class="eyebrow" id="detailCategory">DESIGN</p>
+          <h2 id="detailTitle">SIGMA CIS</h2>
+          <p id="detailMeta">品牌識別設計</p>
+        </aside>
+        <article class="detail-content">
+          <div class="detail-cover" id="detailCover"></div>
 
-        <article class="work-card" data-category="marketing" data-modal="marketing3">
-          <img src="files/marketing03.jpg" alt="蛋舖官網會員回購機制" />
-          <div class="work-line"></div>
-          <p class="category">行銷專案</p>
-          <h3>蛋舖官網｜會員回購機制</h3>
-          <p class="desc">以會員行為與回訪習慣為核心，規劃促購機制。</p>
-        </article>
+          <section class="record-section">
+            <h3>01 這件事是怎麼開始的？</h3>
+            <p id="detailStart"></p>
+          </section>
 
-        <article class="work-card" data-category="marketing" data-modal="marketing4">
-          <img src="files/marketing04.jpg" alt="蛋舖社群短影片策略" />
-          <div class="work-line"></div>
-          <p class="category">行銷專案</p>
-          <h3>蛋舖社群｜短影片內容策略</h3>
-          <p class="desc">從內容鉤子、題材分類到平台節奏，建立社群曝光策略。</p>
-        </article>
+          <section class="record-section">
+            <h3>02 這次，我主要負責……</h3>
+            <p id="detailRole"></p>
+          </section>
 
-        <article class="work-card" data-category="marketing" data-modal="marketing5">
-          <img src="files/marketing05.jpg" alt="香山濕地展場文字歸納" />
-          <div class="work-line"></div>
-          <p class="category">行銷專案</p>
-          <h3>香山濕地｜展場文字歸納</h3>
-          <p class="desc">將環境資訊轉化為更容易理解的展示內容。</p>
-        </article>
+          <section class="record-section">
+            <h3>03 最後變成了這樣。</h3>
+            <p id="detailResult"></p>
+          </section>
 
-        <article class="work-card" data-category="graphic" data-modal="graphic1">
-          <img src="files/dog01.jpg" alt="協助犬 Logo 設計" />
-          <div class="work-line"></div>
-          <p class="category">平面設計</p>
-          <h3>協助犬｜品牌視覺設計</h3>
-          <p class="desc">從品牌命名、標語到包裝，建立視覺語言。</p>
-        </article>
-
-        <article class="work-card" data-category="graphic" data-modal="graphic2">
-          <img src="files/book01.jpg" alt="西洋風味香料美食特餐刊物" />
-          <div class="work-line"></div>
-          <p class="category">平面設計</p>
-          <h3>西洋風味香料 美食特餐｜膠裝刊物</h3>
-          <p class="desc">以西洋香料文化為主軸，結合料理與風味美學。</p>
-        </article>
-
-        <article class="work-card" data-category="graphic" data-modal="graphic3">
-          <img src="files/lala01.jpg" alt="拉拉山水蜜桃包裝設計" />
-          <div class="work-line"></div>
-          <p class="category">平面設計</p>
-          <h3>包裝設計｜拉拉山水蜜桃商品</h3>
-          <p class="desc">以高山果實的純粹為核心，融合在地農產特色。</p>
-        </article>
-
-        <article class="work-card" data-category="graphic" data-modal="graphic4">
-          <img src="files/so01.jpg" alt="沙茶匠包裝設計" />
-          <div class="work-line"></div>
-          <p class="category">平面設計</p>
-          <h3>包裝設計｜沙茶匠</h3>
-          <p class="desc">以職人匠心為核心，將傳統醬料轉化為精緻伴手禮。</p>
-        </article>
-
-        <article class="work-card" data-category="graphic" data-modal="graphic5">
-          <img src="files/graphic05.jpg" alt="蛋舖周邊設計" />
-          <div class="work-line"></div>
-          <p class="category">平面設計</p>
-          <h3>蛋舖周邊設計｜出貨袋與員工服</h3>
-          <p class="desc">延伸品牌視覺至門市與出貨接觸點。</p>
-        </article>
-
-        <article class="work-card" data-category="graphic" data-modal="graphic6">
-          <img src="files/graphic06.jpg" alt="蛋舖門市海報" />
-          <div class="work-line"></div>
-          <p class="category">平面設計</p>
-          <h3>蛋舖｜門市海報設計</h3>
-          <p class="desc">配合檔期與門市情境製作活動視覺。</p>
-        </article>
-
-        <article class="work-card" data-category="video" data-modal="video1">
-          <img src="files/video01.jpg" alt="LED磁吸插座燈 P2" />
-          <div class="work-line"></div>
-          <p class="category">短影片</p>
-          <h3>LED磁吸插座燈 P2</h3>
-          <p class="desc">以商品細節與生活場景切入，建立使用想像。</p>
-        </article>
-
-        <article class="work-card" data-category="video" data-modal="video2">
-          <img src="files/video02.jpg" alt="Calbee薯條危機遊戲模型 P2" />
-          <div class="work-line"></div>
-          <p class="category">短影片</p>
-          <h3>Calbee薯條危機遊戲模型 P2</h3>
-          <p class="desc">以開箱與遊玩過程放大互動樂趣。</p>
-        </article>
-
-        <article class="work-card" data-category="video" data-modal="video3">
-          <img src="files/video03.jpg" alt="必勝客魔法 PIZZA 開箱" />
-          <div class="work-line"></div>
-          <p class="category">短影片</p>
-          <h3>必勝客魔法 PIZZA 開箱</h3>
-          <p class="desc">結合聯名話題與現場紀錄，提升觀看興趣。</p>
-        </article>
-
-        <article class="work-card" data-category="video" data-modal="video4">
-          <img src="files/video04.jpg" alt="IKEA 相框改造" />
-          <div class="work-line"></div>
-          <p class="category">短影片</p>
-          <h3>IKEA 相框改造</h3>
-          <p class="desc">從玩具收納痛點出發，分享實際應用情境。</p>
-        </article>
-
-        <article class="work-card" data-category="video" data-modal="video5">
-          <img src="files/video05.jpg" alt="大創收納盒開箱" />
-          <div class="work-line"></div>
-          <p class="category">短影片</p>
-          <h3>大創收納盒開箱</h3>
-          <p class="desc">以收納情境切入，提供玩家整理靈感。</p>
-        </article>
-
-        <article class="work-card" data-category="photo" data-modal="photo1">
-          <img src="files/work-05.jpg" alt="猴硐貓村旅行攝影" />
-          <div class="work-line"></div>
-          <p class="category">攝影</p>
-          <h3>猴硐貓村｜旅行攝影</h3>
-          <p class="desc">用影像記錄旅途中值得收藏的風景與情緒。</p>
-        </article>
-
-        <article class="work-card" data-category="photo" data-modal="photo2">
-          <img src="files/photo02.jpg" alt="攝影作品 02" />
-          <div class="work-line"></div>
-          <p class="category">攝影</p>
-          <h3>攝影作品｜城市觀察</h3>
-          <p class="desc">捕捉城市中的光線、空間與人物狀態。</p>
-        </article>
-
-        <article class="work-card" data-category="photo" data-modal="photo3">
-          <img src="files/photo03.jpg" alt="攝影作品 03" />
-          <div class="work-line"></div>
-          <p class="category">攝影</p>
-          <h3>攝影作品｜日常紀錄</h3>
-          <p class="desc">以自然視角記錄生活中的細節與情緒。</p>
-        </article>
-
-        <article class="work-card" data-category="uiux" data-modal="uiux1">
-          <img src="files/disney01.jpg" alt="迪士尼導覽 APP 介面設計" />
-          <div class="work-line"></div>
-          <p class="category">UIUX</p>
-          <h3>迪士尼導覽｜APP 介面設計</h3>
-          <p class="desc">整合即時定位的樂園導覽 App，強化智慧遊園體驗。</p>
-        </article>
-
-        <article class="work-card" data-category="uiux" data-modal="uiux2">
-          <img src="files/uiux02.jpg" alt="和正農作官網設計" />
-          <div class="work-line"></div>
-          <p class="category">UIUX</p>
-          <h3>官網設計｜和正農作</h3>
-          <p class="desc">以自然職人風格重新建構品牌官網。</p>
-        </article>
-
-        <article class="work-card" data-category="uiux" data-modal="uiux3">
-          <img src="files/91toy.jpg" alt="蛋舖官網關於我們" />
-          <div class="work-line"></div>
-          <p class="category">UIUX</p>
-          <h3>蛋舖官網｜關於我們</h3>
-          <p class="desc">以品牌展示與合作提案為核心，重新規劃資訊架構。</p>
+          <details class="thinking-block">
+            <summary>▼ 我當時怎麼想的</summary>
+            <p id="detailThinking"></p>
+          </details>
         </article>
       </div>
     </section>
   </main>
 
-  <footer id="contact" class="contact about-contact">
-    <div class="contact-title">
-      <h2>Let’s connect <span>•</span></h2>
-    </div>
-
-    <div class="about-contact-grid">
-      <div class="about-photo">
-        <img src="files/ying.jpg" alt="TSOU CHIA YING 個人照片" />
-      </div>
-
-      <div class="about-copy contact-info">
-        <h3>
-          我關注的不是單一畫面，<br />
-          而是從策略、內容到視覺落地的完整連接。
-        </h3>
-
-        <p>
-          擅長從品牌目標出發，整合設計與內容思維，
-          將資訊轉化為有結構、有溫度且能行動的視覺成果。
-          平面設計、UIUX 協作、行銷企劃、短影音製作與攝影，
-          是我創作與執行的日常，也是串連所有專案的語言。
-        </p>
-
-        <p class="contact-mail">yin9423@gmail.com</p>
-      </div>
-    </div>
+  <footer class="site-footer" id="contact">
+    <p>如果剛好對這些事情有興趣，歡迎來聊聊。</p>
+    <a href="mailto:hello@chia-ying.tw">hello@chia-ying.tw</a>
   </footer>
-
-  <div class="floating-work-filter" id="floatingWorkFilter">
-    <button class="active" type="button" data-filter="all">ALL</button>
-    <button type="button" data-filter="marketing">行銷</button>
-    <button type="button" data-filter="graphic">設計</button>
-    <button type="button" data-filter="video">影片</button>
-    <button type="button" data-filter="photo">攝影</button>
-    <button type="button" data-filter="uiux">UIUX</button>
-  </div>
-
-  <div class="modal" id="workModal">
-    <div class="modal-bg"></div>
-
-    <div class="modal-content">
-      <button class="modal-close" type="button">×</button>
-
-      <div class="modal-media" id="modalMedia"></div>
-
-      <div class="modal-text">
-        <p id="modalCategory"></p>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
-        <div class="modal-tags" id="modalTags"></div>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
