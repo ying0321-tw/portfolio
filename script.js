@@ -1,59 +1,105 @@
 const categories = {
-  planning: { index:'03 / PLANNING OBSERVATORY', title:'PLANNING\nOBSERVATORY', desc:'接收資訊，整理方向。', zh:'企劃' },
-  design: { index:'03 / DESIGN OBSERVATORY', title:'DESIGN\nOBSERVATORY', desc:'把想法轉譯成看得見的樣子。', zh:'設計' },
-  video: { index:'03 / VIDEO OBSERVATORY', title:'VIDEO\nOBSERVATORY', desc:'把故事傳遞出去。', zh:'短影片' },
-  uiux: { index:'03 / UIUX OBSERVATORY', title:'UIUX\nOBSERVATORY', desc:'讓複雜變得順暢。', zh:'UIUX' },
-  photo: { index:'03 / PHOTO OBSERVATORY', title:'PHOTO\nOBSERVATORY', desc:'記錄觀察與感受。', zh:'攝影' }
+  planning: { zh:'企劃', en:'PLANNING CUBE', desc:'把混亂的訊號整理成可以執行的方向。' },
+  design: { zh:'設計', en:'DESIGN CUBE', desc:'把抽象的想法，轉譯成看得見的樣子。' },
+  video: { zh:'短影片', en:'VIDEO CUBE', desc:'用影像與節奏，讓訊息被更多人看見。' },
+  uiux: { zh:'UIUX', en:'UIUX CUBE', desc:'讓資訊與流程變得更清楚、更順手。' },
+  photo: { zh:'攝影', en:'PHOTOGRAPHY CUBE', desc:'記錄看見的瞬間，也記錄當時的感受。' }
 };
+
 const projects = [
-  {id:'sigma',cat:'design',title:'SIGMA CIS',type:'品牌識別設計',year:'2025',cover:'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=900&q=80',line:'把商標延伸成品牌語言。',start:'SIGMA 希望把品牌識別整理成更清楚、可延伸的系統。',role:'我協助整理識別邏輯、標準色、輔助圖形與應用版面。',result:'完成 CIS 手冊與多種品牌應用示意，讓後續使用更一致。',thought:'我當時在想，識別不是只有 Logo 好看，而是別人拿到之後能不能正確使用。'},
-  {id:'ikea',cat:'video',title:'IKEA 相框改造',type:'短影片企劃',year:'2025',cover:'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=900&q=80',line:'原來大家喜歡的，不是 IKEA。',start:'想找一種扭蛋玩家會產生共鳴的內容。',role:'我負責腳本、拍攝、剪輯與社群發布。',result:'Facebook 觀看 210K+，IG 18K，YouTube 24K。',thought:'大家分享的重點不是 IKEA，而是「終於有地方放扭蛋」。所以前 3 秒要先給收納完成的畫面。'},
-  {id:'brand-video',cat:'video',title:'品牌形象影片',type:'影像製作',year:'2024',cover:'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80',line:'用影像說故事，也讓品牌被看見。',start:'品牌需要一支能快速說明氣質與服務內容的影片。',role:'參與腳本、拍攝規劃與剪輯節奏整理。',result:'完成可用於官網、簡報與社群的形象影片素材。',thought:'形象影片不是塞滿資訊，而是先讓人感受到品牌是什麼樣子。'},
-  {id:'beitou-app',cat:'uiux',title:'北流會員 App',type:'UIUX 概念',year:'2024',cover:'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80',line:'讓複雜的事，變得簡單。',start:'希望重新思考演出資訊、會員、票券如何被整合。',role:'我負責流程發想、介面草圖與 Mockup 呈現。',result:'建立首頁、演出資訊、會員票券等核心流程畫面。',thought:'UIUX 最重要不是畫得漂亮，是使用者能不能不用想太多就完成事情。'},
-  {id:'photo-hill',cat:'photo',title:'基隆・望幽谷',type:'攝影紀錄',year:'2023',cover:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',line:'風景有時候，比想像中更療癒。',start:'旅行時想記錄一些讓人停下來的風景。',role:'攝影、選圖、色調整理。',result:'完成一組自然景觀與光線紀錄。',thought:'攝影對我來說比較像練習觀察。'},
-  {id:'member',cat:'planning',title:'會員回購機制',type:'企劃規劃',year:'2025',cover:'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80',line:'讓會員有理由再回來。',start:'觀察到使用者回訪與再購買誘因不足。',role:'我整理會員情境、活動邏輯與頁面資訊。',result:'規劃回購誘因與活動流程，作為官網機制調整參考。',thought:'很多時候不是大家不想買，而是不知道什麼時候該回來。'}
+  { id:'sigma', category:'design', title:'SIGMA CIS', type:'品牌識別設計', year:'2025', line:'把商標延伸成品牌語言。', image:'files/sigma.jpg', sections:[
+    ['這件事怎麼開始？','客戶希望建立更一致、更具辨識度的品牌系統，因此需要從標誌延伸到色彩、版面與應用規範。'],
+    ['我主要負責什麼？','品牌識別規劃、CIS 手冊架構、色彩與輔助圖形整理，以及應用示意規劃。'],
+    ['最後變成了什麼？','完成一套可延伸使用的品牌識別系統，讓後續名片、簡報、社群與印刷應用更一致。'],
+    ['我當時怎麼想的','比起做出很多樣式，我更在意這套系統是否容易被使用，因為品牌規範的價值不只是好看，而是讓團隊能穩定延伸。']
+  ]},
+  { id:'dog', category:'design', title:'協助犬品牌', type:'品牌視覺設計', year:'2024', line:'在溫暖與專業之間取得平衡。', image:'files/dog01.jpg', sections:[['這件事怎麼開始？','想讓協助犬品牌有更親近的形象，同時保留可信任的專業感。'],['我主要負責什麼？','品牌視覺、包裝方向與延伸物設計。'],['最後變成了什麼？','完成一組具有日常感的品牌視覺。'],['我當時怎麼想的','這類主題不能只可愛，也不能太嚴肅，比例很重要。']]},
+  { id:'sausage', category:'design', title:'日式香腸包裝', type:'包裝設計', year:'2025', line:'讓商品有同品牌感，也有新口味的記憶點。', image:'files/sausage.jpg', sections:[['這件事怎麼開始？','原有系列已有品牌語言，新品需要在一致中做出差異。'],['我主要負責什麼？','包裝視覺方向、版面與風格延伸。'],['最後變成了什麼？','形成更日式但不脫離品牌的包裝方向。'],['我當時怎麼想的','系列商品最難的是不能每款都重做，也不能每款都一樣。']]},
+  { id:'member', category:'planning', title:'蛋舖會員回購機制', type:'企劃規劃', year:'2025', line:'讓會員有理由再次回來。', image:'files/marketing03.jpg', sections:[['這件事怎麼開始？','觀察會員回訪情境後，發現需要更明確的誘因與流程。'],['我主要負責什麼？','會員機制構想、活動流程與轉換情境整理。'],['最後變成了什麼？','建立一套更容易被理解的回購溝通方式。'],['我當時怎麼想的','不是每個人都不想買，有時候只是沒有被提醒，或不知道什麼時候該回來。']]},
+  { id:'yellowstone', category:'planning', title:'YELLOWSTONE 整合行銷', type:'行銷專案', year:'2025', line:'從品牌、社群到活動溝通整合。', image:'files/work-03.jpg', sections:[['這件事怎麼開始？','市場改建後需要重新建立與消費者的連結。'],['我主要負責什麼？','社群規劃、活動內容、視覺溝通與成果整理。'],['最後變成了什麼？','讓線上線下素材更一致，活動資訊也更容易被理解。'],['我當時怎麼想的','市場不是只賣東西，也是在賣一種生活感。']]},
+  { id:'ikea', category:'video', title:'IKEA 相框改造', type:'短影片製作', year:'2025', line:'原來大家喜歡的，不只是 IKEA。', image:'files/video04.jpg', sections:[['這件事怎麼開始？','想找一種扭蛋玩家會有共鳴的收納內容。'],['我主要負責什麼？','腳本、拍攝、剪輯與社群呈現。'],['最後變成了什麼？','影片帶來高觀看與分享，成為收納題材代表內容之一。'],['我當時怎麼想的','大家真正分享的原因不是 IKEA，而是終於有地方放扭蛋了，所以前 3 秒必須先讓人看到完成結果。']]},
+  { id:'led', category:'video', title:'LED 磁吸燈', type:'短影片製作', year:'2025', line:'用生活情境建立使用想像。', image:'files/video01.jpg', sections:[['這件事怎麼開始？','商品需要在短時間內讓人理解使用情境。'],['我主要負責什麼？','腳本、拍攝、剪輯與封面設計。'],['最後變成了什麼？','建立新品曝光與情境式觀看。'],['我當時怎麼想的','實用型商品不能只拍功能，要拍出使用後的感覺。']]},
+  { id:'calbee', category:'video', title:'Calbee 模型開箱', type:'短影片製作', year:'2025', line:'把開箱變成有節奏的遊戲感。', image:'files/video02.jpg', sections:[['這件事怎麼開始？','商品本身具備互動玩法，需要放大過程的緊張感。'],['我主要負責什麼？','腳本、拍攝與剪輯節奏。'],['最後變成了什麼？','讓模型玩法更直覺被看見。'],['我當時怎麼想的','玩具影片重點不是把東西拍完，而是讓觀眾想跟著玩。']]},
+  { id:'app', category:'uiux', title:'北流會員 App', type:'UIUX 概念', year:'2025', line:'讓複雜的資訊變得更順手。', image:'files/uiux02.jpg', sections:[['這件事怎麼開始？','想整理演出、會員與場館資訊在手機上的使用流程。'],['我主要負責什麼？','流程規劃、介面視覺與功能情境設計。'],['最後變成了什麼？','完成一組更容易理解的 App Mockup。'],['我當時怎麼想的','介面不是把資訊塞進手機，而是決定使用者當下最需要看見什麼。']]},
+  { id:'photo', category:'photo', title:'基隆・望幽谷', type:'攝影紀錄', year:'2024', line:'風景有時候，比想像中更寧靜。', image:'files/work-05.jpg', sections:[['這件事怎麼開始？','單純被當天的天氣與光線吸引。'],['我主要負責什麼？','拍攝、取景與色調整理。'],['最後變成了什麼？','留下一組自然風景影像紀錄。'],['我當時怎麼想的','攝影對我來說，是訓練觀察力的一種方式。']]}
 ];
-const featured = projects.slice(0,5);
-const qs = (s)=>document.querySelector(s);
-const qsa = (s)=>document.querySelectorAll(s);
-function card(p, className='work-card'){
-  return `<article class="${className}" data-id="${p.id}"><img src="${p.cover}" alt="${p.title}"><div><small>${categories[p.cat].zh}</small><h3>${p.title}</h3><p>${p.line}</p><span class="arrow">→</span></div></article>`;
+
+const tabs = document.querySelector('#categoryTabs');
+const grid = document.querySelector('#projectGrid');
+const recordsTitle = document.querySelector('#recordsTitle');
+const recordsEyebrow = document.querySelector('#recordsEyebrow');
+const recordsDesc = document.querySelector('#recordsDesc');
+let activeCategory = 'design';
+
+function setActiveNav(hash){
+  document.querySelectorAll('.main-nav a').forEach(a=>a.classList.toggle('active', a.getAttribute('href') === hash));
 }
-function record(p){
-  return `<article class="record-card" data-id="${p.id}"><img src="${p.cover}" alt="${p.title}"><div><h4>${p.title}</h4><p>${p.type}｜${p.year}</p></div><span class="arrow">→</span></article>`;
+
+function renderTabs(){
+  tabs.innerHTML = Object.entries(categories).map(([key,cat]) => `<button class="${key===activeCategory?'active':''}" data-category="${key}">${cat.zh}</button>`).join('');
 }
-function openCategory(cat){
-  const c=categories[cat];
-  qs('#fieldIndex').textContent=c.index;
-  qs('#fieldTitle').innerHTML=c.title.replace('\n','<br>');
-  qs('#fieldDesc').textContent=c.desc;
-  qs('#categoryRecords').innerHTML=projects.filter(p=>p.cat===cat).map(record).join('');
-  qs('#fieldView').scrollIntoView({behavior:'smooth'});
-  bindProjectCards();
+
+function renderProjects(){
+  const cat = categories[activeCategory];
+  recordsTitle.textContent = cat.zh;
+  recordsEyebrow.textContent = cat.en;
+  recordsDesc.textContent = cat.desc;
+  grid.innerHTML = projects.filter(p=>p.category===activeCategory).map(p=>`
+    <article class="project-card" data-id="${p.id}">
+      <div class="thumb" style="--image:url('${p.image}')"></div>
+      <div>
+        <small>${p.type}</small>
+        <h3>${p.title}</h3>
+        <p>${p.line}</p>
+      </div>
+      <span class="arrow">→</span>
+    </article>
+  `).join('');
 }
+
+function openCategory(category){
+  activeCategory = category;
+  renderTabs();
+  renderProjects();
+  location.hash = 'records';
+}
+
 function openProject(id){
-  const p=projects.find(x=>x.id===id); if(!p) return;
-  qs('#projectTitle').textContent=p.title;
-  qs('#projectMeta').textContent=`${p.type}｜${p.year}`;
-  qs('#breadcrumb').textContent=`HOME ＞ ${categories[p.cat].zh} ＞ ${p.title}`;
-  qs('#projectStart').innerHTML=`<p>${p.start}</p><img src="${p.cover}" alt="${p.title}">`;
-  qs('#projectRole').innerHTML=`<p>${p.role}</p>`;
-  qs('#projectResult').innerHTML=`<p>${p.result}</p>`;
-  qs('#projectThought').innerHTML=`<p>${p.thought}</p>`;
-  qs('#projectView').classList.add('active');
-  qs('#projectView').scrollIntoView({behavior:'smooth'});
+  const p = projects.find(item=>item.id===id);
+  if(!p) return;
+  const cat = categories[p.category];
+  document.querySelector('#breadcrumb').textContent = `HOME / ${cat.zh} / ${p.title}`;
+  document.querySelector('#projectTitle').textContent = p.title;
+  document.querySelector('#projectType').textContent = p.type;
+  document.querySelector('#projectYear').textContent = p.year;
+  document.querySelector('#projectMedia').style.setProperty('--project-image', `url('${p.image}')`);
+  document.querySelector('#projectAccordion').innerHTML = p.sections.map((s,i)=>`
+    <div class="accordion-item ${i===0?'open':''}">
+      <button class="accordion-head" type="button"><span>${String(i+1).padStart(2,'0')}　${s[0]}</span><span>＋</span></button>
+      <div class="accordion-body"><p>${s[1]}</p></div>
+    </div>
+  `).join('');
+  location.hash = 'project';
 }
-function bindProjectCards(){ qsa('[data-id]').forEach(el=>el.onclick=()=>openProject(el.dataset.id)); }
-qs('#featuredGrid').innerHTML=featured.map(card).join(''); bindProjectCards();
-qsa('.domain').forEach(btn=>btn.onclick=()=>openCategory(btn.dataset.category));
-qs('#backToMap').onclick=()=>qs('#observatories').scrollIntoView({behavior:'smooth'});
-qs('#backToField').onclick=()=>qs('#fieldView').scrollIntoView({behavior:'smooth'});
-qs('#themeToggle').onclick=()=>{
-  document.body.classList.toggle('theme-light');
-  qs('.torch-label').textContent=document.body.classList.contains('theme-light')?'分析模式':'觀測模式';
-};
-qsa('.project-section button').forEach(btn=>btn.onclick=()=>{
-  const section=btn.parentElement; const open=section.classList.contains('open');
-  qsa('.project-section').forEach(s=>{s.classList.remove('open'); s.querySelector('span').textContent='＋'});
-  if(!open){ section.classList.add('open'); btn.querySelector('span').textContent='−'; }
+
+document.addEventListener('click', e=>{
+  const domain = e.target.closest('.domain-card');
+  if(domain) openCategory(domain.dataset.category);
+
+  const tab = e.target.closest('#categoryTabs button');
+  if(tab){ activeCategory = tab.dataset.category; renderTabs(); renderProjects(); }
+
+  const card = e.target.closest('.project-card');
+  if(card) openProject(card.dataset.id);
+
+  const acc = e.target.closest('.accordion-head');
+  if(acc){ acc.parentElement.classList.toggle('open'); }
+
+  const mode = e.target.closest('.mode-toggle');
+  if(mode) document.body.classList.toggle('analysis');
 });
+
+window.addEventListener('hashchange',()=>setActiveNav(location.hash || '#home'));
+renderTabs();
+renderProjects();
+setActiveNav(location.hash || '#home');
