@@ -1,523 +1,198 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const revealTargets = document.querySelectorAll(
-    '.reveal-text, .section-title, .about-photo, .about-copy, .work-card, .contact-title, .contact-info'
-  );
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  revealTargets.forEach((target) => observer.observe(target));
-
-
-  const filterButtons = document.querySelectorAll(
-    '.filter-nav button, .floating-work-filter button'
-  );
-
-  const workCards = document.querySelectorAll('.work-grid .work-card');
-
-  function applyWorkFilter(filter) {
-    filterButtons.forEach((btn) => {
-      btn.classList.toggle('active', btn.dataset.filter === filter);
-    });
-
-    workCards.forEach((card) => {
-      const category = card.dataset.category;
-
-      if (filter === 'all' || category === filter) {
-        card.classList.remove('hide');
-        card.classList.add('is-visible');
-      } else {
-        card.classList.add('hide');
-      }
-    });
+const categories = {
+  planning: {
+    no: 'OBSERVATORY 01', title: '企劃', desc: '接收資訊，整理方向。', label: 'PLANNING'
+  },
+  design: {
+    no: 'OBSERVATORY 02', title: '設計', desc: '把抽象的想法，轉譯成看得見的樣子。', label: 'DESIGN'
+  },
+  video: {
+    no: 'OBSERVATORY 03', title: '短影片', desc: '把故事變成讓人願意停下來看的畫面。', label: 'VIDEO'
+  },
+  uiux: {
+    no: 'OBSERVATORY 04', title: 'UIUX', desc: '讓資訊更容易被理解，也更容易被使用。', label: 'UI/UX'
+  },
+  photo: {
+    no: 'OBSERVATORY 05', title: '攝影', desc: '記錄那些讓我停下來看的瞬間。', label: 'PHOTOGRAPHY'
   }
+};
 
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      applyWorkFilter(button.dataset.filter);
+const projects = [
+  {
+    id:'sigma-cis', category:'design', title:'SIGMA CIS', type:'品牌識別設計', year:'2025', image:'files/sigma-cover.jpg',
+    one:'把商標延伸成品牌語言。',
+    start:'SIGMA 需要一套能延伸到不同應用場景的識別系統，不只是單一標誌。',
+    role:'我負責視覺系統整理、標準色、輔助圖形與品牌應用方向。',
+    result:'完成一套能延伸到名片、社群、簡報與品牌印刷模擬的識別架構。',
+    thinking:'我把重點放在「可延伸性」，因為好的識別不只是好看，而是不同情境下都能被穩定使用。'
+  },
+  {
+    id:'ikea-frame', category:'video', title:'IKEA 相框改造', type:'短影片企劃', year:'2025', image:'files/video04.jpg',
+    one:'原來大家喜歡的，不是 IKEA。',
+    start:'想找一個扭蛋玩家會有共鳴的內容，而不是單純介紹商品。',
+    role:'我負責腳本發想、拍攝、剪輯與社群上架。',
+    result:'影片在 Facebook、Instagram、YouTube Shorts 都獲得不錯觀看，成為收納題材的代表案例。',
+    thinking:'大家真正分享的理由不是 IKEA，而是「終於有地方放扭蛋」。所以前幾秒先呈現完成畫面，再補改造過程。'
+  },
+  {
+    id:'brand-video', category:'video', title:'品牌形象影片', type:'影像製作', year:'2025', image:'files/video01.jpg',
+    one:'用影像說故事，也讓品牌被看見。',
+    start:'希望把商品特點轉成生活中的使用想像。',
+    role:'我負責腳本、拍攝、剪輯與封面設計。',
+    result:'完成適合社群平台觀看節奏的短影片。',
+    thinking:'比起完整介紹，我更在意觀眾前三秒有沒有理由停下來。'
+  },
+  {
+    id:'member-return', category:'planning', title:'會員回購機制', type:'企劃規劃', year:'2025', image:'files/marketing03.jpg',
+    one:'讓使用者有理由再次回來。',
+    start:'觀察到會員互動與回訪需要更明確的誘因。',
+    role:'我負責機制發想、活動流程、文案與頁面溝通。',
+    result:'整理出可執行的會員回購方向與活動架構。',
+    thinking:'我思考的是「為什麼他要回來」，而不是只給折扣。'
+  },
+  {
+    id:'yellowstone', category:'planning', title:'整合行銷專案', type:'行銷企劃', year:'2025', image:'files/work-03.jpg',
+    one:'把場域重新介紹給生活圈。',
+    start:'市場改建後，需要重新建立品牌印象與在地連結。',
+    role:'我參與品牌溝通、社群內容、活動視覺與推廣節奏整理。',
+    result:'建立一套線上線下都能使用的溝通架構。',
+    thinking:'場域行銷不是只做漂亮，而是讓人知道「我為什麼要去」。'
+  },
+  {
+    id:'assist-dog', category:'design', title:'協助犬品牌', type:'品牌視覺設計', year:'2024', image:'files/dog01.jpg',
+    one:'把溫暖與專業放進同一套視覺。',
+    start:'品牌需要在親近感與可信任感之間取得平衡。',
+    role:'我負責視覺方向、標誌應用與延伸物設計。',
+    result:'完成一套具日常感的品牌視覺。',
+    thinking:'這類品牌不能太冰冷，但也不能過度可愛，所以我用簡潔的圖形和柔和語氣取得平衡。'
+  },
+  {
+    id:'package-sausage', category:'design', title:'香腸包裝設計', type:'包裝視覺', year:'2025', image:'files/graphic05.jpg',
+    one:'讓商品多一點日式記憶點。',
+    start:'新商品需要延續品牌感，同時做出與既有品項的差異。',
+    role:'我負責包裝視覺方向、色彩與版面配置。',
+    result:'完成具日式氛圍但不脫離品牌系統的包裝方向。',
+    thinking:'我不想只貼櫻花或富士山，而是用版面節奏和色彩去做日式感。'
+  },
+  {
+    id:'taipei-music-app', category:'uiux', title:'北流會員 App', type:'UIUX 概念', year:'2025', image:'files/uiux02.jpg',
+    one:'讓複雜的事，變得順暢。',
+    start:'希望把演出資訊、會員功能與現場使用情境整合在一起。',
+    role:'我負責流程整理、畫面架構與 Mockup 視覺。',
+    result:'完成可呈現 RWD 與行動情境的介面概念。',
+    thinking:'UIUX 對我來說不是畫好看的介面，而是讓人更快知道下一步要做什麼。'
+  },
+  {
+    id:'travel-photo', category:'photo', title:'基隆・望幽谷', type:'攝影紀錄', year:'2024', image:'files/work-05.jpg',
+    one:'風景有時候，比想像中更寂靜。',
+    start:'在日常移動中記錄讓我停下來看的場景。',
+    role:'我負責拍攝、構圖與色調整理。',
+    result:'整理成一組具有空氣感的旅行攝影紀錄。',
+    thinking:'攝影對我來說不是作品壓力，而是保留觀察能力的一種方式。'
+  },
+  {
+    id:'calbee-video', category:'video', title:'Calbee 薯條模型', type:'短影片', year:'2025', image:'files/video02.jpg',
+    one:'一包薯條，也能玩出互動感。',
+    start:'這款商品的重點不是外觀，而是遊玩的過程。',
+    role:'我負責腳本、拍攝與節奏剪輯。',
+    result:'以遊玩過程放大緊張感與趣味。',
+    thinking:'有些商品不適合靜態介紹，觀眾要看到「它怎麼玩」才會有興趣。'
+  }
+];
 
-      const worksSection = document.querySelector('#works');
-      if (worksSection) {
-        worksSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
+let activeCategory = 'design';
+let lastCategoryScrollTarget = '#categoryPanel';
+
+const categoryProjects = document.querySelector('#categoryProjects');
+const featuredProjects = document.querySelector('#featuredProjects');
+const categoryEyebrow = document.querySelector('#categoryEyebrow');
+const categoryTitle = document.querySelector('#categoryTitle');
+const categoryDesc = document.querySelector('#categoryDesc');
+const projectDetail = document.querySelector('#projectDetail');
+const backToCategory = document.querySelector('#backToCategory');
+
+function createProjectCard(project){
+  const card = document.createElement('article');
+  card.className = 'project-card';
+  card.tabIndex = 0;
+  card.innerHTML = `
+    <div class="project-thumb">
+      <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.remove()" />
+    </div>
+    <div class="project-body">
+      <small>${categories[project.category].title}</small>
+      <h3>${project.title}</h3>
+      <p>${project.one}</p>
+      <span class="project-arrow">→ 查看觀測紀錄</span>
+    </div>
+  `;
+  card.addEventListener('click', () => openProject(project.id));
+  card.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter') openProject(project.id);
   });
+  return card;
+}
 
+function renderCategory(category){
+  activeCategory = category;
+  const data = categories[category];
+  categoryEyebrow.textContent = data.no;
+  categoryTitle.textContent = data.title;
+  categoryDesc.textContent = data.desc;
 
-  const floatingFilter = document.querySelector('#floatingWorkFilter');
-  const worksSectionForFloating = document.querySelector('#works');
-  const contactSectionForFloating = document.querySelector('#contact');
-
-  function toggleFloatingFilter() {
-    if (!floatingFilter || !worksSectionForFloating) return;
-
-    const worksRect = worksSectionForFloating.getBoundingClientRect();
-    const contactRect = contactSectionForFloating
-      ? contactSectionForFloating.getBoundingClientRect()
-      : null;
-
-    const hasReachedWorks = worksRect.top <= window.innerHeight * 0.62;
-    const stillInWorks = contactRect ? contactRect.top > window.innerHeight * 0.72 : true;
-
-    floatingFilter.classList.toggle('show', hasReachedWorks && stillInWorks);
-  }
-
-  window.addEventListener('scroll', toggleFloatingFilter, { passive: true });
-  window.addEventListener('resize', toggleFloatingFilter);
-  toggleFloatingFilter();
-
-
-  const worksData = {
-    marketing1: {
-      category: '行銷專案',
-      title: '板橋 YELLOWSTONE｜整合行銷專案',
-      type: 'image',
-      media: 'files/work-03-3.jpg',
-      desc: '從品牌策略、社群企劃、活動視覺到線上線下推廣，協助市場改建後重新建立與在地生活的連結。',
-      contents: ['品牌定位', '社群內容企劃', '活動視覺整合', '專案成效整理'],
-      info: { 年份: '2025', 類型: 'Marketing Project', 角色: '企劃 / 品牌整合' }
-    },
-
-    marketing2: {
-      category: '行銷專案',
-      title: '東森購物 MOD 商城｜雙11狂歡購',
-      type: 'image',
-      media: 'files/marketing02-detail.jpg',
-      desc: '配合雙11檔期規劃活動溝通、版面素材與促購內容，強化檔期辨識度與購物動線。',
-      contents: ['活動主軸規劃', '檔期視覺素材', '平台版面溝通', '促購資訊整理'],
-      info: { 類型: 'Marketing Project' }
-    },
-
-    marketing3: {
-      category: '行銷專案',
-      title: '蛋舖官網｜會員回購機制',
-      type: 'image',
-      media: 'files/marketing03-detail.jpg',
-      desc: '從會員回訪、消費誘因與日常互動出發，規劃能促進重複購買的官網機制。',
-      contents: ['會員行為觀察', '回購機制設計', '活動流程規劃', '轉換情境整理'],
-      info: { 類型: 'Marketing Project' }
-    },
-
-    marketing4: {
-      category: '行銷專案',
-      title: '蛋舖社群｜短影片內容策略',
-      type: 'image',
-      media: 'files/marketing04-detail.jpg',
-      desc: '以社群平台特性與扭蛋商品特性為基礎，規劃短影片題材、鉤子與曝光節奏。',
-      contents: ['內容題材分類', '短影音鉤子設計', '平台差異觀察', '社群互動優化'],
-      info: { 類型: 'Social Strategy' }
-    },
-
-    marketing5: {
-      category: '行銷專案',
-      title: '香山濕地｜展場文字歸納',
-      type: 'image',
-      media: 'files/marketing05-detail.jpg',
-      desc: '將環境、生態與展場資訊重新整理成更清楚易讀的內容架構，協助觀眾快速理解。',
-      contents: ['資訊歸納', '展場文字整理', '內容層級規劃'],
-      info: { 類型: 'Content Planning' }
-    },
-
-    graphic1: {
-      category: '平面設計',
-      title: '協助犬｜品牌視覺設計',
-      type: 'image',
-      media: 'files/dog-long.jpg',
-      desc: '從品牌命名、標語、包裝到視覺系統，建立具有日常感與辨識度的品牌語言。',
-      contents: ['品牌視覺方向', '包裝與延伸物設計', '版面與字級系統', '視覺應用整理'],
-      info: { 工具: 'Illustrator / Photoshop' }
-    },
-
-    graphic2: {
-      category: '平面設計',
-      title: '西洋風味香料 美食特餐｜膠裝刊物設計',
-      type: 'image',
-      media: 'files/book-long.jpg',
-      desc: '以西洋香料文化為主軸，結合料理與風味美學，透過編輯排版呈現多國經典香料特色與美食靈感。',
-      contents: ['32頁膠裝刊物', '編輯排版設計', '收錄7個西洋經典風味主題', '介紹24種特色香料與料理文化'],
-      info: { 工具: 'Illustrator / Photoshop' }
-    },
-
-    graphic3: {
-      category: '平面設計',
-      title: '包裝設計｜拉拉山水蜜桃商品',
-      type: 'image',
-      media: 'files/lala-long.jpg',
-      desc: '以高山果實的純粹為核心，融合現代美學與在地農產特色，建立具禮品感的商品包裝。',
-      contents: ['禮盒包裝設計', '插圖與視覺延伸', '品牌故事排版'],
-      info: { 工具: 'Illustrator / Photoshop' }
-    },
-
-    graphic4: {
-      category: '平面設計',
-      title: '包裝設計｜沙茶匠',
-      type: 'image',
-      media: 'files/so-long.jpg',
-      desc: '以職人匠心為核心，將傳統醬料轉化為精緻伴手禮，透過色彩與圖示提升選購便利性。',
-      contents: ['系列包裝設計', '禮品結構規劃', '料理建議圖示', '手寫感品牌識別'],
-      info: { 工具: 'Illustrator / Photoshop' }
-    },
-
-    graphic5: {
-      category: '平面設計',
-      title: '蛋舖周邊設計｜出貨袋與員工服',
-      type: 'image',
-      media: 'files/graphic05-detail.jpg',
-      desc: '將品牌視覺延伸至出貨袋、員工服與門市接觸點，建立更一致的品牌印象。',
-      contents: ['周邊設計', '門市視覺延伸', '品牌應用整理'],
-      info: { 工具: 'Illustrator / Photoshop' }
-    },
-
-    graphic6: {
-      category: '平面設計',
-      title: '蛋舖｜門市海報設計',
-      type: 'image',
-      media: 'files/graphic06-detail.jpg',
-      desc: '配合商品檔期與門市活動，製作可快速傳達訊息的活動海報。',
-      contents: ['活動主視覺', '門市海報', '資訊排版'],
-      info: { 工具: 'Illustrator / Photoshop' }
-    },
-
-    video1: {
-      category: '短影片',
-      title: 'LED磁吸插座燈 P2',
-      type: 'video',
-      cover: 'files/video01.jpg',
-      embed: 'https://www.youtube.com/embed/ut150V2baEw',
-      desc: '以商品細節與生活場景切入，快速建立使用想像與購買情境。',
-      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
-      info: { 工具: 'CapCut / Photoshop' },
-      performance: [
-        { value: '51K+', label: 'Facebook' },
-        { value: '2.6K', label: 'Instagram' },
-        { value: '857', label: 'YouTube' }
-      ]
-    },
-
-    video2: {
-      category: '短影片',
-      title: 'Calbee薯條危機遊戲模型 P2',
-      type: 'video',
-      cover: 'files/video02.jpg',
-      embed: 'https://www.youtube.com/embed/U1M6qN8hOu4',
-      desc: '結合開箱與遊玩過程，放大緊張感與互動樂趣。',
-      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
-      info: { 工具: 'CapCut / Photoshop' },
-      performance: [
-        { value: '34K+', label: 'Facebook' },
-        { value: '2.7K', label: 'Instagram' },
-        { value: '572', label: 'YouTube' }
-      ]
-    },
-
-    video3: {
-      category: '短影片',
-      title: '必勝客魔法 PIZZA 開箱',
-      type: 'video',
-      cover: 'files/video03.jpg',
-      embed: 'https://www.youtube.com/embed/o1hKGAlXOvM',
-      desc: '結合聯名話題與現場紀錄，強化觀看真實感與討論度。',
-      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
-      info: { 工具: 'CapCut / Photoshop' },
-      performance: [
-        { value: '66K+', label: 'Facebook' },
-        { value: '2.7K', label: 'Instagram' },
-        { value: '3K', label: 'YouTube' }
-      ]
-    },
-
-    video4: {
-      category: '短影片',
-      title: 'IKEA 相框改造',
-      type: 'video',
-      cover: 'files/video04.jpg',
-      embed: 'https://www.youtube.com/embed/o1hKGAlXOvM',
-      desc: '從玩具收納痛點出發，分享改造方式與實際應用情境。',
-      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
-      info: { 工具: 'CapCut / Photoshop' },
-      performance: [
-        { value: '210K+', label: 'Facebook' },
-        { value: '18K', label: 'Instagram' },
-        { value: '24K', label: 'YouTube' }
-      ]
-    },
-
-    video5: {
-      category: '短影片',
-      title: '大創收納盒開箱',
-      type: 'video',
-      cover: 'files/video05.jpg',
-      embed: 'https://www.youtube.com/embed/Bl2svrqsHVY',
-      desc: '以收納情境切入，協助玩家快速找到整理靈感。',
-      contents: ['腳本企劃', '商品拍攝', '節奏剪輯'],
-      info: { 工具: 'CapCut / Photoshop' },
-      performance: [
-        { value: '140K+', label: 'Facebook' },
-        { value: '6.8K', label: 'Instagram' },
-        { value: '1.5K', label: 'YouTube' }
-      ]
-    },
-
-    photo1: {
-      category: '攝影',
-      title: '猴硐貓村｜旅行攝影',
-      type: 'image',
-      media: 'files/work-05.jpg',
-      desc: '用影像捕捉旅途中值得收藏的光線、場景與情緒。',
-      contents: ['光線與構圖觀察', '場景情緒紀錄', '影像色調整理']
-    },
-
-    photo2: {
-      category: '攝影',
-      title: '攝影作品｜城市觀察',
-      type: 'image',
-      media: 'files/photo02-detail.jpg',
-      desc: '從街景、建築與日常人物中捕捉城市節奏。',
-      contents: ['影像拍攝', '色調整理', '素材挑選']
-    },
-
-    photo3: {
-      category: '攝影',
-      title: '攝影作品｜日常紀錄',
-      type: 'image',
-      media: 'files/photo03-detail.jpg',
-      desc: '以自然視角記錄生活中的細節、光線與情緒。',
-      contents: ['影像拍攝', '色調整理', '素材挑選']
-    },
-
-    uiux1: {
-      category: 'UIUX',
-      title: '迪士尼導覽 APP',
-      type: 'image',
-      media: 'files/disney-uiux.jpg',
-      desc: '結合 GPS、同伴定位、活動推播的迪士尼導覽 APP，讓使用者在園區內獲得更即時、便利且個人化的遊玩體驗。',
-      contents: ['使用者痛點整理', '資訊架構與流程設計', 'UI 視覺與元件規劃', 'APP 功能情境設計'],
-      info: { 工具: 'Figma' }
-    },
-
-    uiux2: {
-      category: 'UIUX',
-      title: '官網設計｜和正農作',
-      type: 'image',
-      media: 'files/uiux-long.jpg',
-      desc: '以自然職人風格重新建構品牌官網，整合購物打造更直覺且具溫度感的烘焙品牌。',
-      contents: ['使用者流程規劃', 'UI 介面設計', '功能情境設計'],
-      info: { 工具: 'Figma' }
-    },
-
-    uiux3: {
-      category: 'UIUX',
-      title: '蛋舖官網｜關於我們',
-      type: 'image',
-      media: 'files/91toy-long.jpg',
-      desc: '以品牌展示與合作提案為核心，重新規劃網站視覺與資訊架構，強化品牌形象與市場吸引力。',
-      contents: ['資訊架構規劃', 'UI 介面設計', '品牌展示頁設計'],
-      info: { 工具: 'Figma' }
-    }
-  };
-
-
-  const modal = document.querySelector('#workModal');
-  const modalMedia = document.querySelector('#modalMedia');
-  const modalCategory = document.querySelector('#modalCategory');
-  const modalTitle = document.querySelector('#modalTitle');
-  const modalDesc = document.querySelector('#modalDesc');
-  const modalTags = document.querySelector('#modalTags');
-  const closeBtn = document.querySelector('.modal-close');
-  const modalBg = document.querySelector('.modal-bg');
-
-  function getFallbackData(element) {
-    const img = element.querySelector('img');
-    const title = element.querySelector('h3');
-    const category = element.querySelector('.category, .slider-info p');
-    const desc = element.querySelector('.desc');
-
-    return {
-      category: category ? category.textContent : '',
-      title: title ? title.textContent : '作品介紹',
-      type: 'image',
-      media: img ? img.getAttribute('src') : '',
-      desc: desc ? desc.textContent : '此作品可再補充專案說明。',
-      contents: ['專案內容可依需求補充'],
-      info: { 類型: 'Portfolio Work' }
-    };
-  }
-
-  function renderMedia(data) {
-    if (data.type === 'video' && data.cover && data.embed) {
-      return `
-        <button
-          class="external-video-box video-cover-box"
-          type="button"
-          data-embed="${data.embed}"
-          aria-label="播放 ${data.title}"
-          style="background-image:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('${data.cover}');">
-        </button>
-      `;
-    }
-
-    if (data.embed) {
-      return `
-        <div class="video-wrap">
-          <iframe
-            class="embed-video"
-            src="${data.embed}"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            frameborder="0">
-          </iframe>
-
-          ${data.link ? `
-            <a class="video-link" href="${data.link}" target="_blank" rel="noopener">
-              若影片無法播放，點此開啟外部影片
-            </a>
-          ` : ''}
-        </div>
-      `;
-    }
-
-    if (data.link && data.link !== 'https://youtu.be/') {
-      return `
-        <a 
-          class="external-video-box"
-          href="${data.link}" 
-          target="_blank" 
-          rel="noopener"
-        ></a>
-      `;
-    }
-
-    if (data.type === 'image' && data.media) {
-      return `
-        <img
-          class="modal-image-file"
-          src="${data.media}"
-          alt="${data.title}">
-      `;
-    }
-
-    return `
-      <div class="media-error">
-        此作品目前尚未設定媒體內容。
-      </div>
-    `;
-  }
-
-  function renderDetail(data) {
-    const contentList = data.contents
-      ? `
-        <div class="modal-section">
-          <h4>專案內容</h4>
-          <ul>
-            ${data.contents.map((item) => `<li>${item}</li>`).join('')}
-          </ul>
-        </div>
-      `
-      : '';
-
-    const infoList = data.info
-      ? `
-        <div class="modal-section">
-          <h4>專案資訊</h4>
-          <dl>
-            ${Object.entries(data.info).map(([key, value]) => `
-              <div>
-                <dt>${key}</dt>
-                <dd>${value}</dd>
-              </div>
-            `).join('')}
-          </dl>
-        </div>
-      `
-      : '';
-
-    const performanceList = data.performance
-      ? `
-        <div class="modal-section performance-section">
-          <h4>Performance</h4>
-          <div class="performance-grid">
-            ${data.performance.map((item) => `
-              <div class="performance-item">
-                <strong>${item.value}</strong>
-                <span>${item.label}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `
-      : '';
-
-    const note=`
-<div class="more-video-note">
-更多短影片作品：<br>
-Facebook｜蛋舖－線上轉蛋就素快
-</div>`;
-
-return contentList + infoList + performanceList + note;
-  }
-
-  function openModal(key, element) {
-    const data = worksData[key] || getFallbackData(element);
-
-    if (!data || !modal || !modalMedia) return;
-
-    modalMedia.innerHTML = renderMedia(data);
-    modalCategory.textContent = data.category || '';
-    modalTitle.textContent = data.title || '';
-    modalDesc.textContent = data.desc || '';
-    modalTags.innerHTML = renderDetail(data);
-
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    if (!modal || !modalMedia) return;
-
-    modal.classList.remove('active');
-    modalMedia.innerHTML = '';
-    document.body.style.overflow = '';
-  }
-
-  document.addEventListener('click', (e) => {
-    const videoCover = e.target.closest('.video-cover-box');
-
-    if (!videoCover || !modalMedia) return;
-
-    const embedUrl = videoCover.dataset.embed;
-
-    if (!embedUrl) return;
-
-    modalMedia.innerHTML = `
-      <iframe
-        class="embed-video"
-        src="${embedUrl}?autoplay=1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        frameborder="0">
-      </iframe>
-    `;
+  categoryProjects.innerHTML = '';
+  projects.filter(project => project.category === category).forEach(project => {
+    categoryProjects.appendChild(createProjectCard(project));
   });
+}
 
+function renderFeatured(){
+  featuredProjects.innerHTML = '';
+  projects.slice(0,5).forEach(project => featuredProjects.appendChild(createProjectCard(project)));
+}
 
-  document.querySelectorAll('[data-modal]').forEach((item) => {
-    item.addEventListener('click', () => {
-      openModal(item.dataset.modal, item);
-    });
-  });
+function openProject(id){
+  const project = projects.find(item => item.id === id);
+  if(!project) return;
+  document.querySelector('#detailCategory').textContent = `${categories[project.category].label} / ${project.year}`;
+  document.querySelector('#detailTitle').textContent = project.title;
+  document.querySelector('#detailMeta').textContent = project.type;
+  document.querySelector('#detailCover').innerHTML = `<img src="${project.image}" alt="${project.title}" onerror="this.remove()" />`;
+  document.querySelector('#detailStart').textContent = project.start;
+  document.querySelector('#detailRole').textContent = project.role;
+  document.querySelector('#detailResult').textContent = project.result;
+  document.querySelector('#detailThinking').textContent = project.thinking;
 
-  closeBtn?.addEventListener('click', closeModal);
-  modalBg?.addEventListener('click', closeModal);
+  projectDetail.hidden = false;
+  projectDetail.scrollIntoView({behavior:'smooth', block:'start'});
+}
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+backToCategory.addEventListener('click', () => {
+  document.querySelector(lastCategoryScrollTarget).scrollIntoView({behavior:'smooth'});
+});
+
+document.querySelectorAll('.station-node').forEach(node => {
+  node.addEventListener('click', () => {
+    const category = node.dataset.category;
+    renderCategory(category);
+    lastCategoryScrollTarget = '#categoryPanel';
+    document.querySelector('#categoryPanel').scrollIntoView({behavior:'smooth'});
   });
 });
+
+const themeToggle = document.querySelector('#themeToggle');
+themeToggle.addEventListener('click', () => {
+  const html = document.documentElement;
+  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  html.dataset.theme = next;
+  themeToggle.querySelector('.torch-text').textContent = next === 'dark' ? '點亮' : '熄滅';
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('is-visible');
+  });
+}, {threshold:.18});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+renderCategory(activeCategory);
+renderFeatured();
