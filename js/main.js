@@ -101,6 +101,13 @@
           </section>
         `;
 
+      case "stats":
+        return `
+          <section class="project-block stats-block fade-in">
+            ${(block.items || []).map(item => `<div>${escapeHTML(item)}</div>`).join("")}
+          </section>
+        `;
+
       case "circles":
         return `
           <section class="project-block circle-block fade-in">
@@ -219,7 +226,8 @@
         </div>
       </section>
 
-      <a class="back-top" href="#">↑ Back to Top</a>
+      <a class="back-top" href="index.html">← Back to Works</a>
+      <footer class="footer-contact"><a href="mailto:yin9423@gmail.com">yin9423@gmail.com</a></footer>
     `;
 
     revealOnScroll();

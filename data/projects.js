@@ -1,185 +1,149 @@
 window.PORTFOLIO_PROJECTS = [
   {
-    slug: "happen-coliving",
-    title: "好伴公寓 Happen Coliving",
-    subtitle: "共居公寓品牌設計 Co-Living Apartment Branding",
+    slug: "yellowstone-market",
+    title: "板橋黃石市場 YELLOWSTONE",
+    subtitle: "品牌社群經營與整合行銷",
+    category: "marketing",
+    year: "2025",
+    client: "板橋黃石市場",
+    service: "整合行銷、社群內容、成果簡報",
+    cover: "assets/images/works/yellowstone.jpg",
+    intro: [
+      "一座與板橋人一起成長的市場，如何在改建後重新被看見？",
+      "參與品牌轉型溝通、社群內容規劃與成果彙整，以「改造傳統市場 × 在地生活美學」作為溝通主軸，協助市場從工程資訊轉化為日常生活場域。"
+    ],
+    blocks: [
+      { type: "stats", items: ["瀏覽 +846%", "觸及 11,000+", "互動 2,449", "16+ 媒體曝光"] },
+      { type: "text", title: "負責項目", text: "社群內容主軸規劃、攤商故事系列、短影音內容、試營運溝通、新聞稿前期資料整理與結案成果彙整。" },
+      { type: "image", src: "assets/images/works/yellowstone.jpg", alt: "板橋黃石市場整合行銷作品" },
+      { type: "credit", items: ["Role｜Marketing Planning / Content Planning", "Year｜2025", "Tools｜社群企劃、內容撰寫、成果整理"] }
+    ]
+  },
+  {
+    slug: "mod-shopping-optimisation",
+    title: "MOD商城優化",
+    subtitle: "使用者體驗 × 流程優化 × 轉換提升",
+    category: "uiux",
+    year: "2022",
+    client: "MOD 東森商城",
+    service: "行銷企劃、數據分析、流程優化",
+    cover: "assets/images/works/mod.jpg",
+    intro: [
+      "透過數據觀察消費流程，改善遙控器、語音與專人訂購體驗，降低操作門檻並提升下單便利性。",
+      "專案聚焦中高齡客群的購買行為，重新整理商城入口、館別分類與加價購機制。"
+    ],
+    blocks: [
+      { type: "stats", items: ["轉換率 +15%", "語音訂購 +42%", "專人接聽 +36%", "年菜營收 +65%"] },
+      { type: "image", src: "assets/images/works/mod.jpg", alt: "MOD商城優化作品" },
+      { type: "credit", items: ["Role｜Marketing Planner", "Year｜2022", "Service｜Data Analysis / UX Optimisation"] }
+    ]
+  },
+  {
+    slug: "disney-guide-app",
+    title: "Disney 導覽 APP",
+    subtitle: "UI/UX 概念設計",
+    category: "uiux",
+    year: "2023",
+    client: "Concept Project",
+    service: "UI Design、User Flow、Visual Proposal",
+    cover: "assets/images/works/disney-uiux.jpg",
+    intro: [
+      "以主題樂園導覽為情境，規劃入園、地圖、排隊資訊與票券展示流程。",
+      "視覺方向以沉浸感、清楚導覽與角色氛圍為核心。"
+    ],
+    blocks: [
+      { type: "image", src: "assets/images/works/disney-uiux.jpg", alt: "Disney 導覽 APP UIUX" },
+      { type: "credit", items: ["Role｜UI/UX Designer", "Year｜2023", "Tools｜Figma / Photoshop"] }
+    ]
+  },
+  {
+    slug: "hezheng-bakery",
+    title: "和正農作官網改版",
+    subtitle: "品牌官網 UI/UX 優化",
+    category: "uiux",
+    year: "2023",
+    client: "和正農作",
+    service: "網站視覺、RWD版面、流程優化",
+    cover: "assets/images/works/hezheng-uiux.jpg",
+    intro: [
+      "以手感、烘焙與農作溫度為視覺核心，重新規劃官網首頁與手機版瀏覽體驗。",
+      "改善首頁資訊一致性、商品呈現、導購路徑與品牌故事溝通。"
+    ],
+    blocks: [
+      { type: "image", src: "assets/images/works/hezheng-uiux.jpg", alt: "和正農作官網改版" },
+      { type: "credit", items: ["Role｜UI/UX Designer", "Year｜2023", "Service｜Website Redesign"] }
+    ]
+  },
+  {
+    slug: "lalashan-peach",
+    title: "拉拉山水蜜桃果醬／冰棒",
+    subtitle: "包裝與品牌視覺提案",
     category: "branding",
-    year: "2026",
-    client: "Happen Coliving",
-    service: "Brand Identity, Logo System, Visual Guideline",
-    cover: "assets/images/cover-happen.svg",
+    year: "2023",
+    client: "Concept Project",
+    service: "Packaging、Visual Design、Copywriting",
+    cover: "assets/images/works/lalashan.jpg",
     intro: [
-      "好伴公寓是一個以「共居」為核心的生活品牌，透過溫暖、穩定且具信任感的識別系統，建立出適合城市租屋、共享生活與社群連結的品牌形象。",
-      "Happen means you can enjoy your time at home with warm companionship. The identity uses a simple housing symbol and neutral tones to create a calm, reliable and approachable living atmosphere."
+      "以水蜜桃產地、保存鮮味與禮盒情境為核心，建立溫暖、清爽且具伴手禮感的包裝視覺。",
+      "延伸果醬與冰棒兩種商品線，讓品牌在不同載體上維持一致識別。"
     ],
     blocks: [
-      {
-        type: "image",
-        src: "assets/images/project-logo.svg",
-        alt: "Logo system"
-      },
-      {
-        type: "circles",
-        items: ["品牌理念", "空間感受", "生活情境"]
-      },
-      {
-        type: "columns",
-        columns: [
-          { title: "共居生活", text: "Live Together" },
-          { title: "生活感", text: "Daily Moment" },
-          { title: "安心空間", text: "Safe Home" }
-        ]
-      },
-      {
-        type: "text",
-        title: "品牌概念 Brand Concept",
-        text: "視覺方向以「家、陪伴、穩定」為核心，將屋形符號與中文標準字整合，讓品牌在租屋、公寓管理、社群活動與線上平台中都能維持一致的識別印象。"
-      },
-      {
-        type: "spec",
-        title: "Basic System",
-        items: ["Primary Logo", "Vertical Logo", "Icon Mark", "Clear Space", "Minimum Size", "Colour Usage", "Incorrect Use", "Pattern"]
-      },
-      {
-        type: "pattern",
-        title: "Brand Pattern"
-      },
-      {
-        type: "twoText",
-        leftTitle: "中文品牌文字",
-        leftText: "好伴公寓希望不只是提供居住空間，而是讓每個人都能在城市裡找到安心生活的位置。",
-        rightTitle: "English Copywriting",
-        rightText: "A calm and friendly co-living brand made for people who are looking for comfort, connection and a better way to live together."
-      },
-      {
-        type: "gallery",
-        images: [
-          { src: "assets/images/project-card.svg", alt: "Name card" },
-          { src: "assets/images/project-sign.svg", alt: "Outdoor signage" }
-        ]
-      },
-      {
-        type: "image",
-        src: "assets/images/project-door.svg",
-        alt: "Door hanger mockup"
-      },
-      {
-        type: "image",
-        src: "assets/images/project-contract.svg",
-        alt: "Contract mockup"
-      },
-      {
-        type: "credit",
-        items: [
-          "Client｜Happen Coliving",
-          "Year｜2026",
-          "Service｜Brand Identity",
-          "Design｜Your Name"
-        ]
-      }
+      { type: "image", src: "assets/images/works/lalashan.jpg", alt: "拉拉山水蜜桃包裝設計" },
+      { type: "credit", items: ["Role｜Packaging Designer", "Year｜2023", "Service｜Packaging / Brand Visual"] }
     ]
   },
   {
-    slug: "social-design-scene",
-    title: "社計現場 Social Design Scene",
-    subtitle: "活動主視覺設計 Key Visual Design",
-    category: "keyvisual",
-    year: "2026",
-    client: "Social Design Scene",
-    service: "Key Visual, Layout System",
-    cover: "assets/images/cover-social.svg",
-    intro: [
-      "以城市觀察與社會設計為核心，建立清楚、具識別性的活動主視覺。",
-      "A key visual system designed for communication, public engagement and flexible campaign usage."
-    ],
-    blocks: [
-      { type: "image", src: "assets/images/cover-social.svg", alt: "Social Design Scene KV" },
-      { type: "text", title: "Visual Direction", text: "使用高對比色塊、簡潔標題與明確資訊層級，讓活動在社群、海報與簡報中都能快速被辨識。" },
-      { type: "gallery", images: [
-        { src: "assets/images/cover-social.svg", alt: "KV 1" },
-        { src: "assets/images/cover-green.svg", alt: "KV 2" }
-      ]},
-      { type: "credit", items: ["Client｜Social Design Scene", "Year｜2026", "Service｜Key Visual Design"] }
-    ]
-  },
-  {
-    slug: "lilisnow-nail",
-    title: "lilisnow nail",
-    subtitle: "美甲工作室品牌設計 Nail Studio Branding",
+    slug: "shacha-branding",
+    title: "沙茶匠",
+    subtitle: "食品品牌包裝識別",
     category: "branding",
-    year: "2026",
-    client: "lilisnow nail",
-    service: "Brand Identity",
-    cover: "assets/images/cover-nail.svg",
+    year: "2023",
+    client: "Concept Project",
+    service: "Brand Identity、Packaging、Application",
+    cover: "assets/images/works/shacha.jpg",
     intro: [
-      "柔和、細膩、帶有手作質感的美甲工作室品牌識別。",
-      "A delicate identity system for a nail studio with soft colour and refined typography."
+      "以職人、醬料與台式口味為核心，打造具辨識度的食品包裝系統。",
+      "透過瓶貼、手提盒、色彩與圖像語彙，建立系列化商品識別。"
     ],
     blocks: [
-      { type: "image", src: "assets/images/cover-nail.svg", alt: "Nail Studio Branding" },
-      { type: "text", title: "Brand Mood", text: "整體色彩維持柔和乾淨，搭配簡潔排版與留白，讓品牌有安靜、精緻、可信任的第一印象。" },
-      { type: "credit", items: ["Client｜lilisnow nail", "Year｜2026", "Service｜Branding"] }
+      { type: "image", src: "assets/images/works/shacha.jpg", alt: "沙茶匠包裝識別" },
+      { type: "credit", items: ["Role｜Brand / Packaging Designer", "Year｜2023", "Service｜CIS / Packaging"] }
     ]
   },
   {
-    slug: "green-corridor",
-    title: "綠空放空空 Green Corridor",
-    subtitle: "活動主視覺設計 Campaign Key Visual",
-    category: "keyvisual",
-    year: "2026",
-    client: "Green Corridor",
-    service: "Campaign Identity",
-    cover: "assets/images/cover-green.svg",
-    intro: [
-      "以綠地、放鬆與城市散步為視覺核心，建立適合活動延展的主視覺系統。",
-      "A flexible visual identity for an outdoor campaign, built with calm greens and spacious layouts."
-    ],
-    blocks: [
-      { type: "image", src: "assets/images/cover-green.svg", alt: "Green Corridor KV" },
-      { type: "columns", columns: [
-        { title: "Relax", text: "放鬆感" },
-        { title: "Nature", text: "綠地意象" },
-        { title: "City", text: "城市活動" }
-      ] },
-      { type: "credit", items: ["Client｜Green Corridor", "Year｜2026", "Service｜Key Visual"] }
-    ]
-  },
-  {
-    slug: "sigma-brand",
-    title: "SIGMA Brand Guidelines",
-    subtitle: "精品選物電商品牌識別 Brand Guidelines",
-    category: "branding",
-    year: "2026",
-    client: "SIGMA",
-    service: "CIS, Guidelines",
-    cover: "assets/images/cover-sigma.svg",
-    intro: [
-      "為精品選物電商建立具速度感、信任感與國際感的品牌識別系統。",
-      "A brand guideline system built for a curated e-commerce platform."
-    ],
-    blocks: [
-      { type: "image", src: "assets/images/cover-sigma.svg", alt: "SIGMA brand" },
-      { type: "spec", title: "Guideline System", items: ["Logo", "Colour", "Typography", "Pattern", "Mockup", "Digital Usage"] },
-      { type: "credit", items: ["Client｜SIGMA", "Year｜2026", "Service｜Brand Guidelines"] }
-    ]
-  },
-  {
-    slug: "summer-festival",
-    title: "Summer Festival Visual",
-    subtitle: "夏日祭典背景視覺設計",
+    slug: "western-spices-book",
+    title: "Western Spices",
+    subtitle: "書籍編排與視覺設計",
     category: "visual",
-    year: "2026",
-    client: "Original Project",
-    service: "Illustration, Background",
-    cover: "assets/images/cover-festival.svg",
+    year: "2022",
+    client: "Editorial Project",
+    service: "Book Design、Layout、Art Direction",
+    cover: "assets/images/works/western-spices.jpg",
     intro: [
-      "為扭蛋公仔拍攝情境設計的橫式背景視覺。",
-      "A warm festival-style background designed for product photography and display."
+      "以西方香料與飲食文化為主題，完成書籍封面、內頁編排與整體視覺調性。",
+      "透過攝影、留白與資訊層級整理，建立清楚且具質感的閱讀節奏。"
     ],
     blocks: [
-      { type: "image", src: "assets/images/cover-festival.svg", alt: "Summer Festival Visual" },
-      { type: "text", title: "Usage", text: "可作為社群貼文、商品拍攝背景、活動頁 Banner 與展示用情境圖。" },
-      { type: "credit", items: ["Client｜Original Project", "Year｜2026", "Service｜Visual Design"] }
+      { type: "image", src: "assets/images/works/western-spices.jpg", alt: "Western Spices 書籍設計" },
+      { type: "credit", items: ["Role｜Editorial Designer", "Year｜2022", "Service｜Book Design"] }
+    ]
+  },
+  {
+    slug: "assistance-dogs-cis",
+    title: "協助犬 DOGS Assistance",
+    subtitle: "企業識別系統與應用設計",
+    category: "branding",
+    year: "2021",
+    client: "Concept Project",
+    service: "CIS、Logo、Application System",
+    cover: "assets/images/works/assistance-dogs.jpg",
+    intro: [
+      "以協助、陪伴與信任為品牌核心，建立溫暖且清楚的識別系統。",
+      "延伸標誌標準、輔助圖形、色彩系統與導視應用，呈現完整 CIS 架構。"
+    ],
+    blocks: [
+      { type: "image", src: "assets/images/works/assistance-dogs.jpg", alt: "協助犬 CIS 設計" },
+      { type: "credit", items: ["Role｜CIS Designer", "Year｜2021", "Service｜Brand Identity System"] }
     ]
   }
 ];
