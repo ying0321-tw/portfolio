@@ -1,69 +1,141 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Observation Cube</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observation Cube｜觀測紀錄</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<div id="loading">
-  <div class="cube"></div>
-  <h2>Observation Cube</h2>
-  <p>Initializing...</p>
-</div>
-
-<main id="app" class="hidden">
-<section class="hero">
-  <div class="text">
-    <small>LUMI</small>
-    <h1>觀測紀錄</h1>
-    <p>把觀察到的訊號，整理成可以被理解的樣子。</p>
-    <p class="sub">記錄曾做過能讓我停下來思考的瞬間。</p>
+  <!-- 01 Loading / Boot -->
+  <div id="boot" class="boot">
+    <div class="boot-panel">
+      <div class="wire-cube small"></div>
+      <p class="eyebrow">Observation Cube</p>
+      <h1>系統啟動中</h1>
+      <div class="progress"><span></span></div>
+      <p class="boot-text">Collecting signals · Building archive · Preparing interface</p>
+    </div>
   </div>
-  <div class="heroCube"></div>
-</section>
 
-<section class="categories">
-  <h2>Observation Modules</h2>
-  <div class="grid">
-    <div>Planning</div>
-    <div>Design</div>
-    <div>Video</div>
-    <div>UIUX</div>
-    <div>Photography</div>
-  </div>
-</section>
+  <main id="site" class="site hidden">
+    <!-- 02 Hero / Cube platform -->
+    <section class="hero section" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Observation Cube</p>
+        <h1>觀測紀錄</h1>
+        <p class="lead">把觀察到的訊號，<br />整理成可以被理解的樣子。</p>
+        <p class="desc">企劃、設計、短影片、UIUX，以及那些讓我停下來思考的瞬間。</p>
+        <a href="#modules" class="cta">開始觀測</a>
+      </div>
 
-<section class="works">
-<h2>Latest Observations</h2>
-<div class="cards">
-<div class="card">
-<div class="thumb"></div>
-<h3>SIGMA CIS</h3>
-<p>Brand Design</p>
-</div>
-<div class="card">
-<div class="thumb"></div>
-<h3>MetroWalk App</h3>
-<p>UIUX</p>
-</div>
-<div class="card">
-<div class="thumb"></div>
-<h3>Gashapon Campaign</h3>
-<p>Planning / Video</p>
-</div>
-</div>
-</section>
+      <div class="cube-stage" aria-hidden="true">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="wire-cube hero-cube"></div>
+        <div class="signal s1"></div>
+        <div class="signal s2"></div>
+        <div class="signal s3"></div>
+      </div>
+    </section>
 
-<footer>
-<h2>Observer</h2>
-<p>鄒佳穎</p>
-<p>Contact Signal · your@email.com</p>
-</footer>
+    <!-- 03 Category modules -->
+    <section class="section modules" id="modules">
+      <div class="section-head">
+        <p class="eyebrow">03 / Observation Modules</p>
+        <h2>選擇觀測分類</h2>
+      </div>
 
-</main>
-<script src="script.js"></script>
+      <div class="module-orbit">
+        <a href="#archive" class="module m1"><span>企劃</span><small>Planning</small></a>
+        <a href="#archive" class="module m2"><span>設計</span><small>Design</small></a>
+        <a href="#archive" class="module m3"><span>短影片</span><small>Video</small></a>
+        <a href="#archive" class="module m4"><span>UIUX</span><small>UIUX</small></a>
+        <a href="#archive" class="module m5"><span>攝影</span><small>Photography</small></a>
+      </div>
+    </section>
+
+    <!-- 04 Work list -->
+    <section class="section archive" id="archive">
+      <div class="section-head row">
+        <div>
+          <p class="eyebrow">04 / Archive</p>
+          <h2>作品列表</h2>
+        </div>
+        <div class="filters">
+          <button class="active">全部</button>
+          <button>設計</button>
+          <button>UIUX</button>
+          <button>影片</button>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="thumb gradient-1"></div>
+          <p class="tag">Brand Design</p>
+          <h3>SIGMA CIS</h3>
+          <p>將品牌識別整理成可被延伸使用的視覺系統。</p>
+        </article>
+
+        <article class="work-card">
+          <div class="thumb gradient-2"></div>
+          <p class="tag">UIUX</p>
+          <h3>Shopping Mall App</h3>
+          <p>用清楚的介面流程，重新整理會員與活動體驗。</p>
+        </article>
+
+        <article class="work-card">
+          <div class="thumb gradient-3"></div>
+          <p class="tag">Planning / Video</p>
+          <h3>Gashapon Campaign</h3>
+          <p>把商品亮點轉譯成短影音與活動溝通素材。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05 Case Study -->
+    <section class="section case-study" id="case">
+      <p class="eyebrow">05 / Case Study</p>
+      <div class="case-cover"></div>
+      <div class="case-layout">
+        <aside>
+          <h2>專案詳情頁</h2>
+          <p>類型 / 年份 / 角色</p>
+        </aside>
+        <div class="case-content">
+          <h3>這件事怎麼開始的？</h3>
+          <p>從需求、情境與使用者問題開始觀察，找出真正需要被整理的資訊。</p>
+
+          <h3>我主要負責什麼？</h3>
+          <p>包含企劃整理、視覺設計、內容轉譯、版面規劃與最終輸出。</p>
+
+          <h3>最後變成了什麼？</h3>
+          <p>形成一套可以被理解、被使用，也能延伸到不同媒介的作品成果。</p>
+
+          <details>
+            <summary>我當時怎麼想的</summary>
+            <p>這裡可以放比較個人的觀察筆記，讓想深入理解的人展開閱讀。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Related / About -->
+    <section class="section observer">
+      <p class="eyebrow">06 / Observer</p>
+      <h2>觀測者：鄒佳穎</h2>
+      <p>我關注資訊如何被理解，也在意想法如何被做出來。透過企劃、設計、短影片與 UIUX，把雜亂訊號整理成清楚的溝通成果。</p>
+
+      <div class="contact">
+        <span>聯絡訊號</span>
+        <a href="mailto:your@email.com">your@email.com</a>
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
