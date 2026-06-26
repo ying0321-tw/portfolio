@@ -1,250 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Observation Cube｜鄒佳穎個人作品集網站。把觀察到的訊號，整理成可以被理解的樣子。" />
-  <meta name="theme-color" content="#050914" />
-  <meta property="og:title" content="Observation Cube｜觀測紀錄" />
-  <meta property="og:description" content="把觀察到的訊號，整理成可以被理解的樣子。" />
-  <meta property="og:type" content="website" />
-  <title>Observation Cube｜觀測紀錄</title>
-  <link rel="preload" href="./styles.css" as="style" />
-  <link rel="stylesheet" href="./styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bocolate style portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="#" class="logo">bocolate studio</a>
 
-  <div id="loader" class="loader" role="status" aria-live="polite">
-    <div class="loader-card">
-      <div class="mini-cube" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-      <p class="meta">Observation Cube</p>
-      <h1>觀測系統啟動中</h1>
-      <div class="loadbar"><i></i></div>
-      <p class="loader-note">Collecting signals · Sorting records · Preparing interface</p>
-    </div>
-  </div>
+    <button class="menu-btn" aria-label="menu">MENU</button>
 
-  <header class="site-header" aria-label="網站導覽">
-    <a class="brand" href="#home" aria-label="回到首頁">
-      <span class="brand-mark"></span>
-      <span>Observation Cube</span>
-    </a>
-
-    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
-      <span></span><span></span>
-      <b>Menu</b>
-    </button>
-
-    <nav id="site-nav" class="site-nav">
-      <a href="#modules">分類</a>
-      <a href="#works">作品</a>
-      <a href="#case-study">案例</a>
-      <a href="#observer">關於</a>
-      <a href="#contact">聯絡</a>
+    <nav class="nav">
+      <a class="active" href="#all">ALL PROJECTS 全部</a>
+      <a href="#branding">BRANDING 品牌</a>
+      <a href="#keyvisual">KEY VISUAL 主視覺</a>
+      <a href="#contact">CONTACT 聯絡我</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero section">
-      <div class="hero-text reveal">
-        <p class="meta">Observation Cube</p>
-        <h1>觀測紀錄</h1>
-        <p class="lead">把觀察到的訊號，<br>整理成可以被理解的樣子。</p>
-        <p class="copy">企劃、設計、短影片、UIUX，以及那些讓我停下來思考的瞬間。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#works">查看作品</a>
-          <a class="button" href="#observer">認識觀測者</a>
-        </div>
-      </div>
-
-      <div class="cube-platform reveal" aria-hidden="true">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="orbit orbit-c"></div>
-        <div class="data-point p1"></div>
-        <div class="data-point p2"></div>
-        <div class="data-point p3"></div>
-        <div class="data-point p4"></div>
-        <div class="cube3d">
-          <div class="face front"></div>
-          <div class="face back"></div>
-          <div class="face right"></div>
-          <div class="face left"></div>
-          <div class="face top"></div>
-          <div class="face bottom"></div>
-        </div>
-      </div>
+    <section class="hero">
+      <h1>Graphic Design<br>Branding & Key Visual</h1>
+      <p>以標準字、品牌識別與主視覺設計，整理每個專案的氣質與訊息。</p>
     </section>
 
-    <section id="modules" class="section modules">
-      <div class="section-title reveal">
-        <p class="meta">03 / Observation Modules</p>
-        <h2>選擇觀測分類</h2>
-        <p>五個模組代表不同的輸出方式，但核心都是把訊號重新整理成清楚的溝通。</p>
-      </div>
-
-      <div class="module-system reveal">
-        <div class="module-core" aria-hidden="true"></div>
-        <a class="module-card module-planning" href="#works" data-filter="Planning">
-          <span>企劃</span><small>Planning</small>
-        </a>
-        <a class="module-card module-design" href="#works" data-filter="Design">
-          <span>設計</span><small>Design</small>
-        </a>
-        <a class="module-card module-video" href="#works" data-filter="Video">
-          <span>短影片</span><small>Video</small>
-        </a>
-        <a class="module-card module-uiux" href="#works" data-filter="UIUX">
-          <span>UIUX</span><small>Interface / Flow</small>
-        </a>
-        <a class="module-card module-photo" href="#works" data-filter="Photography">
-          <span>攝影</span><small>Photography</small>
-        </a>
-      </div>
-    </section>
-
-    <section id="works" class="section works">
-      <div class="section-title split reveal">
-        <div>
-          <p class="meta">04 / Archive</p>
-          <h2>作品列表</h2>
-          <p>先用三件作品作為正式網站範例，之後可以直接複製資料新增。</p>
+    <section id="all" class="works">
+      <article class="work-card" data-category="branding">
+        <div class="thumb gradient-1">
+          <span>Happen Coliving</span>
         </div>
-
-        <div class="filter-group" aria-label="作品分類篩選">
-          <button class="filter active" data-filter="All">全部</button>
-          <button class="filter" data-filter="Design">設計</button>
-          <button class="filter" data-filter="UIUX">UIUX</button>
-          <button class="filter" data-filter="Video">影片</button>
-        </div>
-      </div>
-
-      <div class="work-grid" id="workGrid">
-        <article class="work-card reveal" data-category="Design Planning">
-          <a href="#case-study" class="work-link" aria-label="查看 SIGMA CIS 專案">
-            <div class="work-thumb thumb-sigma">
-              <span class="scanline"></span>
-            </div>
-            <div class="work-info">
-              <p class="tag">Design / Planning</p>
-              <h3>SIGMA CIS</h3>
-              <p>將品牌識別整理成可延伸、可落地的視覺規範。</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="work-card reveal" data-category="UIUX Design">
-          <a href="#case-study" class="work-link" aria-label="查看 Shopping Mall App 專案">
-            <div class="work-thumb thumb-app">
-              <span class="scanline"></span>
-            </div>
-            <div class="work-info">
-              <p class="tag">UIUX / Design</p>
-              <h3>Shopping Mall App</h3>
-              <p>重新整理會員、活動與首頁資訊，讓使用路徑更清楚。</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="work-card reveal" data-category="Video Planning">
-          <a href="#case-study" class="work-link" aria-label="查看 Gashapon Campaign 專案">
-            <div class="work-thumb thumb-video">
-              <span class="scanline"></span>
-            </div>
-            <div class="work-info">
-              <p class="tag">Video / Planning</p>
-              <h3>Gashapon Campaign</h3>
-              <p>把商品亮點轉譯成短影音、活動與社群溝通內容。</p>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section id="case-study" class="section case-study">
-      <div class="section-title reveal">
-        <p class="meta">05 / Case Study Template</p>
-        <h2>正式專案詳情頁結構</h2>
-        <p>這一段可作為每個作品點進去後的標準版型。</p>
-      </div>
-
-      <article class="case-panel reveal">
-        <div class="case-cover">
-          <div class="case-label">Selected Observation</div>
-        </div>
-
-        <div class="case-content">
-          <aside class="case-aside">
-            <h3>SIGMA CIS</h3>
-            <dl>
-              <div><dt>類型</dt><dd>Brand Design</dd></div>
-              <div><dt>年份</dt><dd>2026</dd></div>
-              <div><dt>角色</dt><dd>企劃整理 / 視覺設計 / 規範撰寫</dd></div>
-            </dl>
-          </aside>
-
-          <div class="case-main">
-            <section>
-              <h4>專案簡介</h4>
-              <p>將品牌識別、應用規範與延伸視覺整理成一套可以被團隊理解與使用的系統。</p>
-            </section>
-
-            <section>
-              <h4>這件事怎麼開始的？</h4>
-              <p>從品牌定位、使用情境與未來延伸需求開始，先釐清哪些資訊需要被標準化。</p>
-            </section>
-
-            <section>
-              <h4>我主要負責什麼？</h4>
-              <p>負責視覺邏輯整理、版面規劃、應用情境設計，以及將抽象品牌語言轉換成清楚規範。</p>
-            </section>
-
-            <section>
-              <h4>最後變成了什麼？</h4>
-              <p>形成可交付、可閱讀、可延伸使用的 CIS 手冊與品牌應用示意。</p>
-            </section>
-
-            <details>
-              <summary>Observation Notes｜我當時怎麼想的</summary>
-              <p>這裡適合放比較個人的觀察，例如專案過程中如何判斷資訊優先順序、如何把客戶語言轉成設計語言。</p>
-            </details>
-          </div>
-        </div>
+        <h2>品牌設計｜好伴公寓 Happen Coliving Branding</h2>
       </article>
-    </section>
 
-    <section id="observer" class="section observer">
-      <div class="observer-card reveal">
-        <p class="meta">06 / Observer</p>
-        <h2>觀測者：鄒佳穎</h2>
-        <p>我關注資訊如何被理解，也在意想法如何被做出來。透過企劃、設計、短影片與 UIUX，把雜亂訊號整理成清楚的溝通成果。</p>
-      </div>
-    </section>
+      <article class="work-card" data-category="keyvisual">
+        <div class="thumb gradient-2">
+          <span>Social Design Scene</span>
+        </div>
+        <h2>主視覺設計｜社計現場 Social Design Scene KV Design</h2>
+      </article>
 
-    <section id="contact" class="section contact-section">
-      <div class="section-title reveal">
-        <p class="meta">Contact Signal</p>
-        <h2>聯絡訊號</h2>
-      </div>
+      <article class="work-card" data-category="branding">
+        <div class="thumb gradient-3">
+          <span>Nail Studio</span>
+        </div>
+        <h2>品牌設計｜lilisnow nail 美甲工作室 Branding</h2>
+      </article>
 
-      <div class="contact-grid reveal">
-        <a href="mailto:your@email.com">your@email.com</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" target="_blank" rel="noopener">Behance</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <article class="work-card" data-category="keyvisual">
+        <div class="thumb gradient-4">
+          <span>Green Corridor</span>
+        </div>
+        <h2>主視覺設計｜綠空放空空 Green Corridor KV Design</h2>
+      </article>
+
+      <article class="work-card" data-category="branding">
+        <div class="thumb gradient-5">
+          <span>SUNTIME</span>
+        </div>
+        <h2>品牌設計｜上富工程顧問 SUNTIME Branding</h2>
+      </article>
+
+      <article class="work-card" data-category="keyvisual">
+        <div class="thumb gradient-6">
+          <span>Old Town</span>
+        </div>
+        <h2>主視覺設計｜帶一塊舊城走！KV Design</h2>
+      </article>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>Observation Cube</span>
-    <span>© 2026 鄒佳穎</span>
+  <footer id="contact">
+    <p>Contact Me : yourmail@example.com</p>
+    <p>Copyright © bocolate style portfolio</p>
   </footer>
 
-  <script src="./main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
