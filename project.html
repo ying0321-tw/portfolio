@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio website for branding, graphic design and visual design works." />
-  <title>Portfolio｜作品集</title>
+  <meta name="description" content="Project detail page." />
+  <title>Project｜作品內頁</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -15,10 +15,9 @@
     <button class="menu-toggle" type="button" aria-label="Open menu">MENU</button>
 
     <nav class="nav" aria-label="Project categories">
-      <button class="nav-link active" type="button" data-filter="all">ALL PROJECTS 全部</button>
-      <button class="nav-link" type="button" data-filter="branding">NO BRANDING 品牌</button>
-      <button class="nav-link" type="button" data-filter="keyvisual">NO FEATURE 專案</button>
-      <button class="nav-link" type="button" data-filter="visual">VISUAL 視覺</button>
+      <a class="nav-link text-link" href="index.html">ALL PROJECTS 全部</a>
+      <a class="nav-link text-link" href="index.html?filter=branding">NO BRANDING 品牌</a>
+      <a class="nav-link text-link" href="index.html?filter=keyvisual">NO FEATURE 專案</a>
       <a class="nav-link text-link" href="mailto:yourmail@example.com">CONTACT 聯絡我</a>
     </nav>
 
@@ -30,14 +29,7 @@
     </div>
   </aside>
 
-  <main class="main">
-    <section class="home-intro">
-      <h1>Selected Works</h1>
-      <p>Branding, key visual, graphic design and visual direction.</p>
-    </section>
-
-    <section class="works-grid" id="worksGrid" aria-label="Project list"></section>
-  </main>
+  <main class="main project-main" id="projectRoot"></main>
 
   <script src="data/projects.js"></script>
   <script src="js/main.js"></script>
