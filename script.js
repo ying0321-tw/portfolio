@@ -1,69 +1,28 @@
-const loader = document.querySelector("#loader");
-const nav = document.querySelector("#site-nav");
-const menuToggle = document.querySelector(".menu-toggle");
-const glow = document.querySelector(".cursor-glow");
+const header = document.querySelector(".site-header");
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelectorAll(".nav a");
+const cards = document.querySelectorAll(".work-card");
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.classList.add("is-hidden");
-  }, 1850);
+menuBtn.addEventListener("click", () => {
+  header.classList.toggle("open");
 });
 
-menuToggle?.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
+navLinks.forEach(link => {
+  link.addEventListener("click", event => {
+    navLinks.forEach(item => item.classList.remove("active"));
+    link.classList.add("active");
 
-document.querySelectorAll(".site-nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  });
-});
+    const text = link.textContent.toLowerCase();
 
-window.addEventListener("pointermove", (event) => {
-  if (!glow) return;
-  glow.style.left = `${event.clientX}px`;
-  glow.style.top = `${event.clientY}px`;
-});
+    cards.forEach(card => {
+      const category = card.dataset.category;
+      const showAll = text.includes("all");
+      const showBranding = text.includes("branding") && category === "branding";
+      const showKeyVisual = text.includes("key visual") && category === "keyvisual";
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.16 });
+      card.style.display = showAll || showBranding || showKeyVisual ? "block" : "none";
+    });
 
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-
-const filterButtons = document.querySelectorAll(".filter");
-const workCards = document.querySelectorAll(".work-card");
-
-function setFilter(filterName) {
-  filterButtons.forEach((button) => {
-    button.classList.toggle("active", button.dataset.filter === filterName);
-  });
-
-  workCards.forEach((card) => {
-    const categories = card.dataset.category || "";
-    const show = filterName === "All" || categories.includes(filterName);
-    card.classList.toggle("is-hidden", !show);
-  });
-}
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => setFilter(button.dataset.filter));
-});
-
-document.querySelectorAll(".module-card").forEach((module) => {
-  module.addEventListener("click", () => {
-    const filter = module.dataset.filter;
-    if (["Design", "UIUX", "Video"].includes(filter)) {
-      setTimeout(() => setFilter(filter), 120);
-    } else {
-      setTimeout(() => setFilter("All"), 120);
-    }
+    header.classList.remove("open");
   });
 });
