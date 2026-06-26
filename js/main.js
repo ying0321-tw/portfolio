@@ -190,44 +190,37 @@
       return;
     }
 
-    document.title = `${project.title}｜作品內頁`;
+    document.title = `${project.title}｜鄒佳穎作品集`;
 
-    const related = projects
-      .filter(item => item.slug !== project.slug)
-      .slice(0, 3);
+    const imageBlocks = (project.blocks || []).filter(block => block.type === "image" || block.type === "gallery");
+    const detailImages = imageBlocks.length ? imageBlocks : [{ type: "image", src: project.cover, alt: project.title }];
 
     projectRoot.innerHTML = `
-      <section class="project-hero fade-in">
+      <section class="case-hero fade-in">
         <img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)}">
       </section>
 
-      <section class="project-intro fade-in">
+      <section class="case-intro fade-in">
         <h1>${escapeHTML(project.title)}</h1>
-        <p class="project-subtitle">${escapeHTML(project.subtitle)}</p>
-        <div class="project-meta">
-          <span>Client｜${escapeHTML(project.client)}</span>
-          <span>Year｜${escapeHTML(project.year)}</span>
-          <span>Service｜${escapeHTML(project.service)}</span>
+        <p class="case-subtitle">${escapeHTML(project.subtitle)}</p>
+        <div class="case-meta">
+          <span>${escapeHTML(project.year)}</span>
+          <span>${escapeHTML(project.service)}</span>
         </div>
         ${(project.intro || []).map(p => `<p>${escapeHTML(p)}</p>`).join("")}
       </section>
 
-      ${(project.blocks || []).map(renderBlock).join("")}
+      ${detailImages.map(block => {
+        if (block.type === "gallery") {
+          return `<section class="case-detail-gallery fade-in">${(block.images || []).map(img => `<img src="${escapeHTML(img.src)}" alt="${escapeHTML(img.alt || project.title)}" loading="lazy">`).join("")}</section>`;
+        }
+        return `<section class="case-full-image fade-in"><img src="${escapeHTML(block.src)}" alt="${escapeHTML(block.alt || project.title)}" loading="lazy"></section>`;
+      }).join("")}
 
-      <section class="more-projects fade-in">
-        <h2>其他相關設計</h2>
-        <div class="more-grid">
-          ${related.map(item => `
-            <a class="more-card" href="${projectURL(item.slug)}">
-              <img src="${escapeHTML(item.cover)}" alt="${escapeHTML(item.title)}" loading="lazy">
-              <p>${escapeHTML(item.title)}</p>
-            </a>
-          `).join("")}
-        </div>
-      </section>
-
-      <a class="back-top" href="index.html">← Back to Works</a>
-      <footer class="footer-contact"><a href="mailto:yin9423@gmail.com">yin9423@gmail.com</a></footer>
+      <footer class="case-footer fade-in">
+        <a href="index.html">← 回到作品列表</a>
+        <a href="mailto:yin9423@gmail.com">yin9423@gmail.com</a>
+      </footer>
     `;
 
     revealOnScroll();
